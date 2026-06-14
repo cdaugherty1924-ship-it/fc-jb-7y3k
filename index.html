@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="color-scheme" content="light dark">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Field Companion — Showings</title>
+<style>
+/* ============ PALETTE (matches Command Central desktop) ============ */
+:root, :root[data-theme="light"]{
+  --ink:#1c2a3a; --bg:#f3ebe1; --card:#ffffff; --line:#e8ddcf;
+  --inset:#fbf7f1; --inset-2:#f6efe6; --track:#ede4d8; --neutral:#ece3d6;
+  --muted:#6f665b; --muted-2:#a89e92;
+  --accent:#e85a3f; --accent-soft:#fbe3d8;
+  --gold:#b2894f; --gold-soft:#f1e5cd;
+  --blue:#3e6491; --blue-soft:#e7edf4;
+  --green:#1f8e5a; --green-soft:#e3f3ea;
+  --amber:#bd7a1e; --amber-soft:#f7e9d2;
+  --red:#c0392b;   --red-soft:#f8e1dd;
+  --teal:#0e8c7f;  --teal-soft:#dcf1ed;
+  --topbar:linear-gradient(120deg,#e85a3f 0%,#d8492e 100%);
+  --topbar-ink:#fff; --topbar-sub:#fbe0d2;
+  --shadow:0 1px 2px rgba(28,42,58,.05),0 6px 18px rgba(28,42,58,.07);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#f2e9dd; --bg:#0f1a24; --card:#18242f; --line:#2a3744;
+    --inset:#1f2c39; --inset-2:#1b2632; --track:#2a3744; --neutral:#26333f;
+    --muted:#9dacbb; --muted-2:#6c7b8a;
+    --accent:#f2724f; --accent-soft:rgba(242,114,79,.18);
+    --gold:#d6ac63; --gold-soft:rgba(214,172,99,.18);
+    --blue:#86a9d4; --blue-soft:rgba(134,169,212,.18);
+    --green:#37c77e; --green-soft:rgba(55,199,126,.16);
+    --amber:#e2a744; --amber-soft:rgba(226,167,68,.16);
+    --red:#f26b5c;   --red-soft:rgba(242,107,92,.16);
+    --teal:#2bb6a6;  --teal-soft:rgba(43,182,166,.16);
+    --topbar:linear-gradient(120deg,#e85a3f 0%,#c8412a 100%);
+    --shadow:0 1px 2px rgba(0,0,0,.30),0 8px 22px rgba(0,0,0,.38);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#f2e9dd; --bg:#0f1a24; --card:#18242f; --line:#2a3744;
+  --inset:#1f2c39; --inset-2:#1b2632; --track:#2a3744; --neutral:#26333f;
+  --muted:#9dacbb; --muted-2:#6c7b8a;
+  --accent:#f2724f; --accent-soft:rgba(242,114,79,.18);
+  --gold:#d6ac63; --gold-soft:rgba(214,172,99,.18);
+  --blue:#86a9d4; --blue-soft:rgba(134,169,212,.18);
+  --green:#37c77e; --green-soft:rgba(55,199,126,.16);
+  --amber:#e2a744; --amber-soft:rgba(226,167,68,.16);
+  --red:#f26b5c;   --red-soft:rgba(242,107,92,.16);
+  --teal:#2bb6a6;  --teal-soft:rgba(43,182,166,.16);
+  --topbar:linear-gradient(120deg,#e85a3f 0%,#c8412a 100%);
+  --shadow:0 1px 2px rgba(0,0,0,.30),0 8px 22px rgba(0,0,0,.38);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  font-size:15px;-webkit-font-smoothing:antialiased;overscroll-behavior-y:none}
+#app{max-width:430px;margin:0 auto;min-height:100%;position:relative;display:flex;flex-direction:column}
+
+/* ============ TOP BAR ============ */
+.top{position:sticky;top:0;z-index:30;background:var(--topbar);color:var(--topbar-ink);
+  padding:calc(env(safe-area-inset-top) + 10px) 16px 11px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.top .row{display:flex;align-items:center;gap:10px}
+.logo{width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.18);
+  display:grid;place-items:center;font-weight:800;font-size:14px;flex:0 0 auto}
+.top .title{font-weight:800;font-size:16px;letter-spacing:.2px}
+.top .sub{font-size:11px;color:var(--topbar-sub);margin-top:1px}
+.top .spacer{flex:1}
+.themebtn{background:rgba(255,255,255,.16);border:0;color:#fff;width:32px;height:32px;
+  border-radius:9px;font-size:15px;display:grid;place-items:center}
+.backbtn{background:rgba(255,255,255,.16);border:0;color:#fff;height:32px;border-radius:9px;
+  padding:0 12px;font-weight:700;font-size:13px;display:none;align-items:center;gap:6px}
+.backbtn.show{display:inline-flex}
+
+/* ============ SCREENS ============ */
+.screen{flex:1;padding:14px 14px 40px;display:none;animation:fade .22s ease}
+.screen.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:var(--muted-2);margin:2px 2px 9px}
+.absent{color:var(--muted-2)}
+
+/* ============ TODAY: client cover ============ */
+.cover{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:15px;
+  box-shadow:var(--shadow);margin-bottom:14px;cursor:pointer;transition:transform .12s ease}
+.cover:active{transform:scale(.99)}
+.cover .cv-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.cover h2{margin:0;font-size:19px}
+.cover .cv-go{font-size:11px;font-weight:800;color:var(--accent);white-space:nowrap;text-transform:uppercase;letter-spacing:.3px}
+.cover .cv-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.cover .cv-cancel{background:var(--neutral);border:0;color:var(--muted);width:26px;height:26px;
+  border-radius:8px;font-size:13px;font-weight:800;cursor:pointer;line-height:1;display:grid;place-items:center}
+.cover .cv-cancel:active{background:var(--red-soft);color:var(--red)}
+.cover .meta{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.5}
+.cover dl{margin:13px 0 0;display:grid;gap:9px}
+.cover .f{display:grid;grid-template-columns:96px 1fr;gap:8px;font-size:12.5px;line-height:1.4}
+.cover .f dt{color:var(--muted-2);font-weight:700;text-transform:uppercase;font-size:10px;letter-spacing:.4px;padding-top:1px}
+.cover .f dd{margin:0;color:var(--ink)}
+
+/* itinerary stops */
+.stop{display:flex;gap:12px;align-items:stretch;background:var(--card);border:1px solid var(--line);
+  border-radius:14px;padding:13px;margin-bottom:11px;box-shadow:var(--shadow);cursor:pointer;
+  transition:transform .12s ease}
+.stop:active{transform:scale(.985)}
+.stop .seq{flex:0 0 38px;border-radius:11px;background:var(--accent-soft);color:var(--accent);
+  font-weight:800;font-size:16px;display:grid;place-items:center}
+.stop .body{flex:1;min-width:0}
+.stop .addr{font-weight:700;font-size:14.5px;line-height:1.25}
+.stop .sub2{font-size:12px;color:var(--muted);margin-top:3px}
+.stop .right{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:5px;flex:0 0 auto}
+.timepill{background:var(--blue-soft);color:var(--blue);font-weight:800;font-size:12px;padding:4px 9px;border-radius:999px;white-space:nowrap}
+.pricepill{font-weight:800;font-size:13px;color:var(--ink)}
+.chev{color:var(--muted-2);font-size:18px;align-self:center}
+.stop.warn{border-color:var(--amber)}
+.miniflag{display:inline-block;margin-top:6px;font-size:10.5px;font-weight:700;color:var(--amber);
+  background:var(--amber-soft);padding:3px 7px;border-radius:7px}
+
+/* ============ PACKET ============ */
+.pktwrap{position:relative}
+.swipe{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:0;
+  scroll-behavior:smooth;-webkit-overflow-scrolling:touch;margin:0 -14px}
+.swipe::-webkit-scrollbar{display:none}
+.page{flex:0 0 100%;scroll-snap-align:center;padding:0 14px}
+.dots{display:flex;justify-content:center;gap:7px;margin:2px 0 12px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--track);transition:all .2s}
+.dot.on{background:var(--accent);width:20px;border-radius:4px}
+
+/* property header card */
+.phead{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  box-shadow:var(--shadow);overflow:hidden;margin-bottom:12px}
+.phead .bar{background:linear-gradient(120deg,var(--accent),#d8492e);color:#fff;padding:13px 15px}
+.phead .seqrow{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;opacity:.92;text-transform:uppercase;letter-spacing:.5px}
+.phead .addr{font-size:17px;font-weight:800;margin-top:5px;line-height:1.2}
+.phead .addr2{font-size:12.5px;opacity:.9;margin-top:2px}
+.phead .pills{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+.phead .pp{background:rgba(255,255,255,.2);border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700}
+.flagbanner{background:var(--amber-soft);color:var(--amber);padding:9px 15px;font-size:12px;font-weight:700;
+  display:flex;gap:7px;align-items:flex-start;border-top:1px solid var(--line)}
+.flagbanner.red{background:var(--red-soft);color:var(--red)}
+
+/* action bar */
+.actions{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;padding:11px}
+.act{display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;
+  background:var(--inset);border:1px solid var(--line);border-radius:12px;padding:9px 4px;color:var(--ink)}
+.act:active{background:var(--inset-2)}
+.act .ic{font-size:17px}
+.act .lb{font-size:10.5px;font-weight:700;color:var(--muted)}
+.act.call .ic{color:var(--green)} .act.text .ic{color:var(--blue)}
+.act.navi .ic{color:var(--accent)} .act.zillow .ic{color:var(--teal)}
+
+/* section cards */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:11px;
+  box-shadow:var(--shadow);overflow:hidden}
+.sec > summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;align-items:center;gap:9px;
+  font-weight:800;font-size:13.5px;user-select:none}
+.sec > summary::-webkit-details-marker{display:none}
+.sec .sn{flex:0 0 22px;height:22px;border-radius:7px;background:var(--accent-soft);color:var(--accent);
+  font-size:12px;font-weight:800;display:grid;place-items:center}
+.sec .arw{margin-left:auto;color:var(--muted-2);font-size:12px;transition:transform .2s}
+.sec[open] .arw{transform:rotate(90deg)}
+.sec .inner{padding:2px 14px 14px}
+.kv{display:grid;grid-template-columns:104px 1fr;gap:8px;font-size:12.5px;line-height:1.45;padding:7px 0;border-top:1px solid var(--line)}
+.kv:first-child{border-top:0}
+.kv dt{color:var(--muted-2);font-weight:700;text-transform:uppercase;font-size:10px;letter-spacing:.3px;padding-top:1px}
+.kv dd{margin:0}
+.kv dd.warn{color:var(--amber);font-weight:600}
+.kv dd .flag{color:var(--red);font-weight:700}
+.snapgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:4px 0 10px}
+.snap{background:var(--inset);border:1px solid var(--line);border-radius:11px;padding:9px 7px;text-align:center}
+.snap .v{font-weight:800;font-size:14px}
+.snap .l{font-size:9.5px;color:var(--muted-2);text-transform:uppercase;letter-spacing:.3px;margin-top:2px;font-weight:700}
+.notesbox{width:100%;min-height:130px;border:1.5px dashed var(--line);border-radius:12px;background:var(--inset);
+  padding:11px;font-family:inherit;font-size:13px;color:var(--ink);resize:vertical;line-height:1.5}
+.notesbox:focus{outline:none;border-color:var(--accent);background:var(--card)}
+.notehint{font-size:11px;color:var(--muted-2);margin:7px 2px 0}
+
+/* similar open houses (open-house hosting lane only) */
+.sec .sn.star{background:var(--accent);color:#fff}
+.simhint{font-size:11.5px;color:var(--muted-2);margin:2px 2px 10px;line-height:1.4}
+.simcard{display:block;text-decoration:none;color:inherit;background:var(--inset);
+  border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:11px;
+  padding:10px 12px;margin-bottom:9px}
+.simcard:last-child{margin-bottom:0}
+.simaddr{font-weight:800;font-size:13.5px;color:var(--ink)}
+.simmeta{font-size:12px;color:var(--muted-2);margin-top:2px}
+.simzill{font-size:11.5px;font-weight:700;color:var(--accent);margin-top:6px}
+
+/* seller's disclosure button (bottom of each property) */
+.disclosure{margin-bottom:11px}
+.disclosurebtn{display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;
+  background:var(--blue);color:#fff;border-radius:14px;padding:15px 16px;font-weight:800;font-size:14px;
+  box-shadow:var(--shadow)}
+.disclosurebtn:active{transform:scale(.985)}
+.disclosurebtn .ic{font-size:18px}
+.disclosure-none{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:13px 15px;font-size:12.5px;color:var(--muted-2);text-align:center;box-shadow:var(--shadow)}
+
+/* ============ DONE FEATURE ============ */
+.phead .bar{position:relative}
+.donebtn-top{position:absolute;right:12px;top:50%;transform:translateY(-50%);
+  background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.35);
+  border-radius:10px;color:#fff;font-size:11px;font-weight:800;padding:5px 10px;
+  line-height:1;cursor:pointer;white-space:nowrap}
+.donebtn-top.is-done{background:rgba(255,255,255,.32);border-color:rgba(255,255,255,.7)}
+.donebtn-full{width:100%;background:var(--card);border:1.5px solid var(--line);
+  border-radius:14px;padding:14px 20px;font-weight:800;font-size:14px;color:var(--muted);
+  display:flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;
+  margin-bottom:11px;box-shadow:var(--shadow)}
+.donebtn-full:active{background:var(--inset)}
+.donebtn-full.is-done{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.cancelbtn{width:100%;background:none;border:0;color:var(--muted-2);font-weight:700;font-size:12.5px;
+  padding:4px 10px 6px;cursor:pointer;margin-bottom:6px}
+.cancelbtn:active{color:var(--red)}
+.done-section{margin:12px 0 0}
+.done-eyebrow{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;
+  color:var(--muted-2);margin:2px 2px 9px}
+.done-strip{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  overflow:hidden;box-shadow:var(--shadow);margin-bottom:11px}
+.done-item{display:flex;align-items:center;gap:11px;padding:11px 14px;
+  border-bottom:1px solid var(--line);cursor:pointer}
+.done-item:last-child{border-bottom:0}
+.done-item:active{background:var(--inset)}
+.done-seq{flex:0 0 30px;height:30px;border-radius:9px;background:var(--track);
+  color:var(--muted-2);font-weight:800;font-size:13px;display:grid;place-items:center}
+.done-body{flex:1;min-width:0}
+.done-body .a1{font-weight:700;font-size:13.5px;color:var(--muted-2)}
+.done-body .a2{font-size:11.5px;color:var(--muted-2);margin-top:1px}
+.done-chk{color:var(--green);font-size:18px;flex:0 0 auto}
+.done-back{background:none;border:0;color:var(--muted-2);font-size:13px;font-weight:700;
+  cursor:pointer;display:block;margin:10px auto 4px;padding:6px 12px}
+.all-done-msg{padding:40px 20px;text-align:center;color:var(--muted-2)}
+.all-done-msg .ic{font-size:40px;margin-bottom:12px}
+.all-done-msg .t{font-weight:800;font-size:16px}
+.all-done-msg .s{font-size:13px;margin-top:8px}
+
+/* ============ DAY CHIPS ============ */
+.day-chips-wrap{margin:0 0 12px;overflow-x:auto;display:flex;gap:8px;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+.day-chips-wrap::-webkit-scrollbar{display:none}
+.daychip{flex:0 0 auto;background:var(--card);border:1.5px solid var(--line);border-radius:12px;
+  padding:9px 14px;text-align:left;cursor:pointer;min-width:110px;box-shadow:var(--shadow)}
+.daychip.active{background:var(--accent-soft);border-color:var(--accent)}
+.daychip .dc-label{font-weight:800;font-size:13px;display:block;color:var(--ink)}
+.daychip.active .dc-label{color:var(--accent)}
+.daychip .dc-n{font-size:11px;color:var(--muted-2);display:block;margin-top:2px}
+.daychip.active .dc-n{color:var(--accent)}
+
+/* ============ PAST SHOWINGS (history, at bottom of home) ============ */
+.histentry{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden}
+.histhdr{display:flex;align-items:center;justify-content:space-between;padding:14px 15px;cursor:pointer}
+.histhdr:active{background:var(--inset)}
+.histdate{font-weight:800;font-size:15px}
+.histmeta{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.4}
+.histarw{color:var(--muted-2);font-size:18px;flex:0 0 auto;margin-left:10px;
+  transition:transform .2s}
+.histarw.open{transform:rotate(90deg)}
+.histstops{border-top:1px solid var(--line);padding:10px 12px 12px;display:none}
+.histstops .stop{margin-bottom:8px}
+.histstops .stop:last-child{margin-bottom:0}
+/* Past-showings ENTRY BUTTON on home (opens the separate Past showings screen) */
+.pastbtn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;
+  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 16px;
+  font-weight:800;font-size:14px;color:var(--ink);box-shadow:var(--shadow);cursor:pointer;margin-top:24px}
+.pastbtn:active{background:var(--inset)}
+.pastbtn .pb-l{display:flex;align-items:center;gap:9px}
+.pastbtn .pb-r{color:var(--muted-2);font-weight:700;font-size:13px;white-space:nowrap}
+.past-empty{font-size:13px;color:var(--muted-2);text-align:center;padding:28px 20px;line-height:1.6}
+</style>
+</head>
+<body>
+<div id="app">
+
+  <!-- TOP BAR -->
+  <div class="top">
+    <div class="row">
+      <button class="backbtn" id="backBtn" onclick="goBack()">‹ Today</button>
+      <div class="logo">JB</div>
+      <div>
+        <div class="title" id="topTitle">Field Companion</div>
+        <div class="sub" id="topSub"></div>
+      </div>
+      <div class="spacer"></div>
+      <button class="themebtn" onclick="toggleTheme()" id="themeBtn">◐</button>
+    </div>
+  </div>
+
+  <!-- ===== HOME / TODAY ===== (client cover cards + per-client agenda + past showings) -->
+  <section class="screen active" id="screen-today">
+    <div class="day-chips-wrap" id="dayChips" style="display:none"></div>
+    <div id="coverCard"></div>
+    <div id="itinList"></div>
+    <div id="pastShowings"></div>
+  </section>
+
+  <!-- ===== PACKET ===== (scoped to ONE client at a time) -->
+  <section class="screen" id="screen-packet">
+    <div class="dots" id="dots"></div>
+    <div class="pktwrap">
+      <div class="swipe" id="swipe"></div>
+    </div>
+    <div id="doneSection"></div>
+  </section>
+
+  <!-- ===== PAST SHOWINGS ===== (separate screen, opened via the home button) -->
+  <section class="screen" id="screen-past">
+    <div class="eyebrow">Past showings</div>
+    <div id="pastList"></div>
+  </section>
+
+</div>
+
+<!-- Per-showing data. This is the ONLY file the showing-prep workflow overwrites. -->
+<script src="field_companion_data.js"></script>
+<script>
+/* ============================================================
+   FIELD COMPANION — APP SHELL
+   Navigation model (redesigned 2026-06-13):
+   - No bottom tab bar. Layered navigation only.
+   - HOME shows each client's cover card + that client's agenda, then
+     "Past showings" at the very bottom.
+   - Tapping a client card opens the PACKET viewer scoped to ONLY that
+     buyer's properties. Tapping an individual property opens that buyer's
+     packet positioned at that property. You never swipe across clients.
+   - The top-left back button returns to HOME.
+   NEVER-OMIT-A-LINE: Section 5/6 rows always render for the property's
+   type; a muted absence note ("No mention"/"Not found"/"Not listed")
+   shows when the value is empty.
+   ============================================================ */
+const DATA  = (window.FC_DATA || {appointments:[], client:{fields:[],snapshotLines:[]}, props:[], meta:{}, history:[]});
+const APPTS = (DATA.appointments && DATA.appointments.length)
+              ? DATA.appointments
+              : [{date:(DATA.meta&&DATA.meta.dateLabel)||'', client: DATA.client || {fields:[],snapshotLines:[]}, props: DATA.props || []}];
+const META  = DATA.meta || {};
+const HIST  = DATA.history || [];
+
+/* ---- assign stable ids: numeric global ids for current props; namespaced ids for history ---- */
+let _g = 0;
+APPTS.forEach((a, ai) => {
+  a._ai = ai;
+  (a.props || []).forEach((p, li) => {
+    p._gid = _g++;
+    p._ai  = ai;
+    p._li  = li;
+    p.client_name = p.client_name || (a.client && a.client.name) || '';
+    p._ckey       = _ckey(a.date || META.dateLabel, p.client_name, p);
+    p._ckeyLegacy = _ckeyLegacy(a.date || META.dateLabel, p);
+  });
+});
+const ALL_PROPS = APPTS.flatMap(a => a.props || []);
+HIST.forEach((e, hi) => (e.props || []).forEach((p, pi) => {
+  p._gid        = 'h' + hi + '_' + pi;
+  const hd      = (e.meta && e.meta.dateLabel) || '';
+  p._ckey       = _ckey(hd, (e.client && e.client.name) || '', p);
+  p._ckeyLegacy = _ckeyLegacy(hd, p);
+}));
+function propByGid(gid){ return ALL_PROPS.find(p => p._gid === gid); }
+
+/* ============ LOCAL NOTE STORAGE (keyed by global id) ============ */
+let _noteSessionKey = META.deployedAt || new Date().toDateString();
+function _saveNote(gid){
+  const ta = document.getElementById('note-'+gid);
+  if(ta) localStorage.setItem('fc_note_'+_noteSessionKey+'_'+gid, ta.value);
+}
+function _restoreNotes(sessionKey, gids){
+  gids.forEach(g=>{
+    const ta = document.getElementById('note-'+g);
+    if(ta) ta.value = localStorage.getItem('fc_note_'+sessionKey+'_'+g) || '';
+  });
+}
+
+/* ============ DONE STATE (keyed by global id) ============ */
+const DONE_KEY = 'fc_done_' + (META.deployedAt || new Date().toDateString());
+const donePropIds = new Set(JSON.parse(localStorage.getItem(DONE_KEY) || '[]'));
+function _saveDone(){ localStorage.setItem(DONE_KEY, JSON.stringify([...donePropIds])); }
+
+/* ============ CANCELLED STATE ============
+   A cancelled stop is removed from EVERYTHING — agenda, packet, Done, Past showings.
+   Keyed by date + address (NOT the positional gid, and NOT deployedAt) so the removal
+   PERSISTS across a refresh AND across the nightly re-prep/redeploy. A future showing of
+   the same address on a different date is unaffected. No in-app undo by design (a cancelled
+   stop vanishes from every surface, so there'd be nowhere to surface an undo).            */
+const CANCEL_KEY = 'fc_cancelled';
+const cancelledSet = new Set(JSON.parse(localStorage.getItem(CANCEL_KEY) || '[]'));
+function _saveCancelled(){ localStorage.setItem(CANCEL_KEY, JSON.stringify([...cancelledSet])); }
+// Current key = date + BUYER + address, so cancelling one buyer's showing of a property does
+// NOT cancel another buyer's showing of the same property on the same day (Christian often
+// shows the same property twice in one day).
+function _ckey(date, client, p){
+  return [ (date||'').trim().toLowerCase(),
+           (client||'').trim().toLowerCase(),
+           (p.addr1||'').trim().toLowerCase(),
+           (p.addr2||'').trim().toLowerCase() ].join('||');
+}
+// Legacy key = date + address (pre-2026-06-13, no buyer). Still honored on read so any
+// cancellation made before this change stays in effect; new cancellations use _ckey only.
+function _ckeyLegacy(date, p){
+  return [ (date||'').trim().toLowerCase(),
+           (p.addr1||'').trim().toLowerCase(),
+           (p.addr2||'').trim().toLowerCase() ].join('||');
+}
+function isCancelled(p){
+  if(!p) return false;
+  return (p._ckey && cancelledSet.has(p._ckey)) || (p._ckeyLegacy && cancelledSet.has(p._ckeyLegacy));
+}
+
+/* ============ VIEW STATE ============ */
+let VIEW_PROPS  = [];                                   // props currently in the packet viewer
+let VIEW_CLIENT = (APPTS[0] && APPTS[0].client) || {};  // client owning the open packet
+let VIEW_AI     = 0;
+let _screen     = 'today';                              // current screen
+let _packetFrom = 'today';                              // where the open packet was launched from
+
+/* ============ HELPERS ============ */
+function esc(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;");}
+function row(dt,dd,cls){ if(!dd) return ""; return `<div class="kv"><dt>${dt}</dt><dd class="${cls||''}">${dd}</dd></div>`; }
+// never-omit row: ALWAYS renders; shows a muted absence note when the value is empty.
+function rowF(dt, val, fallback, cls){
+  const has = val && String(val).trim();
+  const dd  = has ? esc(val) : `<span class="absent">${fallback}</span>`;
+  return `<div class="kv"><dt>${dt}</dt><dd class="${cls||''}">${dd}</dd></div>`;
+}
+function ptypeOf(p){
+  if(p.ptype) return p.ptype;  // set by build_field_companion.py
+  const t = (p.type||'').toLowerCase();
+  if(/single[\s-]?family|\bsfh\b|\bsfr\b/.test(t)) return 'sfh';
+  if(/multi|two[\s-]?family|three[\s-]?family|four[\s-]?family|[2-4][\s-]?family/.test(t)) return 'multi';
+  return 'condo';
+}
+
+/* ============ RENDER A PROPERTY PAGE ============ */
+function pageHTML(p, total, readOnly){
+  const gid = p._gid;
+  const pt  = ptypeOf(p);
+  const isDone = donePropIds.has(gid);
+  const showBuilding = (pt === 'condo' || pt === 'multi');
+  const mapsURL  = "https://www.google.com/maps?q=" + encodeURIComponent(p.nav_addr || (p.addr1+", "+p.addr2));
+  const telDigits = (p.phone||"").replace(/[^0-9]/g,"");
+  const flagBanners = (p.flags||[]).map(f=>`<div class="flagbanner ${f.red?'red':''}">⚠ <span>${esc(f.t)}</span></div>`).join("");
+  const snaps = (p.snap||[]).map(s=>`<div class="snap"><div class="v">${s[0]}</div><div class="l">${s[1]}</div></div>`).join("");
+  const gidArg = JSON.stringify(gid);
+
+  const topDoneBtn = readOnly ? '' : (isDone
+    ? `<button class="donebtn-top is-done" onclick="event.stopPropagation();unmarkDone(${gidArg})">↩ Undo</button>`
+    : `<button class="donebtn-top" onclick="event.stopPropagation();markDone(${gidArg})">✓ Done</button>`);
+  const bottomDoneBtn = readOnly ? '' : (isDone
+    ? `<button class="donebtn-full is-done" onclick="unmarkDone(${gidArg})">↩ Undo — put back in rotation</button>`
+    : `<button class="donebtn-full" onclick="markDone(${gidArg})">✓ Done with this showing</button>`);
+  const cancelBtn = readOnly ? '' : `<button class="cancelbtn" onclick="cancelStop(${gidArg})">✕ Cancel — remove this showing from the app</button>`;
+  const addrPad = readOnly ? '' : ' style="padding-right:80px"';
+  const notesSn = showBuilding ? 7 : 6;
+
+  return `<div class="page">
+    <div class="phead">
+      <div class="bar">
+        <div class="seqrow"><span>Stop ${p.seq||''} of ${total}</span><span>·</span><span>${esc(p.type)} · ${esc(p.beds)}</span></div>
+        <div class="addr"${addrPad}>${esc(p.addr1)}</div>
+        <div class="addr2">${esc(p.addr2)} · ${esc(p.time)}</div>
+        <div class="pills"><span class="pp">${esc(p.price)}</span><span class="pp">${esc(p.beds)}</span></div>
+        ${topDoneBtn}
+      </div>
+      ${flagBanners}
+      <div class="actions">
+        <a class="act call" href="tel:${telDigits}"><span class="ic">📞</span><span class="lb">Call agent</span></a>
+        <a class="act text" href="sms:${telDigits}"><span class="ic">💬</span><span class="lb">Text agent</span></a>
+        <a class="act zillow" href="${p.zillow}" target="_blank" rel="noopener"><span class="ic">🔎</span><span class="lb">Zillow</span></a>
+        <a class="act navi" href="${mapsURL}" target="_blank" rel="noopener"><span class="ic">🧭</span><span class="lb">Navigate</span></a>
+      </div>
+    </div>
+
+    <details class="sec" open><summary><span class="sn">1</span>Appointment overview<span class="arw">›</span></summary>
+      <div class="inner">
+        ${rowF("Time", p.s1_time, "No mention")}
+        ${row("Listing agent", `${esc(p.agent)}${telDigits?` · <a href="tel:${telDigits}">${esc(p.phone)}</a>`:''}`)}
+      </div></details>
+
+    <details class="sec"><summary><span class="sn">2</span>Scheduling<span class="arw">›</span></summary>
+      <div class="inner">
+        ${rowF("Confirmed", p.s2_confirmed, "No mention")}
+        ${rowF("Source", p.s2_source, "No mention")}
+      </div></details>
+
+    <details class="sec" open><summary><span class="sn">3</span>Access &amp; occupancy<span class="arw">›</span></summary>
+      <div class="inner">
+        ${rowF("Occupancy", p.s3_occupancy, "No mention")}
+        ${rowF("Lockbox", p.s3_lb, "No mention")}
+        ${rowF("Notes", p.s3_notes, "No mention")}
+      </div></details>
+
+    <details class="sec"><summary><span class="sn">4</span>Listing agent intel<span class="arw">›</span></summary>
+      <div class="inner">
+        ${row("Agent", esc(p.agent))}
+        <div class="kv"><dt>Intel</dt><dd class="absent">No additional notes</dd></div>
+      </div></details>
+
+    <details class="sec" open><summary><span class="sn">5</span>Property snapshot<span class="arw">›</span></summary>
+      <div class="inner">
+        <div class="snapgrid">${snaps}</div>
+        ${rowF("History", p.s5_history, "Not found")}
+        ${rowF("Ownership", p.s5_ownership, "Not found")}
+        ${pt === 'condo' ? rowF("HOA incl.", p.s5_hoainc, "Not listed") : ''}
+        ${rowF("Parking", p.s5_parking, "No mention")}
+        ${rowF("Storage", p.s5_storage, "No mention")}
+        ${rowF("HVAC", p.s5_hvac, "No mention")}
+        ${rowF("Laundry", p.s5_laundry, "No mention")}
+        ${rowF("Flood", p.s5_flood, "No mention")}
+        ${p.s5_misc ? row("Misc", esc(p.s5_misc)) : ""}
+      </div></details>
+
+    ${showBuilding ? `<details class="sec"><summary><span class="sn">6</span>Building details<span class="arw">›</span></summary>
+      <div class="inner">
+        ${rowF("Age", p.s6_age, "Not found")}
+        ${rowF("Units", p.s6_units, "Not found")}
+        ${pt === 'condo' ? rowF("Amenities", p.s6_amenities, "None") : ''}
+        ${pt === 'condo' ? rowF("Projects", p.s6_projects, "None noted") : ''}
+        ${pt === 'condo' ? rowF("Assessment", p.s6_assess, "None noted", p.s6_assess?'warn':'') : ''}
+        ${pt === 'condo' ? rowF("Financing", p.s6_financing, "Not specified") : ''}
+        ${p.s6_key ? row("Key details", esc(p.s6_key)) : ""}
+      </div></details>` : ''}
+
+    ${(p.similar && p.similar.length) ? `<details class="sec" open><summary><span class="sn star">★</span>Similar open houses<span class="arw">›</span></summary>
+      <div class="inner">
+        <div class="simhint">Other company open houses today — send departing visitors here.</div>
+        ${p.similar.map(s=>`<a class="simcard" href="${s.zillow}" target="_blank" rel="noopener">
+          <div class="simaddr">${esc(s.addr)}</div>
+          <div class="simmeta">${esc(s.city)} · ${esc(s.bedbath)} · <strong>${esc(s.price)}</strong></div>
+          <div class="simzill">🔎 View on Zillow ›</div>
+        </a>`).join("")}
+      </div></details>` : ''}
+
+    <details class="sec" open><summary><span class="sn">${notesSn}</span>Notes &amp; feedback<span class="arw">›</span></summary>
+      <div class="inner">
+        <textarea class="notesbox" id="note-${gid}" oninput="_saveNote(${gidArg})" placeholder="Tap to jot — client reactions, condition, follow-ups, anything. Saves locally to this device."></textarea>
+        <div class="notehint">Saved on this device · accessible in Past showings for 7 days</div>
+      </div></details>
+
+    <div class="disclosure">
+      ${p.disclosure
+        ? `<a class="disclosurebtn" href="${p.disclosure}" target="_blank" rel="noopener"><span class="ic">📄</span>Open Seller's Disclosure (PDF)</a>`
+        : `<div class="disclosure-none">No seller's disclosure on file for this property.</div>`}
+    </div>
+
+    ${bottomDoneBtn}
+    ${cancelBtn}
+  </div>`;
+}
+
+/* ============ DATE HELPERS ============ */
+function _todayLabel(){
+  return new Date().toLocaleDateString('en-US',{weekday:'short',month:'long',day:'numeric'})
+    .replace(/,?\s*\d{4}$/, '').trim();
+}
+function _parseDL(label){
+  try{ return new Date(label + ', ' + new Date().getFullYear()); }catch(e){ return null; }
+}
+function _getGroups(){
+  const fallback = META.dateLabel || _todayLabel();
+  const map = {};
+  APPTS.forEach(a => { const d = a.date || fallback; (map[d] = map[d] || []).push(a); });
+  return Object.keys(map)
+    .sort((a,b) => { const da=_parseDL(a), db=_parseDL(b); return (da&&db) ? da-db : 0; })
+    .map(d => ({date:d, appts:map[d]}));
+}
+let _activeDay = null;
+function switchDay(date){ _activeDay = date; renderToday(); }
+
+/* showing-order helpers: turn a time string into minutes for sorting */
+function _timeMins(t){
+  if(!t) return 99999;
+  const m = String(t).match(/(\d{1,2})(?::(\d{2}))?\s*(AM|PM)/i);
+  if(!m) return 99999;                       // "TBD" and the like sort to the end
+  let h = parseInt(m[1],10); const min = m[2] ? parseInt(m[2],10) : 0;
+  const ap = m[3].toUpperCase();
+  if(ap==='PM' && h!==12) h += 12;
+  if(ap==='AM' && h===12) h = 0;
+  return h*60 + min;
+}
+function _apptStart(appt){
+  const ts = (appt.props||[]).filter(p=>!isCancelled(p)).map(p=>_timeMins(p.time));
+  return ts.length ? Math.min(...ts) : 99999; // earliest non-cancelled stop
+}
+
+/* ============ RENDER HOME (cover cards + per-client agenda + past showings) ============ */
+function renderToday(){
+  const groups   = _getGroups();
+  const todayStr = _todayLabel();
+
+  if(!_activeDay || !groups.find(g => g.date === _activeDay)){
+    const todayGrp = groups.find(g => g.date === todayStr);
+    _activeDay = todayGrp ? todayStr : (groups[0] ? groups[0].date : todayStr);
+  }
+
+  // Day chips (only when 2+ distinct dates)
+  const chipsEl = document.getElementById('dayChips');
+  if(groups.length > 1){
+    chipsEl.style.display = '';
+    chipsEl.innerHTML = groups.map(g => {
+      const isToday = g.date === todayStr;
+      let isTomorrow = false;
+      if(!isToday){ const da=_parseDL(g.date), dt=_parseDL(todayStr); if(da&&dt) isTomorrow = Math.round((da-dt)/86400000) === 1; }
+      const label  = isToday ? 'Today' : isTomorrow ? 'Tomorrow' : g.date;
+      const n      = g.appts.reduce((s,a) => s + (a.props||[]).length, 0);
+      const active = g.date === _activeDay;
+      return `<button class="daychip${active?' active':''}" onclick="switchDay('${g.date.replace(/'/g,"\\'")}')">
+        <span class="dc-label">${esc(label)}</span><span class="dc-n">${n} stop${n===1?'':'s'}</span></button>`;
+    }).join('');
+  } else { chipsEl.style.display = 'none'; chipsEl.innerHTML = ''; }
+
+  const activeGroup = groups.find(g => g.date === _activeDay) || {appts:[]};
+  const totalN      = ALL_PROPS.length;
+  const subDate     = (_activeDay && _activeDay !== todayStr) ? _activeDay : (META.dateLabel || '');
+  document.getElementById('topSub').textContent =
+    (subDate ? subDate + ' · ' : '') + totalN + ' showing' + (totalN===1?'':'s');
+
+  // Buyers in showing order (earliest stop first) — appts with at least one non-cancelled stop
+  const appts = activeGroup.appts.filter(a => (a.props||[]).some(p=>!isCancelled(p)))
+                                 .slice()
+                                 .sort((a,b) => _apptStart(a) - _apptStart(b));
+
+  // ZONE A — all buyer cover cards at the top, in showing order
+  let coversHTML = '';
+  appts.forEach(appt => {
+    const ai     = appt._ai;
+    const client = appt.client || {};
+    const nameLink = client.fub_url
+      ? `<a href="${client.fub_url}" target="_blank" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none;border-bottom:2px solid var(--accent)">${esc(client.name||'')}</a>`
+      : esc(client.name||'');
+    const coverFields = (client.fields||[]).map(f=>`<div class="f"><dt>${esc(f[0])}</dt><dd>${esc(f[1])}</dd></div>`).join('');
+    const snapLines   = (client.snapshotLines||[]).map(l=>`<div>${l}</div>`).join('');
+    coversHTML += `<div class="cover" onclick="openClientPacket(${ai},0)">
+      <div class="cv-head"><h2>${nameLink}</h2>
+        <div class="cv-actions"><span class="cv-go">View packet ›</span>
+          <button class="cv-cancel" title="Cancel entire showing" onclick="event.stopPropagation();cancelShowing(${ai})">✕</button>
+        </div>
+      </div>
+      ${client.meta ? `<div class="meta">${esc(client.meta)}</div>` : ''}
+      ${snapLines   ? `<div class="meta" style="margin-top:8px">${snapLines}</div>` : ''}
+      ${coverFields ? `<dl>${coverFields}</dl>` : ''}
+    </div>`;
+  });
+
+  // ZONE B — properties beneath, in showing order, grouped under a buyer-name header divider
+  let itinHTML = '';
+  appts.forEach((appt, gi) => {
+    const ai     = appt._ai;
+    const client = appt.client || {};
+    const props  = (appt.props || []).filter(p => !isCancelled(p)).slice().sort((a,b) => _timeMins(a.time) - _timeMins(b.time));
+    const activeProps = props.filter(p => !donePropIds.has(p._gid));
+    const doneProps   = props.filter(p =>  donePropIds.has(p._gid));
+
+    // buyer-name divider header
+    itinHTML += `<div class="eyebrow" style="margin-top:${gi?'20px':'2px'}">${esc(client.name||'Appointment')} · ${activeProps.length} stop${activeProps.length===1?'':'s'}</div>`;
+    activeProps.forEach(p => {
+      const city = (p.addr2||'').split(',')[0];
+      const priceShort = (p.snap && p.snap[0] && p.snap[0][0]) ? p.snap[0][0] : p.price;
+      itinHTML += `<div class="stop" onclick="openClientPacket(${ai},${p._li})">
+        <div class="seq">${p.seq||''}</div>
+        <div class="body"><div class="addr">${esc(p.addr1)}</div><div class="sub2">${esc(p.type)} · ${esc(p.beds)} · ${esc(city)}</div></div>
+        <div class="right"><span class="timepill">${esc(p.time||'')}</span><span class="pricepill">${esc(priceShort)}</span></div>
+        <div class="chev">›</div></div>`;
+    });
+    if(doneProps.length){
+      itinHTML += `<div class="done-eyebrow" style="margin-top:14px">Done (${doneProps.length})</div><div class="done-strip">`+
+        doneProps.map(p=>`<div class="done-item" onclick="openClientPacket(${ai},${p._li})">
+          <div class="done-seq">${p.seq||''}</div>
+          <div class="done-body"><div class="a1">${esc(p.addr1)}</div><div class="a2">${esc(p.type)} · ${esc(p.beds)}</div></div>
+          <div class="done-chk">✓</div></div>`).join('')+
+        `</div>`;
+    }
+  });
+
+  document.getElementById('coverCard').innerHTML = coversHTML;
+  document.getElementById('itinList').innerHTML  = itinHTML;
+  renderPastButton();
+}
+
+/* ============ PAST SHOWINGS (history, divided by client + date, at bottom of home) ============ */
+function _ageLabel(deployedAt){
+  if(!deployedAt) return '';
+  try{
+    const d = Math.floor((Date.now() - new Date(deployedAt).getTime())/86400000);
+    if(d<=0) return 'Today'; if(d===1) return 'Yesterday'; return d+' days ago';
+  }catch(e){ return ''; }
+}
+function toggleHist(hi){
+  const stops = document.getElementById('histstops-'+hi);
+  const arw   = document.getElementById('histarw-'+hi);
+  if(!stops) return;
+  const open = stops.style.display==='block';
+  stops.style.display = open ? 'none' : 'block';
+  arw.classList.toggle('open', !open);
+}
+// Home only shows a BUTTON; the list lives on a separate screen (openPast).
+function renderPastButton(){
+  const el = document.getElementById('pastShowings');
+  const liveDays = HIST.filter(e => (e.props||[]).some(p=>!isCancelled(p))).length;
+  if(!liveDays){ el.innerHTML = ''; return; }
+  el.innerHTML = `<button class="pastbtn" onclick="openPast()">
+    <span class="pb-l">🕐 Past showings</span>
+    <span class="pb-r">${liveDays} day${liveDays===1?'':'s'} ›</span>
+  </button>`;
+}
+function openPast(){ renderPastList(); showScreen('past','Past showings'); }
+function renderPastList(){
+  const el = document.getElementById('pastList');
+  const items = HIST.map((entry, hi)=>{
+    const props  = (entry.props || []).filter(p=>!isCancelled(p));
+    if(!props.length) return '';                      // entry fully cancelled — drop it
+    const date   = (entry.meta && entry.meta.dateLabel) || (entry.deployedAt||'').slice(0,10) || '–';
+    const client = (entry.client && entry.client.name) || '–';
+    const age    = _ageLabel(entry.deployedAt);
+    const n      = props.length;
+    const stops  = props.map((p,pi)=>`<div class="stop" onclick="openHistoryPacket(${hi},${pi})">
+      <div class="seq">${esc(String(p.seq||pi+1))}</div>
+      <div class="body"><div class="addr">${esc(p.addr1)}</div><div class="sub2">${esc(p.type)} · ${esc(p.beds)}</div></div>
+      <div class="right"><span class="timepill">${esc(p.time||'')}</span></div><div class="chev">›</div></div>`).join('');
+    return `<div class="histentry">
+      <div class="histhdr" onclick="toggleHist(${hi})">
+        <div>
+          <div class="histdate">${esc(date)}${age?` <span style="font-weight:400;font-size:12px;color:var(--muted-2)">(${esc(age)})</span>`:''}</div>
+          <div class="histmeta">${esc(client)} · ${n} showing${n===1?'':'s'}</div>
+        </div>
+        <div class="histarw" id="histarw-${hi}">›</div>
+      </div>
+      <div class="histstops" id="histstops-${hi}">${stops}</div>
+    </div>`;
+  }).join('');
+  el.innerHTML = items.trim() ? items
+    : '<div class="past-empty">No previous showings in the last 7 days.<br>They\'ll appear here after your next prep run.</div>';
+}
+
+/* ============ PACKET VIEWER (scoped to one client) ============ */
+const swipe  = document.getElementById('swipe');
+const dotsEl = document.getElementById('dots');
+
+function renderPacketScoped(props){
+  props = (props || []).filter(p => !isCancelled(p));
+  VIEW_PROPS = props;
+  _noteSessionKey = META.deployedAt || new Date().toDateString();
+  const active = props.filter(p => !donePropIds.has(p._gid));
+  const done   = props.filter(p =>  donePropIds.has(p._gid));
+  const total  = props.length;
+
+  if(active.length === 0){
+    swipe.innerHTML = `<div class="page"><div class="all-done-msg"><div class="ic">✓</div><div class="t">All showings done!</div><div class="s">Tap any property below to review it.</div></div></div>`;
+    dotsEl.innerHTML = '';
+  } else {
+    swipe.innerHTML  = active.map(p => pageHTML(p, total, false)).join("");
+    dotsEl.innerHTML = active.map((_,i)=>`<div class="dot ${i===0?'on':''}"></div>`).join("");
+    _restoreNotes(_noteSessionKey, active.map(p=>p._gid));
+  }
+
+  const ds = document.getElementById('doneSection');
+  ds.innerHTML = done.length ? `<div class="done-section">
+      <div class="done-eyebrow">Done (${done.length})</div>
+      <div class="done-strip">${done.map(p=>`<div class="done-item" onclick='openDoneProp(${JSON.stringify(p._gid)})'>
+        <div class="done-seq">${p.seq||''}</div>
+        <div class="done-body"><div class="a1">${esc(p.addr1)}</div><div class="a2">${esc(p.type)} · ${esc(p.beds)}</div></div>
+        <div class="done-chk">✓</div></div>`).join('')}</div>
+    </div>` : '';
+
+  requestAnimationFrame(()=>{ swipe.scrollLeft = 0; });
+}
+
+function openClientPacket(ai, li){
+  const appt = APPTS[ai]; if(!appt) return;
+  VIEW_AI = ai;
+  _packetFrom = 'today';
+  VIEW_CLIENT = appt.client || {};
+  const props  = appt.props || [];
+  const target = (typeof li === 'number') ? props[li] : null;
+
+  // If the tapped stop is already done, open it directly in review mode
+  if(target && !isCancelled(target) && donePropIds.has(target._gid)){
+    VIEW_PROPS = props.filter(p => !isCancelled(p));
+    showScreen('packet', VIEW_CLIENT.name);
+    openDoneProp(target._gid);
+    return;
+  }
+
+  renderPacketScoped(props);                 // sets VIEW_PROPS to the non-cancelled set
+  showScreen('packet', VIEW_CLIENT.name);
+  const active = VIEW_PROPS.filter(p => !donePropIds.has(p._gid));
+  let pos = target ? active.indexOf(target) : 0;
+  if(pos < 0) pos = 0;
+  requestAnimationFrame(()=>{ swipe.scrollLeft = pos * swipe.clientWidth; });
+}
+
+function markDone(gid){
+  donePropIds.add(gid); _saveDone();
+  renderPacketScoped(VIEW_PROPS);
+  renderToday();
+}
+
+/* ============ CANCEL (remove a stop / whole showing, persistently) ============ */
+function cancelStop(gid){
+  const p = propByGid(gid); if(!p) return;
+  if(!confirm('Remove this showing from the app?\n\n'+(p.addr1||'')+'\n\nIt will be cancelled — gone from the agenda, the packet, and Past showings. This can\'t be undone in the app.')) return;
+  cancelledSet.add(p._ckey); _saveCancelled();
+  renderToday();
+  const appt = APPTS[VIEW_AI];
+  const remaining = appt ? (appt.props||[]).filter(x=>!isCancelled(x)) : [];
+  if(_screen === 'packet' && remaining.length){ renderPacketScoped(remaining); }
+  else { showScreen('today'); }
+}
+function cancelShowing(ai){
+  const appt = APPTS[ai]; if(!appt) return;
+  const live = (appt.props||[]).filter(p=>!isCancelled(p));
+  if(!live.length) return;
+  const client = (appt.client && appt.client.name) || 'this buyer';
+  if(!confirm('Cancel the ENTIRE showing for '+client+' ('+live.length+' stop'+(live.length===1?'':'s')+')?\n\nAll of these stops will be removed from the app. This can\'t be undone in the app.')) return;
+  live.forEach(p=>cancelledSet.add(p._ckey));
+  _saveCancelled();
+  renderToday();
+  if(_screen !== 'today') showScreen('today');
+}
+function unmarkDone(gid){
+  donePropIds.delete(gid); _saveDone();
+  renderPacketScoped(VIEW_PROPS);
+  renderToday();
+}
+
+function openDoneProp(gid){
+  const p = propByGid(gid); if(!p) return;
+  _noteSessionKey = META.deployedAt || new Date().toDateString();
+  swipe.innerHTML  = pageHTML(p, VIEW_PROPS.length || 1, false);
+  dotsEl.innerHTML = `<div class="dot on"></div>`;
+  _restoreNotes(_noteSessionKey, [gid]);
+  document.getElementById('doneSection').innerHTML =
+    `<div style="text-align:center;padding:8px 0 4px"><button class="done-back" onclick="renderPacketScoped(VIEW_PROPS)">‹ Back to all properties</button></div>`;
+  showScreen('packet', VIEW_CLIENT.name);
+}
+
+function openHistoryPacket(hi, pi){
+  const e = HIST[hi]; if(!e) return;
+  _packetFrom = 'past';
+  VIEW_CLIENT = e.client || {};
+  const props = (e.props || []).filter(p=>!isCancelled(p));
+  VIEW_PROPS  = props;
+  _noteSessionKey = e.deployedAt || '';
+  swipe.innerHTML  = props.map(p => pageHTML(p, props.length, true)).join('');
+  dotsEl.innerHTML = props.map((_,i)=>`<div class="dot ${i===0?'on':''}"></div>`).join('');
+  _restoreNotes(_noteSessionKey, props.map(p=>p._gid));
+  document.getElementById('doneSection').innerHTML = '';
+  showScreen('packet', (VIEW_CLIENT.name || 'Past showing'));
+  requestAnimationFrame(()=>{ swipe.scrollLeft = pi * swipe.clientWidth; });
+}
+
+/* ============ SCREEN SWITCH ============ */
+function showScreen(name, title){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById('screen-'+name).classList.add('active');
+  _screen = name;
+  const back = document.getElementById('backBtn');
+  if(name === 'today'){
+    back.classList.remove('show');
+    document.getElementById('topTitle').textContent = 'Field Companion';
+  } else {
+    back.classList.add('show');
+    document.getElementById('topTitle').textContent = title || 'Field Companion';
+  }
+  window.scrollTo(0,0);
+}
+function goBack(){
+  // From a history packet, step back to the Past showings list; otherwise home.
+  if(_screen === 'packet' && _packetFrom === 'past'){ renderPastList(); showScreen('past','Past showings'); return; }
+  renderToday(); showScreen('today');
+}
+
+/* ============ THEME ============ */
+function toggleTheme(){
+  const cur=document.documentElement.getAttribute('data-theme');
+  const next = cur==='dark' ? 'light' : (cur==='light' ? 'dark' : 'dark');
+  document.documentElement.setAttribute('data-theme',next);
+}
+
+/* ============ INIT ============ */
+renderToday();
+showScreen('today');
+swipe.addEventListener('scroll',()=>{
+  const idx = Math.round(swipe.scrollLeft / swipe.clientWidth);
+  [...dotsEl.children].forEach((d,i)=>d.classList.toggle('on', i===idx));
+});
+</script>
+</body>
+</html>
