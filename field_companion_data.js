@@ -1540,3 +1540,4 @@ window.FC_DATA = {
     }
   ]
 };
+// polling-verify-test 2026-07-16T16:05 — confirming StartInterval catches a sandbox-origin write without any manual touch
