@@ -10,13 +10,224 @@
    ============================================================ */
 window.FC_DATA = {
   "meta": {
-    "dateLabel": "Wed, July 15",
+    "dateLabel": "Thu, July 16",
     "agent": "Christian Daugherty",
-    "deployedAt": "2026-07-15T12:49:04.973904+00:00"
+    "deployedAt": "2026-07-16T18:35:03.076702+00:00"
   },
   "appointments": [
     {
-      "date": "Wed, July 15",
+      "date": "Thu, July 16",
+      "client": {
+        "name": "Tyler Krampf",
+        "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/170693",
+        "meta": "1 property · Buyer · Christian Daugherty, Jill Biggs Group",
+        "stage": "Showing homes",
+        "fields": [
+          [
+            "Budget",
+            "$4,800"
+          ],
+          [
+            "Location",
+            "Hoboken"
+          ],
+          [
+            "Home type",
+            "Condo"
+          ],
+          [
+            "Requirements",
+            "1-2 Beds"
+          ],
+          [
+            "Timeline",
+            "Overdue (Jan 5 - Apr 5 2026)"
+          ]
+        ],
+        "snapshotLines": [
+          "$4,800. Showing today (1 property).",
+          "<b>Notes:</b> 1-2 Beds"
+        ]
+      },
+      "props": [
+        {
+          "seq": "1",
+          "addr1": "84 Monroe St #3",
+          "addr2": "Hoboken, NJ 07030",
+          "type": "Condo",
+          "ptype": "condo",
+          "beds": "2 Bed / 1 Bath",
+          "time": "",
+          "price": "$674,000",
+          "agent": "Margaret M Crimmins",
+          "phone": "(201) 240-6531",
+          "zillow": "https://www.zillow.com/homedetails/84-Monroe-St-APT-3-Hoboken-NJ-07030/38882355_zpid/",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/0/HUDSON_355927.pdf",
+          "flags": [],
+          "s1_time": "",
+          "s2_confirmed": "Yes — Confirmed",
+          "s2_source": "ShowingTime",
+          "s3_occupancy": "Occupied — clarify: seller or tenant?",
+          "s3_lb": "Supra",
+          "s3_notes": "There is a key to the front door of the building and a key to the deadbolt lock — there is not a key to the front door knob (to the unit). Be sure everything is locked and lights are turned off. Hallway to the building is currently being painted; listing agent has a picture if needed.",
+          "snap": [
+            [
+              "$674K",
+              "Asking"
+            ],
+            [
+              "37d",
+              "Days on mkt"
+            ],
+            [
+              "$509/mo",
+              "HOA/mo"
+            ],
+            [
+              "$6,695 (2025)",
+              "Taxes"
+            ],
+            [
+              "830 sqft",
+              "Sq ft"
+            ],
+            [
+              "$812/sqft",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "Listed 6/9/2026: $699,999 → Price cut 7/13/2026: $674,000 (-$25,999)",
+          "s5_ownership": "Bought 7/1/21 @ $535K. Owned ~5 yrs. No rental history on Zillow.",
+          "s5_hoainc": "Water",
+          "s5_parking": "None",
+          "s5_storage": "None",
+          "s5_hvac": "Window/wall AC units; baseboard heat",
+          "s5_laundry": "In-unit (washer/dryer)",
+          "s5_flood": "Zone AE (Yes)",
+          "s5_misc": "Hallway is currently being painted (per broker remarks).",
+          "s6_age": "Built 1901",
+          "s6_units": "4 units",
+          "s6_amenities": "None",
+          "s6_projects": "",
+          "s6_assess": "",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Tyler Krampf"
+        }
+      ]
+    }
+  ],
+  "client": {
+    "name": "Tyler Krampf",
+    "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/170693",
+    "meta": "1 property · Buyer · Christian Daugherty, Jill Biggs Group",
+    "stage": "Showing homes",
+    "fields": [
+      [
+        "Budget",
+        "$4,800"
+      ],
+      [
+        "Location",
+        "Hoboken"
+      ],
+      [
+        "Home type",
+        "Condo"
+      ],
+      [
+        "Requirements",
+        "1-2 Beds"
+      ],
+      [
+        "Timeline",
+        "Overdue (Jan 5 - Apr 5 2026)"
+      ]
+    ],
+    "snapshotLines": [
+      "$4,800. Showing today (1 property).",
+      "<b>Notes:</b> 1-2 Beds"
+    ]
+  },
+  "props": [
+    {
+      "seq": "1",
+      "addr1": "84 Monroe St #3",
+      "addr2": "Hoboken, NJ 07030",
+      "type": "Condo",
+      "ptype": "condo",
+      "beds": "2 Bed / 1 Bath",
+      "time": "",
+      "price": "$674,000",
+      "agent": "Margaret M Crimmins",
+      "phone": "(201) 240-6531",
+      "zillow": "https://www.zillow.com/homedetails/84-Monroe-St-APT-3-Hoboken-NJ-07030/38882355_zpid/",
+      "nav_addr": "",
+      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/0/HUDSON_355927.pdf",
+      "flags": [],
+      "s1_time": "",
+      "s2_confirmed": "Yes — Confirmed",
+      "s2_source": "ShowingTime",
+      "s3_occupancy": "Occupied — clarify: seller or tenant?",
+      "s3_lb": "Supra",
+      "s3_notes": "There is a key to the front door of the building and a key to the deadbolt lock — there is not a key to the front door knob (to the unit). Be sure everything is locked and lights are turned off. Hallway to the building is currently being painted; listing agent has a picture if needed.",
+      "snap": [
+        [
+          "$674K",
+          "Asking"
+        ],
+        [
+          "37d",
+          "Days on mkt"
+        ],
+        [
+          "$509/mo",
+          "HOA/mo"
+        ],
+        [
+          "$6,695 (2025)",
+          "Taxes"
+        ],
+        [
+          "830 sqft",
+          "Sq ft"
+        ],
+        [
+          "$812/sqft",
+          "Per sq ft"
+        ]
+      ],
+      "s5_history": "Listed 6/9/2026: $699,999 → Price cut 7/13/2026: $674,000 (-$25,999)",
+      "s5_ownership": "Bought 7/1/21 @ $535K. Owned ~5 yrs. No rental history on Zillow.",
+      "s5_hoainc": "Water",
+      "s5_parking": "None",
+      "s5_storage": "None",
+      "s5_hvac": "Window/wall AC units; baseboard heat",
+      "s5_laundry": "In-unit (washer/dryer)",
+      "s5_flood": "Zone AE (Yes)",
+      "s5_misc": "Hallway is currently being painted (per broker remarks).",
+      "s6_age": "Built 1901",
+      "s6_units": "4 units",
+      "s6_amenities": "None",
+      "s6_projects": "",
+      "s6_assess": "",
+      "s6_financing": "",
+      "s6_key": "",
+      "similar": [],
+      "commute": [],
+      "client_name": "Tyler Krampf"
+    }
+  ],
+  "history": [
+    {
+      "deployedAt": "2026-07-15T12:49:04.973904+00:00",
+      "meta": {
+        "dateLabel": "Wed, July 15",
+        "agent": "Christian Daugherty"
+      },
       "client": {
         "name": "Jessica Lynn",
         "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/217633",
@@ -230,222 +441,7 @@ window.FC_DATA = {
           "client_name": "Jessica Lynn"
         }
       ]
-    }
-  ],
-  "client": {
-    "name": "Jessica Lynn",
-    "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/217633",
-    "meta": "3 properties · Buyer · Christian Daugherty, Jill Biggs Group",
-    "stage": "Showing homes",
-    "fields": [],
-    "snapshotLines": [
-      "Showing today (3 properties)."
-    ]
-  },
-  "props": [
-    {
-      "seq": "1",
-      "addr1": "500 Central Ave #1617",
-      "addr2": "Union City, NJ 07087",
-      "type": "Condo",
-      "ptype": "condo",
-      "beds": "1 BR",
-      "time": "",
-      "price": "$339K",
-      "agent": "Gregory Taylor",
-      "phone": "(917) 805-5411",
-      "zillow": "https://www.zillow.com/homedetails/500-Central-Ave-APT-1617-Union-City-NJ-07087/88859083_zpid/",
-      "nav_addr": "",
-      "disclosure": "https://njmls.mlsmatrix.com/mediaserver/GetMedia.ashx?Key=4006714&TableID=0&Type=3&Number=1&Size=0&NNF=1&RFN=Seller_Property_Condition_Disclosure_Statement_-_2_24.pdf&tstmp=0715080927&exk=290dee74a1bfa534c26e708766d55440f",
-      "flags": [],
-      "s1_time": "",
-      "s2_confirmed": "Yes — Confirmed (Auto Confirm)",
-      "s2_source": "ShowingTime",
-      "s3_occupancy": "Vacant (go-and-show) — LLC-owned; verify at showing",
-      "s3_lb": "N/A · N/A",
-      "s3_notes": "Access via gate guard, doorman, or concierge. Please shut off lights after showing.",
-      "snap": [
-        [
-          "$339K",
-          "Asking"
-        ],
-        [
-          "107d",
-          "Days on mkt"
-        ],
-        [
-          "$570/mo",
-          "HOA/mo"
-        ],
-        [
-          "$2,448",
-          "Taxes"
-        ],
-        [
-          "803 sqft",
-          "Sq ft"
-        ],
-        [
-          "$422/sqft",
-          "Per sq ft"
-        ]
-      ],
-      "s5_history": "Listed 10/2/25: $349K → Cut 3/10/26: $339K (-$10K) → Removed 3/25/26 → Relisted 4/14/26: $349K → Cut 7/10/26: $339K (-$10K). Actual DOM: 286 days (on market since 10/2/2025)",
-      "s5_ownership": "Bought 2/14/14 @ $244,610 (HCMLS at the time). Owned ~12.5 yrs. Rented 2014 (@ $1,750/mo, ~7 wks) and 2019 (@ $1,800/mo, ~3 mos) — both short listings that were removed, likely rented briefly.",
-      "s5_hoainc": "Heat, water, hot water, gas",
-      "s5_parking": "None (parking separately managed and subject to availability — not included with unit)",
-      "s5_storage": "No mention",
-      "s5_hvac": "Cooling: wall units. Heat: gas hot water radiators.",
-      "s5_laundry": "Common — onsite (Building Amenities lists onsite laundry; specific location not stated)",
-      "s5_flood": "Zone X (No)",
-      "s5_misc": "Seller offering $5,000 credit at closing. Free building shuttle to Hoboken PATH / NJ Transit. Parking is managed separately and subject to availability (not included with the unit). Owner-of-record is an LLC (Abe David Union LLC) — likely investor-held. Offers to be submitted to SUPPORT@TEAMTAYLORINC.COM (weekend offers presented Monday).",
-      "s6_age": "Built 1925 per Apartments.com building profile; some unit records (Zillow, Homes.com) show 1963 — likely a redevelopment/conversion year, confirm at showing",
-      "s6_units": "308 units, 16 stories (The Lenox, per Apartments.com building profile: \"308 Units 16 Stories Built in 1925 307,648 Sq Ft\")",
-      "s6_amenities": "24hr security, common area, doorman, elevator(s), exercise room",
-      "s6_projects": "",
-      "s6_assess": "",
-      "s6_financing": "",
-      "s6_key": "",
-      "similar": [],
-      "commute": [],
-      "client_name": "Jessica Lynn"
     },
-    {
-      "seq": "2",
-      "addr1": "2077 Center Ave #7G",
-      "addr2": "Fort Lee, NJ 07024",
-      "type": "Co-op",
-      "ptype": "condo",
-      "beds": "1 BR",
-      "time": "",
-      "price": "$165K",
-      "agent": "Alexandra 'Sasha' Zyrianova",
-      "phone": "(917) 520-9543",
-      "zillow": "https://www.zillow.com/homedetails/2077-Center-Ave-7G-Fort-Lee-NJ-07024/2062412993_zpid/",
-      "nav_addr": "",
-      "disclosure": "",
-      "flags": [],
-      "s1_time": "",
-      "s2_confirmed": "Yes — Confirmed",
-      "s2_source": "ShowingTime",
-      "s3_occupancy": "Vacant (tenant moved out, no furniture per broker remarks)",
-      "s3_lb": "N/A · N/A",
-      "s3_notes": "Access via gate guard, doorman, or concierge. Keys with doorman — leave your card.",
-      "snap": [
-        [
-          "$165K",
-          "Asking"
-        ],
-        [
-          "129d",
-          "Days on mkt"
-        ],
-        [
-          "$1,524/mo",
-          "HOA/mo"
-        ],
-        [
-          "Included in maintenance",
-          "Taxes"
-        ],
-        [
-          "1,030 sqft",
-          "Sq ft"
-        ],
-        [
-          "$160/sqft",
-          "Per sq ft"
-        ]
-      ],
-      "s5_history": "Listed 12/1/25: $179K → Pending 1/21/26 (fell through) → Relisted 3/30/26: $185K → 4/2: $187K → Cut 5/15/26: $172,888 (-$14K) → Cut 6/10/26: $165K (-$7,888). Actual DOM: 226 days (on market since 12/1/2025). NOTE: cross-posted on NJMLS as #26011050 — Zillow primary Source is HCMLS #250025320.",
-      "s5_ownership": "Coop — no public deed record on Zillow or Redfin (coop share transfers do not hit public records). Zillow shows an earlier 7/12/2022 listing at $175K removed 12/11/2022 (possible sale or expired listing) before the current 12/1/2025 relist. No rental history on Zillow.",
-      "s5_hoainc": "Taxes, heat, water, gas, hot water, air conditioner, U/L mortgage, common area",
-      "s5_parking": "None (indoor parking rents at $110/mo — separate from maintenance, not included with unit)",
-      "s5_storage": "Building has common storage (listed under Common Amenities); unit-specific storage not stated",
-      "s5_hvac": "Cooling: central A/C (included in maintenance). Heat: hot air, gas.",
-      "s5_laundry": "Common — building laundry room (per ad remarks: 'LAUNDRY AND SUPER'); specific floor not stated",
-      "s5_flood": "Zone X (No)",
-      "s5_misc": "Coop board application required. All offers must include top 2 pages of last 2 years' tax returns, credit report, pay stubs, and pre-approval letter. Cash buyers with no debt should show income ~$82,000. Total monthly ~$1,633 = $1,524 maint + $59.13 cable/internet + $110 indoor parking. Approx 40% of maintenance ($1,524) is tax-deductible. Can be converted from 1 BR to 2 BR per listing. Building allows pets up to 25 lbs. Broker remarks: 'Text to LA agent Sasha for showing 917-520-9543 (tenant moved out and no more furniture).' SD not on file — confirmed via empty Associated Docs list on the listing.",
-      "s6_age": "Built 1970 (Zillow multiple units); some records show 1968 — 1960s vintage co-op",
-      "s6_units": "220 units, 22 stories (The Pembroke at Fort Lee, per Apartments.com building profile)",
-      "s6_amenities": "24hr doorman, new exercise room, pool, laundry, super on-site, community room, storage, elevator, security, terrace, hardwood floors (building common features)",
-      "s6_projects": "",
-      "s6_assess": "",
-      "s6_financing": "Co-op — typically portfolio / co-op share loan (conventional financing usually does not apply); verify with lender",
-      "s6_key": "",
-      "similar": [],
-      "commute": [],
-      "client_name": "Jessica Lynn"
-    },
-    {
-      "seq": "3",
-      "addr1": "2077 Center Ave #9E",
-      "addr2": "Fort Lee, NJ 07024",
-      "type": "Co-op",
-      "ptype": "condo",
-      "beds": "1 BR",
-      "time": "",
-      "price": "$159K",
-      "agent": "Monica S. Capellan",
-      "phone": "(917) 502-4112",
-      "zillow": "https://www.zillow.com/homedetails/2077-Center-Ave-APT-9E-Fort-Lee-NJ-07024/2086046434_zpid/",
-      "nav_addr": "",
-      "disclosure": "https://njmls.mlsmatrix.com/mediaserver/GetMedia.ashx?Key=4057194&TableID=0&Type=3&Number=1&Size=0&NNF=1&RFN=seller_property_condition_disclosure_statement__525.pdf&tstmp=0715081811&exk=fb539a5d483f83e53345a80cba3c0ac91",
-      "flags": [],
-      "s1_time": "",
-      "s2_confirmed": "Yes — Confirmed",
-      "s2_source": "ShowingTime",
-      "s3_occupancy": "Occupied — clarify: seller or tenant? (owner-of-record Kiara Sencion per MLS; ShowingTime access notes say 'listing agent or seller will let you in')",
-      "s3_lb": "N/A · N/A",
-      "s3_notes": "Other Provided Access — listing agent or seller will let you in.",
-      "snap": [
-        [
-          "$159K",
-          "Asking"
-        ],
-        [
-          "37d",
-          "Days on mkt"
-        ],
-        [
-          "$1,176/mo",
-          "HOA/mo"
-        ],
-        [
-          "Included in maintenance",
-          "Taxes"
-        ],
-        [
-          "780 sqft",
-          "Sq ft"
-        ],
-        [
-          "$204/sqft",
-          "Per sq ft"
-        ]
-      ],
-      "s5_history": "Listed 6/8/26: $159K — no cuts",
-      "s5_ownership": "Bought 4/24/2019 @ $102,000. Owned ~7 yrs. No rental history on Zillow.",
-      "s5_hoainc": "Taxes, U/L mortgage, water, heat, gas, hot water, common area, cable, parking fee (per MLS maintenance-includes field)",
-      "s5_parking": "None (parking is rental only: $72 outdoor / $125 garage — separate from maintenance, not included with unit)",
-      "s5_storage": "No mention",
-      "s5_hvac": "Cooling: central air. Heat: gas hot air / heat pump.",
-      "s5_laundry": "Common — coin/card, onsite (per MLS Laundry field 'Coin/Card, Onsite')",
-      "s5_flood": "Zone X (No)",
-      "s5_misc": "Co-op board approval required — offers must include top 2 pages of last 2 years' tax returns, current credit report, current pay stubs, and pre-approval letter. Please allow adequate time for board approval. Board additional charges: capital contribution + move-in fee. Cable + internet $59.13/mo (per Pembroke coop). Approx 40% of maintenance is tax-deductible (per Pembroke coop). Building allows pets conditional (up to 25 lbs). Possession subject to board approval.",
-      "s6_age": "Built 1970 (Zillow multiple units); some records show 1968 — 1960s vintage co-op",
-      "s6_units": "220 units, 22 stories (The Pembroke at Fort Lee, per Apartments.com building profile)",
-      "s6_amenities": "24hr doorman, security, elevator(s), exercise room, pool, community room, common area — Pembroke coop; 21 stories, 420 shares",
-      "s6_projects": "",
-      "s6_assess": "",
-      "s6_financing": "Co-op — typically portfolio / co-op share loan (conventional financing usually does not apply); verify with lender",
-      "s6_key": "",
-      "similar": [],
-      "commute": [],
-      "client_name": "Jessica Lynn"
-    }
-  ],
-  "history": [
     {
       "deployedAt": "2026-07-11T04:27:52.160003+00:00",
       "meta": {
@@ -1539,231 +1535,6 @@ window.FC_DATA = {
           "similar": [],
           "commute": [],
           "client_name": "Tyler Krampf"
-        }
-      ]
-    },
-    {
-      "deployedAt": "2026-07-09T17:19:29.618536+00:00",
-      "meta": {
-        "dateLabel": "Wed, July 8",
-        "agent": "Christian Daugherty"
-      },
-      "client": {
-        "name": "",
-        "fub_url": "",
-        "meta": "3 properties",
-        "stage": "Active buyer",
-        "fields": [],
-        "snapshotLines": [
-          "Showing today (3 properties)."
-        ]
-      },
-      "props": [
-        {
-          "seq": "1",
-          "addr1": "121 41st St #4",
-          "addr2": "Union City, NJ 07087",
-          "type": "Condo",
-          "ptype": "condo",
-          "beds": "2 BR · 1 BA",
-          "time": "",
-          "price": "$299,000",
-          "agent": "Sandy Melad",
-          "phone": "(201) 205-8972",
-          "zillow": "",
-          "nav_addr": "",
-          "disclosure": "",
-          "flags": [],
-          "s1_time": "",
-          "s2_confirmed": "N/A: text-scheduled",
-          "s2_source": "MLS remarks: text business card to LA Sandy Melad (201-205-8972) for showing instructions.",
-          "s3_occupancy": "Not stated in MLS remarks (listing marked 'Easy to show') — clarify with listing agent.",
-          "s3_lb": "",
-          "s3_notes": "Text business card to Sandy Melad (201-205-8972) for showing instructions.",
-          "snap": [
-            [
-              "$299K",
-              "Asking"
-            ],
-            [
-              "33d",
-              "Days on mkt"
-            ],
-            [
-              "$269",
-              "HOA/mo"
-            ],
-            [
-              "$4,411 (2025)",
-              "Taxes"
-            ],
-            [
-              "629 sf",
-              "Sq ft"
-            ],
-            [
-              "$475",
-              "Per sq ft"
-            ]
-          ],
-          "s5_history": "Listed 6/5/26 at $299,000 (MLS-shown DOM only — actual history not verified this run; Zillow not pulled).",
-          "s5_ownership": "Not pulled this run — Zillow/seller's disclosure skipped per instruction.",
-          "s5_hoainc": "Heat, Water, Hot Water, Other (see remarks)",
-          "s5_parking": "None",
-          "s5_storage": "Private storage unit",
-          "s5_hvac": "Window A/C; gas baseboard heat",
-          "s5_laundry": "Common — basement (coin-operated); W&D hookup possible in-unit per remarks",
-          "s5_flood": "Not pulled this run — flood zone lookup skipped per instruction.",
-          "s5_misc": "",
-          "s6_age": "Not pulled this run — building-data search skipped per instruction.",
-          "s6_units": "Not pulled this run — building-data search skipped per instruction.",
-          "s6_amenities": "Storage, Wash/Dry Room. In-unit: hardwood floors.",
-          "s6_projects": "No mention",
-          "s6_assess": "No mention",
-          "s6_financing": "No mention",
-          "s6_key": "",
-          "similar": [],
-          "commute": [],
-          "client_name": ""
-        },
-        {
-          "seq": "2",
-          "addr1": "3315 Pleasant Ave #407",
-          "addr2": "Union City, NJ 07087",
-          "type": "Condo",
-          "ptype": "condo",
-          "beds": "2 BR · 1 BA",
-          "time": "",
-          "price": "$324,000",
-          "agent": "David Chittum",
-          "phone": "(201) 388-9670",
-          "zillow": "",
-          "nav_addr": "",
-          "disclosure": "",
-          "flags": [],
-          "s1_time": "",
-          "s2_confirmed": "N/A: text-scheduled",
-          "s2_source": "MLS remarks: 'Go and Show! Please contact Showingtime 855-957-1493.'",
-          "s3_occupancy": "Vacant (go-and-show)",
-          "s3_lb": "",
-          "s3_notes": "Contact ShowingTime 855-957-1493. Questions to listing agent David Chittum, 201-388-9670.",
-          "snap": [
-            [
-              "$324K",
-              "Asking"
-            ],
-            [
-              "104d",
-              "Days on mkt"
-            ],
-            [
-              "$465",
-              "HOA/mo"
-            ],
-            [
-              "$5,810 (2025)",
-              "Taxes"
-            ],
-            [
-              "710 sf",
-              "Sq ft"
-            ],
-            [
-              "$456",
-              "Per sq ft"
-            ]
-          ],
-          "s5_history": "Listed 3/26/26 at $324,000 (MLS-shown DOM only — actual history not verified this run; Zillow not pulled).",
-          "s5_ownership": "Not pulled this run — Zillow/seller's disclosure skipped per instruction.",
-          "s5_hoainc": "Heat, Water, Hot Water",
-          "s5_parking": "None",
-          "s5_storage": "No mention",
-          "s5_hvac": "Window A/C; gas radiator/steam heat",
-          "s5_laundry": "Common — laundry room (Harbor View bldg; exact location not specified)",
-          "s5_flood": "Not pulled this run — flood zone lookup skipped per instruction.",
-          "s5_misc": "",
-          "s6_age": "Not pulled this run — building-data search skipped per instruction.",
-          "s6_units": "Not pulled this run — building-data search skipped per instruction.",
-          "s6_amenities": "Elevator, Wash/Dry Room, Intercom. In-unit: hardwood floors. (Harbor View Condominium)",
-          "s6_projects": "No mention",
-          "s6_assess": "No mention",
-          "s6_financing": "No mention",
-          "s6_key": "",
-          "similar": [],
-          "commute": [],
-          "client_name": ""
-        },
-        {
-          "seq": "3",
-          "addr1": "500 Central Ave #314",
-          "addr2": "Union City, NJ 07087",
-          "type": "Condo",
-          "ptype": "condo",
-          "beds": "1 BR · 1 BA",
-          "time": "",
-          "price": "$299,987",
-          "agent": "Jeffrey Radlin",
-          "phone": "(201) 705-9999",
-          "zillow": "",
-          "nav_addr": "",
-          "disclosure": "",
-          "flags": [
-            {
-              "t": "Parking recorded as 'None' — MLS shows '1 Car, Other-See Remarks'; broker remarks describe a paid 3rd-party on-site lot at $250/mo (not an included/deeded spot).",
-              "red": false
-            }
-          ],
-          "s1_time": "",
-          "s2_confirmed": "N/A: text-scheduled",
-          "s2_source": "MLS remarks: 'Call Showing time to schedule. Go and Show, vacant.'",
-          "s3_occupancy": "Vacant (per MLS remarks)",
-          "s3_lb": "",
-          "s3_notes": "Keys with doorman. Unit is to the right (South) elevators when looking at front desk — get fob from doorman, go down opposite hallway past the North elevator. Mgmt: Associa Community, 201-330-1131.",
-          "snap": [
-            [
-              "$300K",
-              "Asking"
-            ],
-            [
-              "35d",
-              "Days on mkt"
-            ],
-            [
-              "$644",
-              "HOA/mo"
-            ],
-            [
-              "$5,796 (2025)",
-              "Taxes"
-            ],
-            [
-              "821 sf",
-              "Sq ft"
-            ],
-            [
-              "$365",
-              "Per sq ft"
-            ]
-          ],
-          "s5_history": "Listed 6/3/26 at $299,987, price-reduced for 4th of July special (MLS-shown DOM only — actual history not verified this run; Zillow not pulled).",
-          "s5_ownership": "Not pulled this run — Zillow/seller's disclosure skipped per instruction.",
-          "s5_hoainc": "Heat, Gas, Hot Water",
-          "s5_parking": "None",
-          "s5_storage": "No mention",
-          "s5_hvac": "Wall A/C; hot water heat, heat pump",
-          "s5_laundry": "Common — main level, North side (per remarks)",
-          "s5_flood": "Not pulled this run — flood zone lookup skipped per instruction.",
-          "s5_misc": "",
-          "s6_age": "Not pulled this run — building-data search skipped per instruction.",
-          "s6_units": "Not pulled this run — building-data search skipped per instruction.",
-          "s6_amenities": "Community Room, Doorman, Elevator, Exercise Room, Play Area, Shops on Premises, Wash/Dry Room, Shared Backyard. In-unit: hardwood floors. (The Lenox)",
-          "s6_projects": "No mention",
-          "s6_assess": "No mention",
-          "s6_financing": "No mention",
-          "s6_key": "",
-          "similar": [],
-          "commute": [],
-          "client_name": ""
         }
       ]
     }
