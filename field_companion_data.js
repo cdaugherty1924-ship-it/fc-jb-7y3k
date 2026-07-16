@@ -1541,3 +1541,4 @@ window.FC_DATA = {
   ]
 };
 // polling-verify-test 2026-07-16T16:05 — confirming StartInterval catches a sandbox-origin write without any manual touch
+// unattended-deploy-test-20260716T203612Z — sandbox write; expecting fcdeploy StartInterval poll to push within ~60s, no manual action
