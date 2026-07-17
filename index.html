@@ -3263,8 +3263,9 @@ async function loadCadenceLive(){
 function setClientCadence(cid, key, ev){
   if(ev){ ev.stopPropagation(); ev.preventDefault(); }
   const sid = String(cid);
-  if(key){ CLIENT_CADENCE[sid] = { cadence:key, updatedAt:_nowISOc() }; }
-  else   { delete CLIENT_CADENCE[sid]; }
+  // Set OR clear both stamp a fresh updatedAt so the roster-merge keeps this
+  // optimistic value until the desktop ingests it (a clear is a '' tombstone).
+  CLIENT_CADENCE[sid] = { cadence:key||'', updatedAt:_nowISOc() };
   _cacheCadence();
   if(typeof cloudPost==='function'){
     cloudPost({ type:'cadence', action:'upsert',
@@ -3604,9 +3605,28 @@ function renderRosterLive(){
   }
 }
 
+// Cadence rides on the roster row now (desktop bundles active_cadence there).
+// Rebuild CLIENT_CADENCE from it, but keep any locally-set cadence that's NEWER
+// than the roster's — an optimistic phone set the desktop hasn't ingested +
+// re-bundled yet. Last-write-wins by updatedAt.
+function _mergeRosterCadence(rc){
+  const merged = {};
+  Object.keys(rc||{}).forEach(function(id){
+    const e = rc[id] || {};
+    const key = (typeof e === 'string') ? e : (e.cadence || '');
+    merged[String(id)] = { cadence:key, updatedAt:(e && e.updatedAt) || '' };
+  });
+  Object.keys(CLIENT_CADENCE||{}).forEach(function(id){
+    const l = CLIENT_CADENCE[id]; const r = merged[id];
+    const lts = (l && l.updatedAt) || ''; const rts = (r && r.updatedAt) || '';
+    if(l && (!r || lts > rts)) merged[id] = l;   // keep newer local optimistic value
+  });
+  CLIENT_CADENCE = merged;
+  _cacheCadence();
+}
+
 async function loadClientsLive(){
   renderRosterLive();   // paint cache
-  loadCadenceLive().then(function(){ renderRosterLive(); });   // refresh cadence lamps
   try{
     const r = await _cloudGetClients();
     if(r && r.ok){
@@ -3620,6 +3640,7 @@ async function loadClientsLive(){
           builtAt: roster.builtAt || '',
         };
         _cacheClients();
+        _mergeRosterCadence(roster.cadence || {});   // cadence lamps
         renderRosterLive();
       }
     }
