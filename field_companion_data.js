@@ -12,7 +12,7 @@ window.FC_DATA = {
   "meta": {
     "dateLabel": "Sat, July 25",
     "agent": "Christian Daugherty",
-    "deployedAt": "2026-07-25T15:39:23.277474+00:00"
+    "deployedAt": "2026-07-25T16:00:05.111484+00:00"
   },
   "appointments": [
     {
@@ -53,11 +53,11 @@ window.FC_DATA = {
           "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/6/HUDSON_359620.pdf",
           "flags": [],
           "s1_time": "12:00 PM",
-          "s2_confirmed": "Awaiting confirmation",
-          "s2_source": "ShowingTime calendar My Showings=0 on 7/25 after hydration. Listing confirmed active in ShowingTime (ID 174195396, 1032 WILLOW AVE, 3, HCMLS 260013236). No existing appointment for 7/25. No Auto Confirm badge. No explicit text-to-schedule signal in available data.",
+          "s2_confirmed": "Yes — Confirmed",
+          "s2_source": "Christian confirmed visually in his ShowingTime app ~11:50 AM 7/25. NOTE: overnight sub-agent falsely reported 'My Showings (0)' — automation browser's ST app was serving a stale 7/24 cache (occluded-window no-sync bug, root-caused 7/25).",
           "s3_occupancy": "Occupied — clarify: seller or tenant?",
           "s3_lb": "",
-          "s3_notes": "No ShowingTime appointment confirmed for 7/25. Showing at 12:00 PM — verify access with listing agent Gerard Mattera Jr (917) 693-1233 before arriving. Access details not available without confirmed appointment.",
+          "s3_notes": "CONFIRMED showing 12:00 PM (per Christian, ST app). Lockbox/access details not retrieved — automation browser's ShowingTime data sync is dead in the off-screen window (root-caused 7/25; fleet fix pending). LA: Gerard Mattera Jr (917) 693-1233.",
           "snap": [
             [
               "$850K",
@@ -478,11 +478,11 @@ window.FC_DATA = {
       "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/6/HUDSON_359620.pdf",
       "flags": [],
       "s1_time": "12:00 PM",
-      "s2_confirmed": "Awaiting confirmation",
-      "s2_source": "ShowingTime calendar My Showings=0 on 7/25 after hydration. Listing confirmed active in ShowingTime (ID 174195396, 1032 WILLOW AVE, 3, HCMLS 260013236). No existing appointment for 7/25. No Auto Confirm badge. No explicit text-to-schedule signal in available data.",
+      "s2_confirmed": "Yes — Confirmed",
+      "s2_source": "Christian confirmed visually in his ShowingTime app ~11:50 AM 7/25. NOTE: overnight sub-agent falsely reported 'My Showings (0)' — automation browser's ST app was serving a stale 7/24 cache (occluded-window no-sync bug, root-caused 7/25).",
       "s3_occupancy": "Occupied — clarify: seller or tenant?",
       "s3_lb": "",
-      "s3_notes": "No ShowingTime appointment confirmed for 7/25. Showing at 12:00 PM — verify access with listing agent Gerard Mattera Jr (917) 693-1233 before arriving. Access details not available without confirmed appointment.",
+      "s3_notes": "CONFIRMED showing 12:00 PM (per Christian, ST app). Lockbox/access details not retrieved — automation browser's ShowingTime data sync is dead in the off-screen window (root-caused 7/25; fleet fix pending). LA: Gerard Mattera Jr (917) 693-1233.",
       "snap": [
         [
           "$850K",
