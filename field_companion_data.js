@@ -10,13 +10,533 @@
    ============================================================ */
 window.FC_DATA = {
   "meta": {
-    "dateLabel": "Fri, July 24",
+    "dateLabel": "Sat, July 25",
     "agent": "Christian Daugherty",
-    "deployedAt": "2026-07-24T05:48:28.783616+00:00"
+    "deployedAt": "2026-07-25T15:39:23.277474+00:00"
   },
   "appointments": [
     {
-      "date": "Fri, July 24",
+      "date": "Sat, July 25",
+      "client": {
+        "name": "Catherine Anderson",
+        "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/175835",
+        "meta": "1 property · Buyer · Christian Daugherty, Jill Biggs Group",
+        "stage": "Showing homes",
+        "fields": [
+          [
+            "Budget",
+            "$800,000"
+          ],
+          [
+            "Location",
+            "Hoboken, NJ"
+          ]
+        ],
+        "snapshotLines": [
+          "$800,000. Showing today (1 property)."
+        ]
+      },
+      "props": [
+        {
+          "seq": "1",
+          "addr1": "1032 Willow Ave #3",
+          "addr2": "Hoboken, NJ 07030",
+          "type": "Condominium",
+          "ptype": "condo",
+          "beds": "3 BR",
+          "time": "12:00 PM",
+          "price": "$850,000",
+          "agent": "Gerard A Mattera Jr",
+          "phone": "(917) 693-1233",
+          "zillow": "https://www.zillow.com/homedetails/1032-Willow-Ave-APT-3-Hoboken-NJ-07030/2126559974_zpid/",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/6/HUDSON_359620.pdf",
+          "flags": [],
+          "s1_time": "12:00 PM",
+          "s2_confirmed": "Awaiting confirmation",
+          "s2_source": "ShowingTime calendar My Showings=0 on 7/25 after hydration. Listing confirmed active in ShowingTime (ID 174195396, 1032 WILLOW AVE, 3, HCMLS 260013236). No existing appointment for 7/25. No Auto Confirm badge. No explicit text-to-schedule signal in available data.",
+          "s3_occupancy": "Occupied — clarify: seller or tenant?",
+          "s3_lb": "",
+          "s3_notes": "No ShowingTime appointment confirmed for 7/25. Showing at 12:00 PM — verify access with listing agent Gerard Mattera Jr (917) 693-1233 before arriving. Access details not available without confirmed appointment.",
+          "snap": [
+            [
+              "$850K",
+              "Asking"
+            ],
+            [
+              "17",
+              "Days on mkt"
+            ],
+            [
+              "$351/mo",
+              "HOA/mo"
+            ],
+            [
+              "$8,135/yr (2025)",
+              "Taxes"
+            ],
+            [
+              "992 sqft",
+              "Sq ft"
+            ],
+            [
+              "$857/sqft",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "Listed 7/8: $850,000 (no price changes)",
+          "s5_ownership": "Bought 12/21/2020 @ $710,000. Owned ~4.6 yrs. Listed for rent 7/9/2023 at $2,775/mo (removed 7/28/2023 — assumed rented). Note: Zillow 'Show more' not expandable (viewport issue in this session); pre-2020 sale history not confirmed.",
+          "s5_hoainc": "No mention",
+          "s5_parking": "None",
+          "s5_storage": "Storage (per common amenities: Security, Storage)",
+          "s5_hvac": "A/C Wall, Baseboard, Gas",
+          "s5_laundry": "In-unit washer/dryer",
+          "s5_flood": "Zone X (No)",
+          "s5_misc": "Intercom, Hardwood Floor, Fireplace, 10-ft ceilings, granite countertops, soaking tub; inclusions: appliances as installed; exclusions: personal property",
+          "s6_age": "1901",
+          "s6_units": "8 — 7 residential + 1 ground-floor commercial (taxed as 1030 Willow, per tax records)",
+          "s6_amenities": "Security, Intercom, Storage",
+          "s6_projects": "",
+          "s6_assess": "No mention",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Catherine Anderson"
+        }
+      ]
+    },
+    {
+      "date": "Sat, July 25",
+      "client": {
+        "name": "Mina Nedjari",
+        "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/217741",
+        "meta": "2 properties · Buyer · Christian Daugherty, Jill Biggs Group",
+        "stage": "Appointment set",
+        "fields": [
+          [
+            "Budget",
+            "$1,800"
+          ],
+          [
+            "Location",
+            "Jersey City Heights / Bayonne, NJ"
+          ],
+          [
+            "Timeline",
+            "0-3 months"
+          ]
+        ],
+        "snapshotLines": [
+          "$1,800. Showing today (2 properties)."
+        ]
+      },
+      "props": [
+        {
+          "seq": "1",
+          "addr1": "113 W 2nd St #2",
+          "addr2": "Bayonne, NJ 07002",
+          "type": "Condominium",
+          "ptype": "condo",
+          "beds": "1 BR",
+          "time": "10:00 AM",
+          "price": "$190,000",
+          "agent": "Lissa Ruge",
+          "phone": "(551) 227-1309",
+          "zillow": "https://www.zillow.com/homedetails/113-W-2nd-St-2-Bayonne-NJ-07002/2128256812_zpid/",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/0/HUDSON_362054.pdf",
+          "flags": [],
+          "s1_time": "10:00 AM",
+          "s2_confirmed": "Awaiting confirmation",
+          "s2_source": "ShowingTime calendar My Showings=0 on 7/25 after hydration. Listing confirmed active in ShowingTime (ID 174684778, HCMLS 260014580). No existing appointment found for 7/25. No Auto Confirm badge. Access details tab not rendered in current session (Ionic shadow DOM). No explicit text-to-schedule signal in available data.",
+          "s3_occupancy": "Occupied — clarify: seller or tenant?",
+          "s3_lb": "",
+          "s3_notes": "No ShowingTime appointment confirmed for 7/25. Access details not available — no confirmed appointment to pull from. Contact listing agent Lissa Ruge (551) 227-1309 to verify access before showing.",
+          "snap": [
+            [
+              "$190K",
+              "Asking"
+            ],
+            [
+              "2",
+              "Days on mkt"
+            ],
+            [
+              "$432/mo",
+              "HOA/mo"
+            ],
+            [
+              "$3,533/yr",
+              "Taxes"
+            ],
+            [
+              "450 sqft",
+              "Sq ft"
+            ],
+            [
+              "$422/sqft",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "Listed 7/23: $190,000 (no price changes)",
+          "s5_ownership": "No Sold event on Zillow, Redfin, or Google. Zillow shows rental listing 2/7/2011 at $900/mo (removed 5/17/2011). No prior sale confirmed — owner appears long-term holder (pre-2011). Not found after full web search.",
+          "s5_hoainc": "Heat, hot water, common area maintenance, snow removal",
+          "s5_parking": "1 designated spot",
+          "s5_storage": "Private storage cage",
+          "s5_hvac": "A/C Window; Radiators",
+          "s5_laundry": "No mention",
+          "s5_flood": "Zone X (No)",
+          "s5_misc": "",
+          "s6_age": "1950",
+          "s6_units": "20 (complex spans 99-113 W 2nd St per Bayonne tax records; 2-story brick condo)",
+          "s6_amenities": "None",
+          "s6_projects": "",
+          "s6_assess": "$305.38/mo, started Feb 2026, will last 12-18 months",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Mina Nedjari"
+        },
+        {
+          "seq": "2",
+          "addr1": "214 AVENUE A, Unit B5",
+          "addr2": "Bayonne, NJ 07002",
+          "type": "Condominium",
+          "ptype": "condo",
+          "beds": "2 BR",
+          "time": "10:00 AM",
+          "price": "$269,000",
+          "agent": "Christopher Piechocki",
+          "phone": "(201) 978-1110",
+          "zillow": "Not found — no active Zillow listing identified for '214 Avenue #A'. Address may be incomplete or unlisted. MLS step must search HCMLS directly.",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/2/HUDSON_357297.pdf",
+          "flags": [],
+          "s1_time": "10:00 AM",
+          "s2_confirmed": "Awaiting confirmation",
+          "s2_source": "ShowingTime calendar My Showings=0 on 7/25 after hydration. Listing found in ShowingTime as '214 AVENUE A, B5' (ID 173468708) — unit mismatch: appointment title shows unit A but ShowingTime/MLS show unit B5. No existing appointment for 7/25. No Auto Confirm badge. No explicit text-to-schedule signal in available data.",
+          "s3_occupancy": "Occupied — clarify: seller or tenant?",
+          "s3_lb": "",
+          "s3_notes": "No ShowingTime appointment for 7/25. UNIT DISCREPANCY: appointment says unit A, but ShowingTime/HCMLS show unit B5 under MLS 260011832 — confirm correct unit with LA Christopher Piechocki (201) 978-1110 before arriving. Access details unknown.",
+          "snap": [
+            [
+              "$269K",
+              "Asking"
+            ],
+            [
+              "38",
+              "Days on mkt"
+            ],
+            [
+              "$320/mo",
+              "HOA/mo"
+            ],
+            [
+              "$4,804/yr (2025)",
+              "Taxes"
+            ],
+            [
+              "602 sqft",
+              "Sq ft"
+            ],
+            [
+              "$447/sqft",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "Not found — no active Zillow listing identified for '214 Avenue #A'. Address appears ambiguous (no specific avenue name).",
+          "s5_ownership": "Not found — no Zillow listing identified. Fallback search also unsuccessful. MLS step must determine and coordinator should flag address to Christian for clarification.",
+          "s5_hoainc": "No mention",
+          "s5_parking": "2 tandem spots (deeded per advertising remarks; MLS features: Tandem-Shared)",
+          "s5_storage": "No mention",
+          "s5_hvac": "A/C Wall",
+          "s5_laundry": "Building laundry room",
+          "s5_flood": "Not found — no Zillow listing identified; flood zone could not be determined.",
+          "s5_misc": "Hardwood floors, recessed lighting; inclusions: all major appliances; exclusions: all personal items",
+          "s6_age": "Built ~1965 (Bayonne tax records; Trulia public facts show 1950 — confirm at showing)",
+          "s6_units": "25 (West Bay Condominiums, 3-story brick, per tax records)",
+          "s6_amenities": "None",
+          "s6_projects": "",
+          "s6_assess": "No mention",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Mina Nedjari"
+        }
+      ]
+    },
+    {
+      "date": "Sat, July 25",
+      "client": {
+        "name": "Manmeet Chawla",
+        "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/219848",
+        "meta": "1 property · Buyer · Christian Daugherty, Jill Biggs Group",
+        "stage": "Appointment set",
+        "fields": [
+          [
+            "Budget",
+            "$1,499,000"
+          ],
+          [
+            "Location",
+            "Jersey City, NJ"
+          ]
+        ],
+        "snapshotLines": [
+          "$1,499,000. Showing today (1 property)."
+        ]
+      },
+      "props": [
+        {
+          "seq": "1",
+          "addr1": "73 Palisade Ave #1",
+          "addr2": "Jersey City, NJ 07306",
+          "type": "Condominium",
+          "ptype": "condo",
+          "beds": "1 BR",
+          "time": "11:30 AM",
+          "price": "$296,000",
+          "agent": "Samir Y Genid",
+          "phone": "(973) 271-1666",
+          "zillow": "https://www.zillow.com/homedetails/73-Palisade-Ave-1-Jersey-City-NJ-07306/2111066501_zpid/",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/6/HUDSON_360223.pdf",
+          "flags": [],
+          "s1_time": "11:30 AM",
+          "s2_confirmed": "Awaiting confirmation",
+          "s2_source": "FUB appointment description says [Requested] status in ShowingTime, but ShowingTime calendar My Showings=0 on 7/25 after hydration. Listing confirmed active in ShowingTime (ID 174285790, 73 PALISADE AVE, 1). Discrepancy — request may have been declined, expired, or submitted under different account. No Auto Confirm badge.",
+          "s3_occupancy": "Occupied — clarify: seller or tenant?",
+          "s3_lb": "",
+          "s3_notes": "STATUS DISCREPANCY — FUB shows [Requested] in ShowingTime but ST calendar shows 0 appointments on 7/25. Showing is at 11:30 AM — verify confirmation status immediately with listing agent Samir Genid (973) 271-1666 before arriving. Access details unknown.",
+          "snap": [
+            [
+              "$296K",
+              "Asking"
+            ],
+            [
+              "15",
+              "Days on mkt"
+            ],
+            [
+              "$220/mo",
+              "HOA/mo"
+            ],
+            [
+              "$5,017/yr (2025)",
+              "Taxes"
+            ],
+            [
+              "438 sqft",
+              "Sq ft"
+            ],
+            [
+              "$676/sqft",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "Listed 7/10: $296,000 (no price changes)",
+          "s5_ownership": "No Sold event on Zillow or Redfin. Redfin shows prior listing Jun 2006 at $199K (sale not confirmed in public record). Zillow shows rental 9/11/2013 at $1,100/mo (removed 9/17/2013). Owner appears long-term holder (pre-2006). Not found after full web search.",
+          "s5_hoainc": "Common area maintenance",
+          "s5_parking": "None",
+          "s5_storage": "No mention",
+          "s5_hvac": "A/C Window, Gas",
+          "s5_laundry": "No mention",
+          "s5_flood": "Zone X (No)",
+          "s5_misc": "All furniture included (inclusions: all personal items/furniture); all appliances excluded; private backyard",
+          "s6_age": "1900",
+          "s6_units": "6 (association spans 73 & 75 Palisade per Hudson County tax records)",
+          "s6_amenities": "Private Backyard",
+          "s6_projects": "",
+          "s6_assess": "No mention",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Manmeet Chawla"
+        }
+      ]
+    },
+    {
+      "date": "Sat, July 25",
+      "client": {
+        "name": "noclient",
+        "fub_url": "",
+        "meta": "1 property · Buyer · Christian Daugherty, Jill Biggs Group",
+        "stage": "Active buyer",
+        "fields": [],
+        "snapshotLines": [
+          "Showing today (1 property)."
+        ]
+      },
+      "props": [
+        {
+          "seq": "1",
+          "addr1": "24 Avenue at Port Imperial #B37",
+          "addr2": "West New York, NJ 07093",
+          "type": "Condominium",
+          "ptype": "condo",
+          "beds": "1 BR",
+          "time": "1:00 PM (OH 1-3 PM)",
+          "price": "$575,000",
+          "agent": "Jill K Biggs ·  (Coldwell Banker / Jill Biggs Group — Christian's office)",
+          "phone": "(973) 495-6038",
+          "zillow": "https://www.zillow.com/homedetails/24-Avenue-At-Port-Imperial-B37-West-New-York-NJ-07093/2093437559_zpid/",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/3/HUDSON_360531.pdf",
+          "flags": [],
+          "s1_time": "1:00 PM (OH 1-3 PM)",
+          "s2_confirmed": "Yes — Confirmed (Auto Confirm)",
+          "s2_source": "ShowingTime — Auto Confirm badge on listing card (ID 174404599, MLS 260013863). Vacant per MLS occupancy_hint. JBG own listing (Coldwell Banker / Jill Biggs Group). Auto Confirm = instant approval; no pre-booked appointment needed for go-and-show access.",
+          "s3_occupancy": "Vacant (go-and-show)",
+          "s3_lb": "",
+          "s3_notes": "Own JBG / Coldwell Banker listing — Christian is the contact. Vacant, Auto Confirm, go-and-show. Lockbox/access details not retrieved from ShowingTime scheduling tab (Ionic shadow DOM not rendering in current session). Christian should know building access for own listing. Open house 7/25 & 7/26 1pm–3pm.",
+          "snap": [
+            [
+              "$575K",
+              "Asking"
+            ],
+            [
+              "10",
+              "Days on mkt"
+            ],
+            [
+              "$597/mo",
+              "HOA/mo"
+            ],
+            [
+              "$10,500/yr (2026 — verify with city tax assessor)",
+              "Taxes"
+            ],
+            [
+              "767 sqft",
+              "Sq ft"
+            ],
+            [
+              "$750/sqft",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "Listed 5/28: $599,000 → Price cut 7/15: $575,000 (-$24K)",
+          "s5_ownership": "Bought 8/31/2022 @ $525,000. Owned ~2.9 yrs. No rental history on Zillow since purchase. Note: Zillow 'Show more' not expandable (viewport issue); pre-2022 sale history not confirmed.",
+          "s5_hoainc": "Parking (deeded spot #57)",
+          "s5_parking": "1 Car, Covered, Garage (deeded spot #57; included in HOA)",
+          "s5_storage": "Built-in shelving system in bedroom closet (per advertising)",
+          "s5_hvac": "A/C Central",
+          "s5_laundry": "In-unit washer/dryer",
+          "s5_flood": "Zone AE (Yes)",
+          "s5_misc": "Private terrace, Hardwood Floor, NY/river views; inclusions: appliances and light fixtures as installed; exclusions: all personal possessions; only 1 neighbor on same floor; direct garage access from unit; quartz countertops; custom barn door in bedroom",
+          "s6_age": "~2002-2004 (Hudson Club; sources conflict — likely phased completion)",
+          "s6_units": "172 in this building (Hudson Club complex = 344 units across 24 & 26 Ave at Port Imperial)",
+          "s6_amenities": "Doorman (24-7 concierge), Exercise Room, Jacuzzi, Pool, Tennis Court, Basketball Courts, Business Center, Children's Play Area, On-site security",
+          "s6_projects": "",
+          "s6_assess": "No mention",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "noclient"
+        }
+      ]
+    }
+  ],
+  "client": {
+    "name": "Catherine Anderson",
+    "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/175835",
+    "meta": "1 property · Buyer · Christian Daugherty, Jill Biggs Group",
+    "stage": "Showing homes",
+    "fields": [
+      [
+        "Budget",
+        "$800,000"
+      ],
+      [
+        "Location",
+        "Hoboken, NJ"
+      ]
+    ],
+    "snapshotLines": [
+      "$800,000. Showing today (1 property)."
+    ]
+  },
+  "props": [
+    {
+      "seq": "1",
+      "addr1": "1032 Willow Ave #3",
+      "addr2": "Hoboken, NJ 07030",
+      "type": "Condominium",
+      "ptype": "condo",
+      "beds": "3 BR",
+      "time": "12:00 PM",
+      "price": "$850,000",
+      "agent": "Gerard A Mattera Jr",
+      "phone": "(917) 693-1233",
+      "zillow": "https://www.zillow.com/homedetails/1032-Willow-Ave-APT-3-Hoboken-NJ-07030/2126559974_zpid/",
+      "nav_addr": "",
+      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/6/HUDSON_359620.pdf",
+      "flags": [],
+      "s1_time": "12:00 PM",
+      "s2_confirmed": "Awaiting confirmation",
+      "s2_source": "ShowingTime calendar My Showings=0 on 7/25 after hydration. Listing confirmed active in ShowingTime (ID 174195396, 1032 WILLOW AVE, 3, HCMLS 260013236). No existing appointment for 7/25. No Auto Confirm badge. No explicit text-to-schedule signal in available data.",
+      "s3_occupancy": "Occupied — clarify: seller or tenant?",
+      "s3_lb": "",
+      "s3_notes": "No ShowingTime appointment confirmed for 7/25. Showing at 12:00 PM — verify access with listing agent Gerard Mattera Jr (917) 693-1233 before arriving. Access details not available without confirmed appointment.",
+      "snap": [
+        [
+          "$850K",
+          "Asking"
+        ],
+        [
+          "17",
+          "Days on mkt"
+        ],
+        [
+          "$351/mo",
+          "HOA/mo"
+        ],
+        [
+          "$8,135/yr (2025)",
+          "Taxes"
+        ],
+        [
+          "992 sqft",
+          "Sq ft"
+        ],
+        [
+          "$857/sqft",
+          "Per sq ft"
+        ]
+      ],
+      "s5_history": "Listed 7/8: $850,000 (no price changes)",
+      "s5_ownership": "Bought 12/21/2020 @ $710,000. Owned ~4.6 yrs. Listed for rent 7/9/2023 at $2,775/mo (removed 7/28/2023 — assumed rented). Note: Zillow 'Show more' not expandable (viewport issue in this session); pre-2020 sale history not confirmed.",
+      "s5_hoainc": "No mention",
+      "s5_parking": "None",
+      "s5_storage": "Storage (per common amenities: Security, Storage)",
+      "s5_hvac": "A/C Wall, Baseboard, Gas",
+      "s5_laundry": "In-unit washer/dryer",
+      "s5_flood": "Zone X (No)",
+      "s5_misc": "Intercom, Hardwood Floor, Fireplace, 10-ft ceilings, granite countertops, soaking tub; inclusions: appliances as installed; exclusions: personal property",
+      "s6_age": "1901",
+      "s6_units": "8 — 7 residential + 1 ground-floor commercial (taxed as 1030 Willow, per tax records)",
+      "s6_amenities": "Security, Intercom, Storage",
+      "s6_projects": "",
+      "s6_assess": "No mention",
+      "s6_financing": "",
+      "s6_key": "",
+      "similar": [],
+      "commute": [],
+      "client_name": "Catherine Anderson"
+    }
+  ],
+  "history": [
+    {
+      "deployedAt": "2026-07-24T05:48:28.783616+00:00",
+      "meta": {
+        "dateLabel": "Fri, July 24",
+        "agent": "Christian Daugherty"
+      },
       "client": {
         "name": "Jessica Lynn",
         "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/217633",
@@ -324,312 +844,5 @@ window.FC_DATA = {
         }
       ]
     }
-  ],
-  "client": {
-    "name": "Jessica Lynn",
-    "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/217633",
-    "meta": "4 properties · Buyer · Christian Daugherty, Jill Biggs Group",
-    "stage": "Showing homes",
-    "fields": [
-      [
-        "Budget",
-        "$350k max"
-      ],
-      [
-        "Location",
-        "anywhere (drives to Hackensack, nurse)"
-      ],
-      [
-        "Home type",
-        "1 bed plus condo"
-      ],
-      [
-        "Requirements",
-        "nice building; move in ready"
-      ],
-      [
-        "Condition",
-        "move in ready"
-      ],
-      [
-        "Timeline",
-        "asap before end of summer"
-      ]
-    ],
-    "snapshotLines": [
-      "$350k max. Showing today (4 properties).",
-      "<b>Notes:</b> nice building; move in ready"
-    ]
-  },
-  "props": [
-    {
-      "seq": "1",
-      "addr1": "6600 Blvd E Unit 5J",
-      "addr2": "West New York, NJ 07093",
-      "type": "Cooperative",
-      "ptype": "condo",
-      "beds": "1 bed / 1 bath",
-      "time": "",
-      "price": "$189,000",
-      "agent": "Sonia DaSilva",
-      "phone": "(201) 288-4241",
-      "zillow": "https://www.zillow.com/homedetails/6600-Boulevard-East-UNIT-5J-West-New-York-NJ-07093/2070933497_zpid/",
-      "nav_addr": "",
-      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/3/HUDSON_349193.pdf",
-      "flags": [],
-      "s1_time": "",
-      "s2_confirmed": "N/A: text-scheduled",
-      "s2_source": "FUB calendar says confirmed; no appointment found in ShowingTime — assumed text-scheduled",
-      "s3_occupancy": "",
-      "s3_lb": "",
-      "s3_notes": "",
-      "snap": [
-        [
-          "$189K",
-          "Asking"
-        ],
-        [
-          "95d",
-          "Days on mkt"
-        ],
-        [
-          "$739/mo",
-          "HOA/mo"
-        ],
-        [
-          "$378/yr",
-          "Taxes"
-        ],
-        [
-          "850 sqft",
-          "Sq ft"
-        ],
-        [
-          "$222/sqft",
-          "Per sq ft"
-        ]
-      ],
-      "s5_history": "Listed 4/21/2026: $189,000",
-      "s5_ownership": "Bought 4/15/2004 @ $119K (Redfin). Owned ~22 yrs. No rental history on Zillow.",
-      "s5_hoainc": "Taxes, Heat, Water, Gas, Electric, Hot Water, Air Conditioner",
-      "s5_parking": "None",
-      "s5_storage": "None",
-      "s5_hvac": "Hot Air heat; A/C wall units",
-      "s5_laundry": "Common",
-      "s5_flood": "Zone X (No)",
-      "s5_misc": "Board approval required. Income to debt ratio 3:1 with 20% min down; 10% down = 4:1 ratio. Pets allowed.",
-      "s6_age": "1959",
-      "s6_units": "250",
-      "s6_amenities": "Community Room, Doorman, Elevator, Exercise Room, Pool, Security, Terrace",
-      "s6_projects": "",
-      "s6_assess": "",
-      "s6_financing": "",
-      "s6_key": "",
-      "similar": [],
-      "commute": [],
-      "client_name": "Jessica Lynn"
-    },
-    {
-      "seq": "2",
-      "addr1": "5 Horizon Unit 1708",
-      "addr2": "Fort Lee, NJ 07024",
-      "type": "Cooperative",
-      "ptype": "condo",
-      "beds": "1 bed / 1 bath",
-      "time": "",
-      "price": "$175,000",
-      "agent": "Debra Jacobs",
-      "phone": "(201) 803-3191",
-      "zillow": "https://www.zillow.com/homedetails/5-Horizon-Rd-APT-1708-Fort-Lee-NJ-07024/2117087029_zpid/",
-      "nav_addr": "",
-      "disclosure": "https://njmls.mlsmatrix.com/mediaserver/GetMedia.ashx?Key=40698542&TableID=0&Type=3&Number=2&Size=0&NNF=1&RFN=Hantman+Seller+Disclosure.pdf&tstmp=0724003826&exk=e6baf23409f0554f4cbc9bd6e5853d88",
-      "flags": [],
-      "s1_time": "",
-      "s2_confirmed": "Yes — Confirmed",
-      "s2_source": "ShowingTime",
-      "s3_occupancy": "Occupied — clarify: seller or tenant? (Access details not provided in ShowingTime)",
-      "s3_lb": "",
-      "s3_notes": "Access details not provided in ShowingTime — contact Debra Jacobs (201) 803-3191",
-      "snap": [
-        [
-          "$175K",
-          "Asking"
-        ],
-        [
-          "10d",
-          "Days on mkt"
-        ],
-        [
-          "$1,955/mo base HOA (all util+taxes incl) + $475/mo capital assessment = $2,628/mo all-in",
-          "HOA/mo"
-        ],
-        [
-          "Included in HOA",
-          "Taxes"
-        ],
-        [
-          "1,317 sqft",
-          "Sq ft"
-        ],
-        [
-          "$133/sqft",
-          "Per sq ft"
-        ]
-      ],
-      "s5_history": "Listed 7/13/2026: $175,000",
-      "s5_ownership": "No Sold event found on Zillow/Redfin (co-op shares). Owner listed without selling in 2012 and 2013; held since before 2012 (14+ yrs). No rental history on Zillow.",
-      "s5_hoainc": "Taxes, All Utilities, Cable/Internet, Parking, Amenities, Underlying Mortgage",
-      "s5_parking": "Included (indoor garage +$105.60/mo for dedicated space)",
-      "s5_storage": "",
-      "s5_hvac": "Gas/hot air heat; central A/C multi-zone",
-      "s5_laundry": "Common — basement",
-      "s5_flood": "Zone X (No)",
-      "s5_misc": "Board approval required. 25% down, 4:1 ITD ratio. Min gross income (cash buyer/no debt): ~$126K/yr. Board app fees: $800/$400/$500. Pets: cats & dogs OK (conditional). Offers require: POF/pre-approval, full credit report w/score, top 2 pages last 3 yrs tax returns, 1 month pay stubs, asset statements.",
-      "s6_age": "1965",
-      "s6_units": "Not found after web search (Horizon House complex total: 900 units across 6 buildings per Homes.com; per-building count not found)",
-      "s6_amenities": "24hr Security/Doorman, Exercise Room, On-site Management (Associa 201-224-6300), Pickleball Courts, Play Area, Pool Outdoor, Shops on Premises, Tennis Ct",
-      "s6_projects": "",
-      "s6_assess": "$475/mo capital assessment",
-      "s6_financing": "",
-      "s6_key": "",
-      "similar": [],
-      "commute": [],
-      "client_name": "Jessica Lynn"
-    },
-    {
-      "seq": "3",
-      "addr1": "6 Horizon Rd Unit 1904",
-      "addr2": "Fort Lee, NJ 07024",
-      "type": "Cooperative",
-      "ptype": "condo",
-      "beds": "1 bed / 1 bath",
-      "time": "",
-      "price": "$198,500",
-      "agent": "Debra Jacobs",
-      "phone": "(201) 803-3191",
-      "zillow": "https://www.zillow.com/homedetails/6-Horizon-Rd-APT-1904-Fort-Lee-NJ-07024/2075797352_zpid/",
-      "nav_addr": "",
-      "disclosure": "https://njmls.mlsmatrix.com/mediaserver/GetMedia.ashx?Key=40653422&TableID=0&Type=3&Number=0&Size=0&NNF=1&RFN=JR_SD.pdf&tstmp=0724004941&exk=43544e0598d0a8373c78e4f5e8277548",
-      "flags": [],
-      "s1_time": "",
-      "s2_confirmed": "Yes — Confirmed",
-      "s2_source": "ShowingTime",
-      "s3_occupancy": "Seller-occupied",
-      "s3_lb": "N/A · N/A",
-      "s3_notes": "Owner home or key at doorman",
-      "snap": [
-        [
-          "$198K",
-          "Asking"
-        ],
-        [
-          "25d",
-          "Days on mkt"
-        ],
-        [
-          "$1,647/mo (all util+taxes incl) + $400/mo capital assessment = $2,244/mo all-in (incl. garage, cable)",
-          "HOA/mo"
-        ],
-        [
-          "Included in HOA",
-          "Taxes"
-        ],
-        [
-          "1,062 sqft",
-          "Sq ft"
-        ],
-        [
-          "$187/sqft",
-          "Per sq ft"
-        ]
-      ],
-      "s5_history": "Listed 6/27/2026: $209,000 → Price cut 7/13/2026: $198,500 (-$10.5K)",
-      "s5_ownership": "Bought 5/7/2025 @ $188K. Owned ~14 months. Prior sale: 2/25/2022 @ $90K. No rental history on Zillow.",
-      "s5_hoainc": "Taxes, All Utilities (elec, gas, water), Cable, Parking, Health Club, Pool, Tennis, Underlying Mortgage",
-      "s5_parking": "Indoor garage spot #182 included",
-      "s5_storage": "",
-      "s5_hvac": "Gas/hot air heat; Central A/C multi-zone + wall units",
-      "s5_laundry": "Common — basement (coin/card)",
-      "s5_flood": "Zone X (No)",
-      "s5_misc": "Board approval required. 4:1 ITD ratio. All-cash buyers: min gross income ~$107K. Board app fees: $800/$400/$500. Pets: cats OK (conditional). Fully furnished turnkey (Haverty's + Crate & Barrel). Showing via ShowingTime.",
-      "s6_age": "1965",
-      "s6_units": "Not found after web search (Horizon House complex total: 900 units across 6 buildings per Homes.com; per-building count not found)",
-      "s6_amenities": "24hr Security/Doorman, Exercise Room/Health Club, Fulltime Handyman, Hot Tub, On-site Management (Associa), Pickleball Courts, Play Area, Pool Outdoor, Shops on Premises, Super 24hrs, Tennis Ct, EV Charging in garage",
-      "s6_projects": "",
-      "s6_assess": "$400/mo capital assessment",
-      "s6_financing": "A portion of maintenance is tax-deductible",
-      "s6_key": "",
-      "similar": [],
-      "commute": [],
-      "client_name": "Jessica Lynn"
-    },
-    {
-      "seq": "4",
-      "addr1": "4 Horizon Rd Unit G18",
-      "addr2": "Fort Lee, NJ 07024",
-      "type": "Cooperative",
-      "ptype": "condo",
-      "beds": "2 bed / 2 bath",
-      "time": "",
-      "price": "$185,000",
-      "agent": "Halley Natkin ·  (LA1; Coldwell Banker Fort Lee); Co: Debra Jacobs (201) 803-3191",
-      "phone": "(917) 626-8240",
-      "zillow": "https://www.zillow.com/homedetails/4-Horizon-Rd-APT-G18-Fort-Lee-NJ-07024/2098949433_zpid/",
-      "nav_addr": "",
-      "disclosure": "https://njmls.mlsmatrix.com/mediaserver/GetMedia.ashx?Key=40661682&TableID=0&Type=3&Number=1&Size=0&NNF=1&RFN=M0lvOUJjZmpzU3RnTXVUbjBzdzREMlJvVmQwMUN0M2N2WUM0ejFtQTV2VStTSjVkanhVWXl6RkVzbEVJS2kzeFEwSFNwclZRRktOaGVLTTc2UXJaUkE9PQ==.pdf&tstmp=0724010155&exk=4059f9ce833189e45054ca01c6875be0",
-      "flags": [],
-      "s1_time": "",
-      "s2_confirmed": "Yes — Confirmed",
-      "s2_source": "ShowingTime",
-      "s3_occupancy": "Vacant (go-and-show; virtually staged — access details not provided in ShowingTime)",
-      "s3_lb": "",
-      "s3_notes": "Access details not provided in ShowingTime — contact Halley Natkin (917) 626-8240 or Debra Jacobs (201) 803-3191",
-      "snap": [
-        [
-          "$185K",
-          "Asking"
-        ],
-        [
-          "22d",
-          "Days on mkt"
-        ],
-        [
-          "$2,084/mo (listed base); $2,761.52/mo all-in",
-          "HOA/mo"
-        ],
-        [
-          "Included in HOA",
-          "Taxes"
-        ],
-        [
-          "1,317 sqft",
-          "Sq ft"
-        ],
-        [
-          "$141/sqft",
-          "Per sq ft"
-        ]
-      ],
-      "s5_history": "Listed 7/1/2026: $185,000",
-      "s5_ownership": "Bought 9/28/2018 @ $140K (Trulia). Owned ~8 yrs. No rental history on Zillow.",
-      "s5_hoainc": "Taxes, All Utilities (elec/gas/heat/HW), Cable/Int, Assessments, Underlying Mortgage, Parking, Amenities",
-      "s5_parking": "Included — deck parking spot #14 (premier)",
-      "s5_storage": "",
-      "s5_hvac": "All utilities included in HOA (electric/gas/heat/hot water)",
-      "s5_laundry": "Common — Coin/Card, Basement",
-      "s5_flood": "Zone X (No)",
-      "s5_misc": "Board: 25% down, 4:1 ITD. All-cash purchase (no other debt) requires min $132K gross income. Board fees: $800 APP, $400 M/I, $500 Dep. Pets conditional. 810 shares. Possession: 61-90 days. Subject to Board Approval.",
-      "s6_age": "1965",
-      "s6_units": "Not found after web search (Horizon House complex total: 900 units across 6 buildings per Homes.com; per-building count not found)",
-      "s6_amenities": "24hr Doorman, Elevator (building), Exercise Room, Fulltime Handyman, On-site Management, Pickleball Ct, Play Area, Pool Outdoor, Recycling, Shops on Premises, Super 24hr, Tennis Ct",
-      "s6_projects": "",
-      "s6_assess": "$506.25/mo capital assessment (included in all-in total)",
-      "s6_financing": "25% down; 4:1 ITD",
-      "s6_key": "",
-      "similar": [],
-      "commute": [],
-      "client_name": "Jessica Lynn"
-    }
-  ],
-  "history": []
+  ]
 };
