@@ -10,13 +10,198 @@
    ============================================================ */
 window.FC_DATA = {
   "meta": {
-    "dateLabel": "Sat, July 25",
+    "dateLabel": "Mon, July 27",
     "agent": "Christian Daugherty",
-    "deployedAt": "2026-07-25T16:00:05.111484+00:00"
+    "deployedAt": "2026-07-27T04:03:25.806424+00:00"
   },
   "appointments": [
     {
-      "date": "Sat, July 25",
+      "date": "Mon, July 27",
+      "client": {
+        "name": "Elle Dong",
+        "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/177066",
+        "meta": "1 property · Buyer · Christian Daugherty, Jill Biggs Group",
+        "stage": "Appointment set",
+        "fields": [
+          [
+            "Budget",
+            "$599,000"
+          ],
+          [
+            "Location",
+            "West New York, NJ"
+          ]
+        ],
+        "snapshotLines": [
+          "$599,000. Showing today (1 property)."
+        ]
+      },
+      "props": [
+        {
+          "seq": "1",
+          "addr1": "24 Ave at Port Imperial #B37",
+          "addr2": "West New York, NJ 07093",
+          "type": "Condo",
+          "ptype": "condo",
+          "beds": "1 bed / 1 bath",
+          "time": "",
+          "price": "$575,000",
+          "agent": "Mahesh",
+          "phone": "929-389-5710",
+          "zillow": "https://www.zillow.com/homedetails/24-Avenue-At-Port-Imperial-B37-West-New-York-NJ-07093/2093437559_zpid/",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/3/HUDSON_360531.pdf",
+          "flags": [],
+          "s1_time": "",
+          "s2_confirmed": "Yes — Confirmed (go-and-show)",
+          "s2_source": "Broker remarks: Vacant, go and show. ShowingTime login not accessible this run (occluded window); go-and-show confirmed from MLS broker remarks.",
+          "s3_occupancy": "Vacant (go-and-show)",
+          "s3_lb": "Not found · Not found",
+          "s3_notes": "Not found",
+          "snap": [
+            [
+              "$575K",
+              "Asking"
+            ],
+            [
+              "12d",
+              "Days on mkt"
+            ],
+            [
+              "$597/mo",
+              "HOA/mo"
+            ],
+            [
+              "$10,500/yr (2026)",
+              "Taxes"
+            ],
+            [
+              "767 sq ft",
+              "Sq ft"
+            ],
+            [
+              "$750/sq",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "Listed 5/28: $599K → Price cut 7/15: $575K (-$24K). Actual DOM: 59 days (on market since 5/28/2026)",
+          "s5_ownership": "Bought 8/31/22 @ $525K. Owned ~3 yrs 11 mos. No rental history on Zillow. (Prior sale: 6/20/2007 @ $450K.)",
+          "s5_hoainc": "Parking",
+          "s5_parking": "1 Car, Covered Garage (included in HOA)",
+          "s5_storage": "No mention",
+          "s5_hvac": "Central AC; heat type not specified — verify at showing",
+          "s5_laundry": "In-unit",
+          "s5_flood": "Zone AE (Yes)",
+          "s5_misc": "",
+          "s6_age": "2004",
+          "s6_units": "344 (Hudson Club complex at 24 and 26 Ave at Port Imperial — per hudsonnest.com building profile)",
+          "s6_amenities": "Doorman, Exercise Room, Jacuzzi, Pool, Tennis Court, Basketball Courts",
+          "s6_projects": "",
+          "s6_assess": "",
+          "s6_financing": "",
+          "s6_key": "Not in property database.",
+          "similar": [],
+          "commute": [],
+          "client_name": "Elle Dong"
+        }
+      ]
+    }
+  ],
+  "client": {
+    "name": "Elle Dong",
+    "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/177066",
+    "meta": "1 property · Buyer · Christian Daugherty, Jill Biggs Group",
+    "stage": "Appointment set",
+    "fields": [
+      [
+        "Budget",
+        "$599,000"
+      ],
+      [
+        "Location",
+        "West New York, NJ"
+      ]
+    ],
+    "snapshotLines": [
+      "$599,000. Showing today (1 property)."
+    ]
+  },
+  "props": [
+    {
+      "seq": "1",
+      "addr1": "24 Ave at Port Imperial #B37",
+      "addr2": "West New York, NJ 07093",
+      "type": "Condo",
+      "ptype": "condo",
+      "beds": "1 bed / 1 bath",
+      "time": "",
+      "price": "$575,000",
+      "agent": "Mahesh",
+      "phone": "929-389-5710",
+      "zillow": "https://www.zillow.com/homedetails/24-Avenue-At-Port-Imperial-B37-West-New-York-NJ-07093/2093437559_zpid/",
+      "nav_addr": "",
+      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/3/HUDSON_360531.pdf",
+      "flags": [],
+      "s1_time": "",
+      "s2_confirmed": "Yes — Confirmed (go-and-show)",
+      "s2_source": "Broker remarks: Vacant, go and show. ShowingTime login not accessible this run (occluded window); go-and-show confirmed from MLS broker remarks.",
+      "s3_occupancy": "Vacant (go-and-show)",
+      "s3_lb": "Not found · Not found",
+      "s3_notes": "Not found",
+      "snap": [
+        [
+          "$575K",
+          "Asking"
+        ],
+        [
+          "12d",
+          "Days on mkt"
+        ],
+        [
+          "$597/mo",
+          "HOA/mo"
+        ],
+        [
+          "$10,500/yr (2026)",
+          "Taxes"
+        ],
+        [
+          "767 sq ft",
+          "Sq ft"
+        ],
+        [
+          "$750/sq",
+          "Per sq ft"
+        ]
+      ],
+      "s5_history": "Listed 5/28: $599K → Price cut 7/15: $575K (-$24K). Actual DOM: 59 days (on market since 5/28/2026)",
+      "s5_ownership": "Bought 8/31/22 @ $525K. Owned ~3 yrs 11 mos. No rental history on Zillow. (Prior sale: 6/20/2007 @ $450K.)",
+      "s5_hoainc": "Parking",
+      "s5_parking": "1 Car, Covered Garage (included in HOA)",
+      "s5_storage": "No mention",
+      "s5_hvac": "Central AC; heat type not specified — verify at showing",
+      "s5_laundry": "In-unit",
+      "s5_flood": "Zone AE (Yes)",
+      "s5_misc": "",
+      "s6_age": "2004",
+      "s6_units": "344 (Hudson Club complex at 24 and 26 Ave at Port Imperial — per hudsonnest.com building profile)",
+      "s6_amenities": "Doorman, Exercise Room, Jacuzzi, Pool, Tennis Court, Basketball Courts",
+      "s6_projects": "",
+      "s6_assess": "",
+      "s6_financing": "",
+      "s6_key": "Not in property database.",
+      "similar": [],
+      "commute": [],
+      "client_name": "Elle Dong"
+    }
+  ],
+  "history": [
+    {
+      "deployedAt": "2026-07-25T16:00:05.111484+00:00",
+      "meta": {
+        "dateLabel": "Sat, July 25",
+        "agent": "Christian Daugherty"
+      },
       "client": {
         "name": "Catherine Anderson",
         "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/175835",
@@ -107,7 +292,11 @@ window.FC_DATA = {
       ]
     },
     {
-      "date": "Sat, July 25",
+      "deployedAt": "2026-07-25T16:00:05.111484+00:00",
+      "meta": {
+        "dateLabel": "Sat, July 25",
+        "agent": "Christian Daugherty"
+      },
       "client": {
         "name": "Mina Nedjari",
         "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/217741",
@@ -269,7 +458,11 @@ window.FC_DATA = {
       ]
     },
     {
-      "date": "Sat, July 25",
+      "deployedAt": "2026-07-25T16:00:05.111484+00:00",
+      "meta": {
+        "dateLabel": "Sat, July 25",
+        "agent": "Christian Daugherty"
+      },
       "client": {
         "name": "Manmeet Chawla",
         "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/219848",
@@ -360,7 +553,11 @@ window.FC_DATA = {
       ]
     },
     {
-      "date": "Sat, July 25",
+      "deployedAt": "2026-07-25T16:00:05.111484+00:00",
+      "meta": {
+        "dateLabel": "Sat, July 25",
+        "agent": "Christian Daugherty"
+      },
       "client": {
         "name": "noclient",
         "fub_url": "",
@@ -440,97 +637,7 @@ window.FC_DATA = {
           "client_name": "noclient"
         }
       ]
-    }
-  ],
-  "client": {
-    "name": "Catherine Anderson",
-    "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/175835",
-    "meta": "1 property · Buyer · Christian Daugherty, Jill Biggs Group",
-    "stage": "Showing homes",
-    "fields": [
-      [
-        "Budget",
-        "$800,000"
-      ],
-      [
-        "Location",
-        "Hoboken, NJ"
-      ]
-    ],
-    "snapshotLines": [
-      "$800,000. Showing today (1 property)."
-    ]
-  },
-  "props": [
-    {
-      "seq": "1",
-      "addr1": "1032 Willow Ave #3",
-      "addr2": "Hoboken, NJ 07030",
-      "type": "Condominium",
-      "ptype": "condo",
-      "beds": "3 BR",
-      "time": "12:00 PM",
-      "price": "$850,000",
-      "agent": "Gerard A Mattera Jr",
-      "phone": "(917) 693-1233",
-      "zillow": "https://www.zillow.com/homedetails/1032-Willow-Ave-APT-3-Hoboken-NJ-07030/2126559974_zpid/",
-      "nav_addr": "",
-      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/6/HUDSON_359620.pdf",
-      "flags": [],
-      "s1_time": "12:00 PM",
-      "s2_confirmed": "Yes — Confirmed",
-      "s2_source": "Christian confirmed visually in his ShowingTime app ~11:50 AM 7/25. NOTE: overnight sub-agent falsely reported 'My Showings (0)' — automation browser's ST app was serving a stale 7/24 cache (occluded-window no-sync bug, root-caused 7/25).",
-      "s3_occupancy": "Occupied — clarify: seller or tenant?",
-      "s3_lb": "",
-      "s3_notes": "CONFIRMED showing 12:00 PM (per Christian, ST app). Lockbox/access details not retrieved — automation browser's ShowingTime data sync is dead in the off-screen window (root-caused 7/25; fleet fix pending). LA: Gerard Mattera Jr (917) 693-1233.",
-      "snap": [
-        [
-          "$850K",
-          "Asking"
-        ],
-        [
-          "17",
-          "Days on mkt"
-        ],
-        [
-          "$351/mo",
-          "HOA/mo"
-        ],
-        [
-          "$8,135/yr (2025)",
-          "Taxes"
-        ],
-        [
-          "992 sqft",
-          "Sq ft"
-        ],
-        [
-          "$857/sqft",
-          "Per sq ft"
-        ]
-      ],
-      "s5_history": "Listed 7/8: $850,000 (no price changes)",
-      "s5_ownership": "Bought 12/21/2020 @ $710,000. Owned ~4.6 yrs. Listed for rent 7/9/2023 at $2,775/mo (removed 7/28/2023 — assumed rented). Note: Zillow 'Show more' not expandable (viewport issue in this session); pre-2020 sale history not confirmed.",
-      "s5_hoainc": "No mention",
-      "s5_parking": "None",
-      "s5_storage": "Storage (per common amenities: Security, Storage)",
-      "s5_hvac": "A/C Wall, Baseboard, Gas",
-      "s5_laundry": "In-unit washer/dryer",
-      "s5_flood": "Zone X (No)",
-      "s5_misc": "Intercom, Hardwood Floor, Fireplace, 10-ft ceilings, granite countertops, soaking tub; inclusions: appliances as installed; exclusions: personal property",
-      "s6_age": "1901",
-      "s6_units": "8 — 7 residential + 1 ground-floor commercial (taxed as 1030 Willow, per tax records)",
-      "s6_amenities": "Security, Intercom, Storage",
-      "s6_projects": "",
-      "s6_assess": "No mention",
-      "s6_financing": "",
-      "s6_key": "",
-      "similar": [],
-      "commute": [],
-      "client_name": "Catherine Anderson"
-    }
-  ],
-  "history": [
+    },
     {
       "deployedAt": "2026-07-24T05:48:28.783616+00:00",
       "meta": {
