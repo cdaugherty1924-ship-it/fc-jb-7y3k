@@ -10,13 +10,1170 @@
    ============================================================ */
 window.FC_DATA = {
   "meta": {
-    "dateLabel": "Mon, July 27",
+    "dateLabel": "Tue, July 28",
     "agent": "Christian Daugherty",
-    "deployedAt": "2026-07-27T04:03:25.806424+00:00"
+    "deployedAt": "2026-07-28T04:55:45.283300+00:00"
   },
   "appointments": [
     {
-      "date": "Mon, July 27",
+      "date": "Tue, July 28",
+      "client": {
+        "name": "Jake Triarsi",
+        "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/189400",
+        "meta": "10 properties · Buyer · Christian Daugherty, Jill Biggs Group",
+        "stage": "Showing homes",
+        "fields": [
+          [
+            "Budget",
+            "$799,000"
+          ],
+          [
+            "Location",
+            "Hoboken, NJ"
+          ],
+          [
+            "Home type",
+            "Condo"
+          ],
+          [
+            "Timeline",
+            "Lease ended June 30th"
+          ]
+        ],
+        "snapshotLines": [
+          "$799,000. Showing today (10 properties)."
+        ]
+      },
+      "props": [
+        {
+          "seq": "1",
+          "addr1": "",
+          "addr2": "",
+          "type": "",
+          "ptype": "condo",
+          "beds": "",
+          "time": "",
+          "price": "",
+          "agent": "",
+          "phone": "",
+          "zillow": "https://www.zillow.com/homedetails/734-Adams-St-APT-3A-Hoboken-NJ-07030/88857375_zpid/",
+          "nav_addr": "",
+          "disclosure": "",
+          "flags": [],
+          "s1_time": "",
+          "s2_confirmed": "Yes — Confirmed (Auto Confirm)",
+          "s2_source": "ShowingTime — Auto Confirm, appointment #885546622, confirmed 6:00 PM – 6:30 PM, Tue 7/28",
+          "s3_occupancy": "Vacant (go-and-show)",
+          "s3_lb": "Supra",
+          "s3_notes": "",
+          "snap": [],
+          "s5_history": "Listed 7/20/26: $550K. No cuts.",
+          "s5_ownership": "Bought 2/3/20 @ $375K. Rented @ $3,200/mo (listed/removed 2024 & 2025). Listed for sale 7/20/26. Owned ~6.5 yrs.",
+          "s5_hoainc": "",
+          "s5_parking": "",
+          "s5_storage": "",
+          "s5_hvac": "",
+          "s5_laundry": "",
+          "s5_flood": "Zone AE (Yes)",
+          "s5_misc": "",
+          "s6_age": "1910",
+          "s6_units": "22",
+          "s6_amenities": "",
+          "s6_projects": "",
+          "s6_assess": "",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Jake Triarsi"
+        },
+        {
+          "seq": "1",
+          "addr1": "734 Adams St",
+          "addr2": "#3A · Hoboken NJ 07030",
+          "type": "Condominium",
+          "ptype": "condo",
+          "beds": "2 BR / 1 BA",
+          "time": "",
+          "price": "$550,000",
+          "agent": "Soha Fontaine ·  (cell) · Compass NJ",
+          "phone": "917-892-8977",
+          "zillow": "",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/4/HUDSON_358733.pdf",
+          "flags": [],
+          "s1_time": "",
+          "s2_confirmed": "",
+          "s2_source": "",
+          "s3_occupancy": "",
+          "s3_lb": "",
+          "s3_notes": "",
+          "snap": [
+            [
+              "$550K",
+              "Asking"
+            ],
+            [
+              "8d",
+              "Days on mkt"
+            ],
+            [
+              "$400/mo",
+              "HOA/mo"
+            ],
+            [
+              "$5,215",
+              "Taxes"
+            ],
+            [
+              "537 sq ft",
+              "Sq ft"
+            ],
+            [
+              "$1,024/sq",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "",
+          "s5_ownership": "",
+          "s5_hoainc": "",
+          "s5_parking": "None",
+          "s5_storage": "Common storage in building",
+          "s5_hvac": "Wall A/C; baseboard gas heat",
+          "s5_laundry": "Common (wash/dry room in lower level)",
+          "s5_flood": "",
+          "s5_misc": "3rd floor walk-up (no elevator per ad remarks)",
+          "s6_age": "",
+          "s6_units": "",
+          "s6_amenities": "Intercom; shared backyard",
+          "s6_projects": "",
+          "s6_assess": "",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Jake Triarsi"
+        },
+        {
+          "seq": "2",
+          "addr1": "",
+          "addr2": "",
+          "type": "",
+          "ptype": "condo",
+          "beds": "",
+          "time": "",
+          "price": "",
+          "agent": "",
+          "phone": "",
+          "zillow": "https://www.zillow.com/homedetails/73-Madison-St-APT-1S-Hoboken-NJ-07030/38882435_zpid/",
+          "nav_addr": "",
+          "disclosure": "",
+          "flags": [],
+          "s1_time": "",
+          "s2_confirmed": "Awaiting confirmation",
+          "s2_source": "ShowingTime — Auto Confirm listing (MLS 260013775, Active, 73 Madison St #1S); no appointment found for 7/28. Needs booking — will Auto Confirm instantly once scheduled.",
+          "s3_occupancy": "Vacant",
+          "s3_lb": "",
+          "s3_notes": "",
+          "snap": [],
+          "s5_history": "Listed 7/14/26: $725K. No cuts.",
+          "s5_ownership": "Bought 5/15/23 @ $650K. No rental history on Zillow. Owned ~2.2 yrs.",
+          "s5_hoainc": "",
+          "s5_parking": "",
+          "s5_storage": "",
+          "s5_hvac": "",
+          "s5_laundry": "",
+          "s5_flood": "Zone AE (Yes)",
+          "s5_misc": "",
+          "s6_age": "1883",
+          "s6_units": "6",
+          "s6_amenities": "",
+          "s6_projects": "",
+          "s6_assess": "",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Jake Triarsi"
+        },
+        {
+          "seq": "2",
+          "addr1": "73 Madison St",
+          "addr2": "#1S · Hoboken NJ 07030",
+          "type": "Condominium",
+          "ptype": "condo",
+          "beds": "2 BR / 1 BA",
+          "time": "",
+          "price": "$725,000",
+          "agent": "Thomas Kramer ·  (cell) · Weichert Realtors",
+          "phone": "201-458-3476",
+          "zillow": "",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/5/HUDSON_359982.pdf",
+          "flags": [],
+          "s1_time": "",
+          "s2_confirmed": "",
+          "s2_source": "",
+          "s3_occupancy": "",
+          "s3_lb": "",
+          "s3_notes": "",
+          "snap": [
+            [
+              "$725K",
+              "Asking"
+            ],
+            [
+              "14d",
+              "Days on mkt"
+            ],
+            [
+              "$440/mo",
+              "HOA/mo"
+            ],
+            [
+              "$6,872",
+              "Taxes"
+            ],
+            [
+              "702 sq ft",
+              "Sq ft"
+            ],
+            [
+              "$1,033/sq",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "",
+          "s5_ownership": "",
+          "s5_hoainc": "Water",
+          "s5_parking": "None (parking nearby for additional fee per broker remarks)",
+          "s5_storage": "Private storage in building",
+          "s5_hvac": "Wall A/C; baseboard heat",
+          "s5_laundry": "Common W/D room in building",
+          "s5_flood": "",
+          "s5_misc": "",
+          "s6_age": "",
+          "s6_units": "",
+          "s6_amenities": "Intercom; private backyard",
+          "s6_projects": "",
+          "s6_assess": "",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Jake Triarsi"
+        },
+        {
+          "seq": "3",
+          "addr1": "",
+          "addr2": "",
+          "type": "",
+          "ptype": "condo",
+          "beds": "",
+          "time": "",
+          "price": "",
+          "agent": "",
+          "phone": "",
+          "zillow": "https://www.zillow.com/homedetails/132-Jackson-St-APT-1N-Hoboken-NJ-07030/38882700_zpid/",
+          "nav_addr": "",
+          "disclosure": "",
+          "flags": [],
+          "s1_time": "",
+          "s2_confirmed": "UNVERIFIED: listing CND, not in ShowingTime — confirm with LA",
+          "s2_source": "ShowingTime returned 0 results for MLS 260012699 (CND per MLS ~7/22/26). Confirm with LA Anthony Packwood · 929-309-5530.",
+          "s3_occupancy": "Unknown — CND listing not in ShowingTime",
+          "s3_lb": "No mention · No mention",
+          "s3_notes": "Property under contract (CND). Confirm whether backup showing is proceeding and how to access with LA: Anthony Packwood · 929-309-5530.",
+          "snap": [],
+          "s5_history": "Listed 6/30/26: $715K. Listing removed 7/22/26 (off market — note for coordinator).",
+          "s5_ownership": "Bought 4/5/21 @ $455K. No rental history on Redfin. Owned ~5.3 yrs.",
+          "s5_hoainc": "",
+          "s5_parking": "",
+          "s5_storage": "",
+          "s5_hvac": "",
+          "s5_laundry": "",
+          "s5_flood": "Zone AE (Yes)",
+          "s5_misc": "",
+          "s6_age": "1986",
+          "s6_units": "6",
+          "s6_amenities": "",
+          "s6_projects": "",
+          "s6_assess": "",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Jake Triarsi"
+        },
+        {
+          "seq": "3",
+          "addr1": "132 Jackson St",
+          "addr2": "#1N · Hoboken NJ 07030",
+          "type": "Condominium",
+          "ptype": "condo",
+          "beds": "2 BR / 1 BA",
+          "time": "",
+          "price": "$715,000",
+          "agent": "Anthony Packwood ·  (cell) · Engel & Volkers Hoboken",
+          "phone": "929-309-5530",
+          "zillow": "",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/9/HUDSON_358294.pdf",
+          "flags": [],
+          "s1_time": "",
+          "s2_confirmed": "",
+          "s2_source": "",
+          "s3_occupancy": "",
+          "s3_lb": "",
+          "s3_notes": "",
+          "snap": [
+            [
+              "$715K",
+              "Asking"
+            ],
+            [
+              "22d",
+              "Days on mkt"
+            ],
+            [
+              "$325/mo",
+              "HOA/mo"
+            ],
+            [
+              "$5,682",
+              "Taxes"
+            ],
+            [
+              "670 sq ft",
+              "Sq ft"
+            ],
+            [
+              "$1,067/sq",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "",
+          "s5_ownership": "",
+          "s5_hoainc": "Water",
+          "s5_parking": "None",
+          "s5_storage": "Private basement storage",
+          "s5_hvac": "Central A/C; hot air (electric)",
+          "s5_laundry": "In-unit W/D",
+          "s5_flood": "",
+          "s5_misc": "STATUS: Conditional (under contract ~7/22/26). Unit has private terrace.",
+          "s6_age": "",
+          "s6_units": "",
+          "s6_amenities": "Terrace (unit-specific); private backyard",
+          "s6_projects": "",
+          "s6_assess": "",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Jake Triarsi"
+        },
+        {
+          "seq": "4",
+          "addr1": "",
+          "addr2": "",
+          "type": "",
+          "ptype": "condo",
+          "beds": "",
+          "time": "",
+          "price": "",
+          "agent": "",
+          "phone": "",
+          "zillow": "https://www.zillow.com/homedetails/84-Monroe-St-APT-3-Hoboken-NJ-07030/38882355_zpid/",
+          "nav_addr": "",
+          "disclosure": "",
+          "flags": [],
+          "s1_time": "",
+          "s2_confirmed": "UNVERIFIED: listing CND, not in ShowingTime — confirm with LA",
+          "s2_source": "ShowingTime returned 0 results for MLS 260011070 (CND per MLS ~7/27/26). Confirm with LA Margaret M Crimmins · 201-240-6531.",
+          "s3_occupancy": "Unknown — CND listing not in ShowingTime",
+          "s3_lb": "No mention · No mention",
+          "s3_notes": "Property under contract (CND) as of today. Confirm whether backup showing is proceeding and how to access with LA: Margaret M Crimmins · 201-240-6531.",
+          "snap": [],
+          "s5_history": "Listed 6/9/26: $700K → Price changed 7/13/26: $674K (−$26K). Removed 7/27/26 (off market — note for coordinator).",
+          "s5_ownership": "Bought 7/1/21 @ $535K. No rental history on Redfin. Owned ~5 yrs.",
+          "s5_hoainc": "",
+          "s5_parking": "",
+          "s5_storage": "",
+          "s5_hvac": "",
+          "s5_laundry": "",
+          "s5_flood": "Zone AE (Yes)",
+          "s5_misc": "",
+          "s6_age": "1901",
+          "s6_units": "5",
+          "s6_amenities": "",
+          "s6_projects": "",
+          "s6_assess": "",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Jake Triarsi"
+        },
+        {
+          "seq": "4",
+          "addr1": "84 Monroe St",
+          "addr2": "#3 · Hoboken NJ 07030",
+          "type": "Condominium",
+          "ptype": "condo",
+          "beds": "2 BR / 1 BA",
+          "time": "",
+          "price": "$674,000",
+          "agent": "Margaret M Crimmins ·  (cell) · Corcoran Sawyer Smith",
+          "phone": "201-240-6531",
+          "zillow": "",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/0/HUDSON_355927.pdf",
+          "flags": [],
+          "s1_time": "",
+          "s2_confirmed": "",
+          "s2_source": "",
+          "s3_occupancy": "",
+          "s3_lb": "",
+          "s3_notes": "",
+          "snap": [
+            [
+              "$674K",
+              "Asking"
+            ],
+            [
+              "48d",
+              "Days on mkt"
+            ],
+            [
+              "$509/mo",
+              "HOA/mo"
+            ],
+            [
+              "$6,695 (2025)",
+              "Taxes"
+            ],
+            [
+              "830 sq ft",
+              "Sq ft"
+            ],
+            [
+              "$812/sq",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "",
+          "s5_ownership": "",
+          "s5_hoainc": "Water",
+          "s5_parking": "None",
+          "s5_storage": "",
+          "s5_hvac": "Wall A/C; baseboard heat",
+          "s5_laundry": "In-unit W/D",
+          "s5_flood": "",
+          "s5_misc": "STATUS: Conditional (under contract ~7/27/26).",
+          "s6_age": "",
+          "s6_units": "",
+          "s6_amenities": "Intercom",
+          "s6_projects": "Hallway in process of being painted (per broker remarks)",
+          "s6_assess": "$370,900 (2025)",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Jake Triarsi"
+        },
+        {
+          "seq": "5",
+          "addr1": "",
+          "addr2": "",
+          "type": "",
+          "ptype": "condo",
+          "beds": "",
+          "time": "",
+          "price": "",
+          "agent": "",
+          "phone": "",
+          "zillow": "https://www.zillow.com/homedetails/717-Willow-Ave-APT-2-Hoboken-NJ-07030/88857654_zpid/",
+          "nav_addr": "",
+          "disclosure": "",
+          "flags": [],
+          "s1_time": "",
+          "s2_confirmed": "Awaiting confirmation",
+          "s2_source": "ShowingTime — Auto Confirm listing (MLS 260014550, Active, 717 Willow Ave #2); no appointment found for 7/28. Needs booking — will Auto Confirm instantly once scheduled.",
+          "s3_occupancy": "Vacant (virtually staged per broker remarks)",
+          "s3_lb": "",
+          "s3_notes": "",
+          "snap": [],
+          "s5_history": "Listed 7/23/26: $650K. No cuts.",
+          "s5_ownership": "Bought 12/14/20 @ $530K. No rental history on Zillow. Owned ~5.6 yrs.",
+          "s5_hoainc": "",
+          "s5_parking": "",
+          "s5_storage": "",
+          "s5_hvac": "",
+          "s5_laundry": "",
+          "s5_flood": "Zone AE (Yes)",
+          "s5_misc": "",
+          "s6_age": "1900",
+          "s6_units": "10",
+          "s6_amenities": "",
+          "s6_projects": "",
+          "s6_assess": "",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Jake Triarsi"
+        },
+        {
+          "seq": "5",
+          "addr1": "717 Willow Ave",
+          "addr2": "#2 · Hoboken NJ 07030",
+          "type": "Condominium",
+          "ptype": "condo",
+          "beds": "2 BR / 1 BA",
+          "time": "",
+          "price": "$650,000",
+          "agent": "Colleen Kraus · KP&G NJ ·  (contact: Matt Kraus per broker remarks)",
+          "phone": "973-891-0616",
+          "zillow": "",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/0/HUDSON_362177.pdf",
+          "flags": [],
+          "s1_time": "",
+          "s2_confirmed": "",
+          "s2_source": "",
+          "s3_occupancy": "",
+          "s3_lb": "",
+          "s3_notes": "",
+          "snap": [
+            [
+              "$650K",
+              "Asking"
+            ],
+            [
+              "7d",
+              "Days on mkt"
+            ],
+            [
+              "$451/mo",
+              "HOA/mo"
+            ],
+            [
+              "$6,733 (2025)",
+              "Taxes"
+            ],
+            [
+              "800 sq ft",
+              "Sq ft"
+            ],
+            [
+              "$813/sq",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "",
+          "s5_ownership": "",
+          "s5_hoainc": "Heat, water, hot water",
+          "s5_parking": "None",
+          "s5_storage": "Deeded private basement storage",
+          "s5_hvac": "Window A/C; radiator heat (heat included in HOA)",
+          "s5_laundry": "In-unit W/D",
+          "s5_flood": "",
+          "s5_misc": "Split-bedroom layout. Shared backyard w/ patio furniture and grills.",
+          "s6_age": "",
+          "s6_units": "",
+          "s6_amenities": "Intercom; shared backyard with patio and grills",
+          "s6_projects": "",
+          "s6_assess": "",
+          "s6_financing": "",
+          "s6_key": "",
+          "similar": [],
+          "commute": [],
+          "client_name": "Jake Triarsi"
+        }
+      ]
+    }
+  ],
+  "client": {
+    "name": "Jake Triarsi",
+    "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/189400",
+    "meta": "10 properties · Buyer · Christian Daugherty, Jill Biggs Group",
+    "stage": "Showing homes",
+    "fields": [
+      [
+        "Budget",
+        "$799,000"
+      ],
+      [
+        "Location",
+        "Hoboken, NJ"
+      ],
+      [
+        "Home type",
+        "Condo"
+      ],
+      [
+        "Timeline",
+        "Lease ended June 30th"
+      ]
+    ],
+    "snapshotLines": [
+      "$799,000. Showing today (10 properties)."
+    ]
+  },
+  "props": [
+    {
+      "seq": "1",
+      "addr1": "",
+      "addr2": "",
+      "type": "",
+      "ptype": "condo",
+      "beds": "",
+      "time": "",
+      "price": "",
+      "agent": "",
+      "phone": "",
+      "zillow": "https://www.zillow.com/homedetails/734-Adams-St-APT-3A-Hoboken-NJ-07030/88857375_zpid/",
+      "nav_addr": "",
+      "disclosure": "",
+      "flags": [],
+      "s1_time": "",
+      "s2_confirmed": "Yes — Confirmed (Auto Confirm)",
+      "s2_source": "ShowingTime — Auto Confirm, appointment #885546622, confirmed 6:00 PM – 6:30 PM, Tue 7/28",
+      "s3_occupancy": "Vacant (go-and-show)",
+      "s3_lb": "Supra",
+      "s3_notes": "",
+      "snap": [],
+      "s5_history": "Listed 7/20/26: $550K. No cuts.",
+      "s5_ownership": "Bought 2/3/20 @ $375K. Rented @ $3,200/mo (listed/removed 2024 & 2025). Listed for sale 7/20/26. Owned ~6.5 yrs.",
+      "s5_hoainc": "",
+      "s5_parking": "",
+      "s5_storage": "",
+      "s5_hvac": "",
+      "s5_laundry": "",
+      "s5_flood": "Zone AE (Yes)",
+      "s5_misc": "",
+      "s6_age": "1910",
+      "s6_units": "22",
+      "s6_amenities": "",
+      "s6_projects": "",
+      "s6_assess": "",
+      "s6_financing": "",
+      "s6_key": "",
+      "similar": [],
+      "commute": [],
+      "client_name": "Jake Triarsi"
+    },
+    {
+      "seq": "1",
+      "addr1": "734 Adams St",
+      "addr2": "#3A · Hoboken NJ 07030",
+      "type": "Condominium",
+      "ptype": "condo",
+      "beds": "2 BR / 1 BA",
+      "time": "",
+      "price": "$550,000",
+      "agent": "Soha Fontaine ·  (cell) · Compass NJ",
+      "phone": "917-892-8977",
+      "zillow": "",
+      "nav_addr": "",
+      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/4/HUDSON_358733.pdf",
+      "flags": [],
+      "s1_time": "",
+      "s2_confirmed": "",
+      "s2_source": "",
+      "s3_occupancy": "",
+      "s3_lb": "",
+      "s3_notes": "",
+      "snap": [
+        [
+          "$550K",
+          "Asking"
+        ],
+        [
+          "8d",
+          "Days on mkt"
+        ],
+        [
+          "$400/mo",
+          "HOA/mo"
+        ],
+        [
+          "$5,215",
+          "Taxes"
+        ],
+        [
+          "537 sq ft",
+          "Sq ft"
+        ],
+        [
+          "$1,024/sq",
+          "Per sq ft"
+        ]
+      ],
+      "s5_history": "",
+      "s5_ownership": "",
+      "s5_hoainc": "",
+      "s5_parking": "None",
+      "s5_storage": "Common storage in building",
+      "s5_hvac": "Wall A/C; baseboard gas heat",
+      "s5_laundry": "Common (wash/dry room in lower level)",
+      "s5_flood": "",
+      "s5_misc": "3rd floor walk-up (no elevator per ad remarks)",
+      "s6_age": "",
+      "s6_units": "",
+      "s6_amenities": "Intercom; shared backyard",
+      "s6_projects": "",
+      "s6_assess": "",
+      "s6_financing": "",
+      "s6_key": "",
+      "similar": [],
+      "commute": [],
+      "client_name": "Jake Triarsi"
+    },
+    {
+      "seq": "2",
+      "addr1": "",
+      "addr2": "",
+      "type": "",
+      "ptype": "condo",
+      "beds": "",
+      "time": "",
+      "price": "",
+      "agent": "",
+      "phone": "",
+      "zillow": "https://www.zillow.com/homedetails/73-Madison-St-APT-1S-Hoboken-NJ-07030/38882435_zpid/",
+      "nav_addr": "",
+      "disclosure": "",
+      "flags": [],
+      "s1_time": "",
+      "s2_confirmed": "Awaiting confirmation",
+      "s2_source": "ShowingTime — Auto Confirm listing (MLS 260013775, Active, 73 Madison St #1S); no appointment found for 7/28. Needs booking — will Auto Confirm instantly once scheduled.",
+      "s3_occupancy": "Vacant",
+      "s3_lb": "",
+      "s3_notes": "",
+      "snap": [],
+      "s5_history": "Listed 7/14/26: $725K. No cuts.",
+      "s5_ownership": "Bought 5/15/23 @ $650K. No rental history on Zillow. Owned ~2.2 yrs.",
+      "s5_hoainc": "",
+      "s5_parking": "",
+      "s5_storage": "",
+      "s5_hvac": "",
+      "s5_laundry": "",
+      "s5_flood": "Zone AE (Yes)",
+      "s5_misc": "",
+      "s6_age": "1883",
+      "s6_units": "6",
+      "s6_amenities": "",
+      "s6_projects": "",
+      "s6_assess": "",
+      "s6_financing": "",
+      "s6_key": "",
+      "similar": [],
+      "commute": [],
+      "client_name": "Jake Triarsi"
+    },
+    {
+      "seq": "2",
+      "addr1": "73 Madison St",
+      "addr2": "#1S · Hoboken NJ 07030",
+      "type": "Condominium",
+      "ptype": "condo",
+      "beds": "2 BR / 1 BA",
+      "time": "",
+      "price": "$725,000",
+      "agent": "Thomas Kramer ·  (cell) · Weichert Realtors",
+      "phone": "201-458-3476",
+      "zillow": "",
+      "nav_addr": "",
+      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/5/HUDSON_359982.pdf",
+      "flags": [],
+      "s1_time": "",
+      "s2_confirmed": "",
+      "s2_source": "",
+      "s3_occupancy": "",
+      "s3_lb": "",
+      "s3_notes": "",
+      "snap": [
+        [
+          "$725K",
+          "Asking"
+        ],
+        [
+          "14d",
+          "Days on mkt"
+        ],
+        [
+          "$440/mo",
+          "HOA/mo"
+        ],
+        [
+          "$6,872",
+          "Taxes"
+        ],
+        [
+          "702 sq ft",
+          "Sq ft"
+        ],
+        [
+          "$1,033/sq",
+          "Per sq ft"
+        ]
+      ],
+      "s5_history": "",
+      "s5_ownership": "",
+      "s5_hoainc": "Water",
+      "s5_parking": "None (parking nearby for additional fee per broker remarks)",
+      "s5_storage": "Private storage in building",
+      "s5_hvac": "Wall A/C; baseboard heat",
+      "s5_laundry": "Common W/D room in building",
+      "s5_flood": "",
+      "s5_misc": "",
+      "s6_age": "",
+      "s6_units": "",
+      "s6_amenities": "Intercom; private backyard",
+      "s6_projects": "",
+      "s6_assess": "",
+      "s6_financing": "",
+      "s6_key": "",
+      "similar": [],
+      "commute": [],
+      "client_name": "Jake Triarsi"
+    },
+    {
+      "seq": "3",
+      "addr1": "",
+      "addr2": "",
+      "type": "",
+      "ptype": "condo",
+      "beds": "",
+      "time": "",
+      "price": "",
+      "agent": "",
+      "phone": "",
+      "zillow": "https://www.zillow.com/homedetails/132-Jackson-St-APT-1N-Hoboken-NJ-07030/38882700_zpid/",
+      "nav_addr": "",
+      "disclosure": "",
+      "flags": [],
+      "s1_time": "",
+      "s2_confirmed": "UNVERIFIED: listing CND, not in ShowingTime — confirm with LA",
+      "s2_source": "ShowingTime returned 0 results for MLS 260012699 (CND per MLS ~7/22/26). Confirm with LA Anthony Packwood · 929-309-5530.",
+      "s3_occupancy": "Unknown — CND listing not in ShowingTime",
+      "s3_lb": "No mention · No mention",
+      "s3_notes": "Property under contract (CND). Confirm whether backup showing is proceeding and how to access with LA: Anthony Packwood · 929-309-5530.",
+      "snap": [],
+      "s5_history": "Listed 6/30/26: $715K. Listing removed 7/22/26 (off market — note for coordinator).",
+      "s5_ownership": "Bought 4/5/21 @ $455K. No rental history on Redfin. Owned ~5.3 yrs.",
+      "s5_hoainc": "",
+      "s5_parking": "",
+      "s5_storage": "",
+      "s5_hvac": "",
+      "s5_laundry": "",
+      "s5_flood": "Zone AE (Yes)",
+      "s5_misc": "",
+      "s6_age": "1986",
+      "s6_units": "6",
+      "s6_amenities": "",
+      "s6_projects": "",
+      "s6_assess": "",
+      "s6_financing": "",
+      "s6_key": "",
+      "similar": [],
+      "commute": [],
+      "client_name": "Jake Triarsi"
+    },
+    {
+      "seq": "3",
+      "addr1": "132 Jackson St",
+      "addr2": "#1N · Hoboken NJ 07030",
+      "type": "Condominium",
+      "ptype": "condo",
+      "beds": "2 BR / 1 BA",
+      "time": "",
+      "price": "$715,000",
+      "agent": "Anthony Packwood ·  (cell) · Engel & Volkers Hoboken",
+      "phone": "929-309-5530",
+      "zillow": "",
+      "nav_addr": "",
+      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/9/HUDSON_358294.pdf",
+      "flags": [],
+      "s1_time": "",
+      "s2_confirmed": "",
+      "s2_source": "",
+      "s3_occupancy": "",
+      "s3_lb": "",
+      "s3_notes": "",
+      "snap": [
+        [
+          "$715K",
+          "Asking"
+        ],
+        [
+          "22d",
+          "Days on mkt"
+        ],
+        [
+          "$325/mo",
+          "HOA/mo"
+        ],
+        [
+          "$5,682",
+          "Taxes"
+        ],
+        [
+          "670 sq ft",
+          "Sq ft"
+        ],
+        [
+          "$1,067/sq",
+          "Per sq ft"
+        ]
+      ],
+      "s5_history": "",
+      "s5_ownership": "",
+      "s5_hoainc": "Water",
+      "s5_parking": "None",
+      "s5_storage": "Private basement storage",
+      "s5_hvac": "Central A/C; hot air (electric)",
+      "s5_laundry": "In-unit W/D",
+      "s5_flood": "",
+      "s5_misc": "STATUS: Conditional (under contract ~7/22/26). Unit has private terrace.",
+      "s6_age": "",
+      "s6_units": "",
+      "s6_amenities": "Terrace (unit-specific); private backyard",
+      "s6_projects": "",
+      "s6_assess": "",
+      "s6_financing": "",
+      "s6_key": "",
+      "similar": [],
+      "commute": [],
+      "client_name": "Jake Triarsi"
+    },
+    {
+      "seq": "4",
+      "addr1": "",
+      "addr2": "",
+      "type": "",
+      "ptype": "condo",
+      "beds": "",
+      "time": "",
+      "price": "",
+      "agent": "",
+      "phone": "",
+      "zillow": "https://www.zillow.com/homedetails/84-Monroe-St-APT-3-Hoboken-NJ-07030/38882355_zpid/",
+      "nav_addr": "",
+      "disclosure": "",
+      "flags": [],
+      "s1_time": "",
+      "s2_confirmed": "UNVERIFIED: listing CND, not in ShowingTime — confirm with LA",
+      "s2_source": "ShowingTime returned 0 results for MLS 260011070 (CND per MLS ~7/27/26). Confirm with LA Margaret M Crimmins · 201-240-6531.",
+      "s3_occupancy": "Unknown — CND listing not in ShowingTime",
+      "s3_lb": "No mention · No mention",
+      "s3_notes": "Property under contract (CND) as of today. Confirm whether backup showing is proceeding and how to access with LA: Margaret M Crimmins · 201-240-6531.",
+      "snap": [],
+      "s5_history": "Listed 6/9/26: $700K → Price changed 7/13/26: $674K (−$26K). Removed 7/27/26 (off market — note for coordinator).",
+      "s5_ownership": "Bought 7/1/21 @ $535K. No rental history on Redfin. Owned ~5 yrs.",
+      "s5_hoainc": "",
+      "s5_parking": "",
+      "s5_storage": "",
+      "s5_hvac": "",
+      "s5_laundry": "",
+      "s5_flood": "Zone AE (Yes)",
+      "s5_misc": "",
+      "s6_age": "1901",
+      "s6_units": "5",
+      "s6_amenities": "",
+      "s6_projects": "",
+      "s6_assess": "",
+      "s6_financing": "",
+      "s6_key": "",
+      "similar": [],
+      "commute": [],
+      "client_name": "Jake Triarsi"
+    },
+    {
+      "seq": "4",
+      "addr1": "84 Monroe St",
+      "addr2": "#3 · Hoboken NJ 07030",
+      "type": "Condominium",
+      "ptype": "condo",
+      "beds": "2 BR / 1 BA",
+      "time": "",
+      "price": "$674,000",
+      "agent": "Margaret M Crimmins ·  (cell) · Corcoran Sawyer Smith",
+      "phone": "201-240-6531",
+      "zillow": "",
+      "nav_addr": "",
+      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/0/HUDSON_355927.pdf",
+      "flags": [],
+      "s1_time": "",
+      "s2_confirmed": "",
+      "s2_source": "",
+      "s3_occupancy": "",
+      "s3_lb": "",
+      "s3_notes": "",
+      "snap": [
+        [
+          "$674K",
+          "Asking"
+        ],
+        [
+          "48d",
+          "Days on mkt"
+        ],
+        [
+          "$509/mo",
+          "HOA/mo"
+        ],
+        [
+          "$6,695 (2025)",
+          "Taxes"
+        ],
+        [
+          "830 sq ft",
+          "Sq ft"
+        ],
+        [
+          "$812/sq",
+          "Per sq ft"
+        ]
+      ],
+      "s5_history": "",
+      "s5_ownership": "",
+      "s5_hoainc": "Water",
+      "s5_parking": "None",
+      "s5_storage": "",
+      "s5_hvac": "Wall A/C; baseboard heat",
+      "s5_laundry": "In-unit W/D",
+      "s5_flood": "",
+      "s5_misc": "STATUS: Conditional (under contract ~7/27/26).",
+      "s6_age": "",
+      "s6_units": "",
+      "s6_amenities": "Intercom",
+      "s6_projects": "Hallway in process of being painted (per broker remarks)",
+      "s6_assess": "$370,900 (2025)",
+      "s6_financing": "",
+      "s6_key": "",
+      "similar": [],
+      "commute": [],
+      "client_name": "Jake Triarsi"
+    },
+    {
+      "seq": "5",
+      "addr1": "",
+      "addr2": "",
+      "type": "",
+      "ptype": "condo",
+      "beds": "",
+      "time": "",
+      "price": "",
+      "agent": "",
+      "phone": "",
+      "zillow": "https://www.zillow.com/homedetails/717-Willow-Ave-APT-2-Hoboken-NJ-07030/88857654_zpid/",
+      "nav_addr": "",
+      "disclosure": "",
+      "flags": [],
+      "s1_time": "",
+      "s2_confirmed": "Awaiting confirmation",
+      "s2_source": "ShowingTime — Auto Confirm listing (MLS 260014550, Active, 717 Willow Ave #2); no appointment found for 7/28. Needs booking — will Auto Confirm instantly once scheduled.",
+      "s3_occupancy": "Vacant (virtually staged per broker remarks)",
+      "s3_lb": "",
+      "s3_notes": "",
+      "snap": [],
+      "s5_history": "Listed 7/23/26: $650K. No cuts.",
+      "s5_ownership": "Bought 12/14/20 @ $530K. No rental history on Zillow. Owned ~5.6 yrs.",
+      "s5_hoainc": "",
+      "s5_parking": "",
+      "s5_storage": "",
+      "s5_hvac": "",
+      "s5_laundry": "",
+      "s5_flood": "Zone AE (Yes)",
+      "s5_misc": "",
+      "s6_age": "1900",
+      "s6_units": "10",
+      "s6_amenities": "",
+      "s6_projects": "",
+      "s6_assess": "",
+      "s6_financing": "",
+      "s6_key": "",
+      "similar": [],
+      "commute": [],
+      "client_name": "Jake Triarsi"
+    },
+    {
+      "seq": "5",
+      "addr1": "717 Willow Ave",
+      "addr2": "#2 · Hoboken NJ 07030",
+      "type": "Condominium",
+      "ptype": "condo",
+      "beds": "2 BR / 1 BA",
+      "time": "",
+      "price": "$650,000",
+      "agent": "Colleen Kraus · KP&G NJ ·  (contact: Matt Kraus per broker remarks)",
+      "phone": "973-891-0616",
+      "zillow": "",
+      "nav_addr": "",
+      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/0/HUDSON_362177.pdf",
+      "flags": [],
+      "s1_time": "",
+      "s2_confirmed": "",
+      "s2_source": "",
+      "s3_occupancy": "",
+      "s3_lb": "",
+      "s3_notes": "",
+      "snap": [
+        [
+          "$650K",
+          "Asking"
+        ],
+        [
+          "7d",
+          "Days on mkt"
+        ],
+        [
+          "$451/mo",
+          "HOA/mo"
+        ],
+        [
+          "$6,733 (2025)",
+          "Taxes"
+        ],
+        [
+          "800 sq ft",
+          "Sq ft"
+        ],
+        [
+          "$813/sq",
+          "Per sq ft"
+        ]
+      ],
+      "s5_history": "",
+      "s5_ownership": "",
+      "s5_hoainc": "Heat, water, hot water",
+      "s5_parking": "None",
+      "s5_storage": "Deeded private basement storage",
+      "s5_hvac": "Window A/C; radiator heat (heat included in HOA)",
+      "s5_laundry": "In-unit W/D",
+      "s5_flood": "",
+      "s5_misc": "Split-bedroom layout. Shared backyard w/ patio furniture and grills.",
+      "s6_age": "",
+      "s6_units": "",
+      "s6_amenities": "Intercom; shared backyard with patio and grills",
+      "s6_projects": "",
+      "s6_assess": "",
+      "s6_financing": "",
+      "s6_key": "",
+      "similar": [],
+      "commute": [],
+      "client_name": "Jake Triarsi"
+    }
+  ],
+  "history": [
+    {
+      "deployedAt": "2026-07-27T04:03:25.806424+00:00",
+      "meta": {
+        "dateLabel": "Mon, July 27",
+        "agent": "Christian Daugherty"
+      },
       "client": {
         "name": "Elle Dong",
         "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/177066",
@@ -105,97 +1262,7 @@ window.FC_DATA = {
           "client_name": "Elle Dong"
         }
       ]
-    }
-  ],
-  "client": {
-    "name": "Elle Dong",
-    "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/177066",
-    "meta": "1 property · Buyer · Christian Daugherty, Jill Biggs Group",
-    "stage": "Appointment set",
-    "fields": [
-      [
-        "Budget",
-        "$599,000"
-      ],
-      [
-        "Location",
-        "West New York, NJ"
-      ]
-    ],
-    "snapshotLines": [
-      "$599,000. Showing today (1 property)."
-    ]
-  },
-  "props": [
-    {
-      "seq": "1",
-      "addr1": "24 Ave at Port Imperial #B37",
-      "addr2": "West New York, NJ 07093",
-      "type": "Condo",
-      "ptype": "condo",
-      "beds": "1 bed / 1 bath",
-      "time": "",
-      "price": "$575,000",
-      "agent": "Mahesh",
-      "phone": "929-389-5710",
-      "zillow": "https://www.zillow.com/homedetails/24-Avenue-At-Port-Imperial-B37-West-New-York-NJ-07093/2093437559_zpid/",
-      "nav_addr": "",
-      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/3/HUDSON_360531.pdf",
-      "flags": [],
-      "s1_time": "",
-      "s2_confirmed": "Yes — Confirmed (go-and-show)",
-      "s2_source": "Broker remarks: Vacant, go and show. ShowingTime login not accessible this run (occluded window); go-and-show confirmed from MLS broker remarks.",
-      "s3_occupancy": "Vacant (go-and-show)",
-      "s3_lb": "Not found · Not found",
-      "s3_notes": "Not found",
-      "snap": [
-        [
-          "$575K",
-          "Asking"
-        ],
-        [
-          "12d",
-          "Days on mkt"
-        ],
-        [
-          "$597/mo",
-          "HOA/mo"
-        ],
-        [
-          "$10,500/yr (2026)",
-          "Taxes"
-        ],
-        [
-          "767 sq ft",
-          "Sq ft"
-        ],
-        [
-          "$750/sq",
-          "Per sq ft"
-        ]
-      ],
-      "s5_history": "Listed 5/28: $599K → Price cut 7/15: $575K (-$24K). Actual DOM: 59 days (on market since 5/28/2026)",
-      "s5_ownership": "Bought 8/31/22 @ $525K. Owned ~3 yrs 11 mos. No rental history on Zillow. (Prior sale: 6/20/2007 @ $450K.)",
-      "s5_hoainc": "Parking",
-      "s5_parking": "1 Car, Covered Garage (included in HOA)",
-      "s5_storage": "No mention",
-      "s5_hvac": "Central AC; heat type not specified — verify at showing",
-      "s5_laundry": "In-unit",
-      "s5_flood": "Zone AE (Yes)",
-      "s5_misc": "",
-      "s6_age": "2004",
-      "s6_units": "344 (Hudson Club complex at 24 and 26 Ave at Port Imperial — per hudsonnest.com building profile)",
-      "s6_amenities": "Doorman, Exercise Room, Jacuzzi, Pool, Tennis Court, Basketball Courts",
-      "s6_projects": "",
-      "s6_assess": "",
-      "s6_financing": "",
-      "s6_key": "Not in property database.",
-      "similar": [],
-      "commute": [],
-      "client_name": "Elle Dong"
-    }
-  ],
-  "history": [
+    },
     {
       "deployedAt": "2026-07-25T16:00:05.111484+00:00",
       "meta": {
