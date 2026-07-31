@@ -10,13 +10,448 @@
    ============================================================ */
 window.FC_DATA = {
   "meta": {
-    "dateLabel": "Tue, July 28",
+    "dateLabel": "Fri, July 31",
     "agent": "Christian Daugherty",
-    "deployedAt": "2026-07-28T04:57:05.959190+00:00"
+    "deployedAt": "2026-07-31T20:25:48.055266+00:00"
   },
   "appointments": [
     {
-      "date": "Tue, July 28",
+      "date": "Fri, July 31",
+      "client": {
+        "name": "",
+        "fub_url": "",
+        "meta": "3 properties · Buyer · Christian Daugherty, Jill Biggs Group",
+        "stage": "Active buyer",
+        "fields": [],
+        "snapshotLines": [
+          "Showing today (3 properties)."
+        ]
+      },
+      "props": [
+        {
+          "seq": "1",
+          "addr1": "380 Luis M Marin Blvd #2R",
+          "addr2": "Jersey City, NJ 07302",
+          "type": "Condo",
+          "ptype": "condo",
+          "beds": "2 BR / 2 full + 1 half bath",
+          "time": "5:00 PM",
+          "price": "$849,000",
+          "agent": "Pavel Saikin, Corcoran Sawyer Smith —  (office)",
+          "phone": "201-653-8000",
+          "zillow": "https://www.zillow.com/homedetails/380-Luis-M-Marin-Blvd-2R-Jersey-City-NJ-07302/2081554800_zpid/",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/3/HUDSON_358099.pdf",
+          "flags": [],
+          "s1_time": "5:00 PM",
+          "s2_confirmed": "Yes - Confirmed (1st Showing (Auto Confirm))",
+          "s2_source": "ShowingTime confirmation (screenshot provided by Christian)",
+          "s3_occupancy": "No mention",
+          "s3_lb": "Keypad · Code: Unit door: 2692 · No mention",
+          "s3_notes": "Alarm details: none provided. Access listed as Keypad; unit door code supplied by Christian.",
+          "snap": [
+            [
+              "$849K",
+              "Asking"
+            ],
+            [
+              "38d",
+              "Days on mkt"
+            ],
+            [
+              "$542/mo",
+              "HOA/mo"
+            ],
+            [
+              "No mention (Zillow: tax history unavailable)",
+              "Taxes"
+            ],
+            [
+              "1,150 sq ft",
+              "Sq ft"
+            ],
+            [
+              "$738/sq",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "Listed 5/1: $869K → Price cut 6/8: $849K (-$20K). Actual DOM: 91 days (on market since 5/1/2026)",
+          "s5_ownership": "Bought 2/27/20 @ $695K. Owned ~6.4 yrs. No rental history on Zillow. (Prior sales: 5/18/15 @ $612K, 12/3/10 @ $405K.)",
+          "s5_hoainc": "No mention",
+          "s5_parking": "None (Zillow feature says '1 Car / See Remarks' but no actual spot is described in the listing description — realtor-CYA filter per §5.9)",
+          "s5_storage": "No mention",
+          "s5_hvac": "Central air conditioning (per listing description). Heat type: No mention — verify at showing.",
+          "s5_laundry": "In-unit washer/dryer",
+          "s5_flood": "Not found — Zillow no longer shows a FEMA zone (climate section now links out to First Street); FEMA NFHL API errored. VERIFY: downtown JC/Powerhouse Arts District block near the waterfront.",
+          "s5_misc": "Loft-style condo in the Powerhouse Arts District. 6-ft windows, exposed brick walls, two brick fireplaces, cherrywood floors, granite counters, stainless appliances, primary ensuite w/ custom glass shower. 1,150 sqft, $738/sqft. Zestimate $848,900. Short walk to Grove St PATH / Van Vorst Park.",
+          "s6_age": "1900 (Zillow + Trulia). Historic loft building in the Powerhouse Arts District — industrial-to-residential conversion; conversion year not found.",
+          "s6_units": "Not found — no published unit count. Past listings show only 2R / 3R / 4R (4R is the top-floor penthouse duplex), i.e. a small walk-up-scale loft building.",
+          "s6_amenities": "No shared amenities surfaced — no doorman, gym, roof deck or common laundry in any source. Intercom is the only building feature listed. Elevator: never mentioned — assume walk-up until confirmed. In-unit W/D + central A/C per past listings. HOA on this line has run $456-$542/mo (incl. water).",
+          "s6_projects": "Not found.",
+          "s6_assess": "Not found.",
+          "s6_financing": "Not found. Worth asking: a small (<10 unit) 1900 loft conversion is the profile where FHA approval / warrantability and rental caps bite.",
+          "s6_key": "No entry in property_database.md - first visit. Public data on this building is unusually thin (StreetEasy has no building profile). Parking is contradictory across sources (Zillow #2R '1 Car'; Compass #2R and Trulia 'None') - treat as NOT included until the listing agent confirms. Ask on site: unit count + elevator; is any parking deeded or rented and where; any assessment pending; FHA / rental-cap status.",
+          "similar": [],
+          "commute": [],
+          "client_name": ""
+        },
+        {
+          "seq": "2",
+          "addr1": "230 3rd St #1",
+          "addr2": "Jersey City, NJ 07302",
+          "type": "Condominium (Row House — garden/parlor duplex)",
+          "ptype": "condo",
+          "beds": "2 BR / 1 full bath",
+          "time": "5:30 PM",
+          "price": "$650,000",
+          "agent": "Brian Henry",
+          "phone": "(201) 401-1457",
+          "zillow": "",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/5/HUDSON_362720.pdf",
+          "flags": [],
+          "s1_time": "5:30 PM",
+          "s2_confirmed": "Yes - Confirmed (1st Showing)",
+          "s2_source": "ShowingTime confirmation (screenshot provided by Christian)",
+          "s3_occupancy": "No mention",
+          "s3_lb": "Supra · Code: No mention · No mention",
+          "s3_notes": "ShowingTime: access details not provided — showing instructions say call Brian at 201-401-1457 for listing + showing info. Supra per Christian. NOTE: MLS status shows WITHDRAWN - CONDITIONAL.",
+          "snap": [
+            [
+              "$650K",
+              "Asking"
+            ],
+            [
+              "34d",
+              "Days on mkt"
+            ],
+            [
+              "$500/mo",
+              "HOA/mo"
+            ],
+            [
+              "$13,529/yr (2025)",
+              "Taxes"
+            ],
+            [
+              "1,100 sq ft",
+              "Sq ft"
+            ],
+            [
+              "$591/sq",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "",
+          "s5_ownership": "",
+          "s5_hoainc": "Heat, water, hot water",
+          "s5_parking": "None — MLS Parking Available = None",
+          "s5_storage": "No mention",
+          "s5_hvac": "Baseboard gas heat; no central A/C listed",
+          "s5_laundry": "No mention — appliances listed are refrigerator and gas oven/range only",
+          "s5_flood": "",
+          "s5_misc": "Seller will consider ALL-CASH offers only; all offers require proof of funds through the listing broker. Sold 'as is' — renovation project. Exclusions: light fixtures (2 chandeliers on parlor floor, 4 sconces on garden level).",
+          "s6_age": "1885 (Hudson County tax record, Block 11105 Lot 22). 3-story brick-and-stucco rowhouse. Conversion/gut-reno year not found; facade recently restored and front windows newly replaced.",
+          "s6_units": "2 (tax record: duplex, 2 living units). Association on record: '230 Third Street Condominium'. Unit 1 is the lower duplex with the private garden.",
+          "s6_amenities": "No shared amenities (StreetEasy: 'No info on amenities'). Unit-level: private garden, eat-in kitchen, soaring ceilings, marble mantels, hardwood, original moldings. Parking: none on site. Heat: gas baseboard. Central A/C: not found. Laundry: not found.",
+          "s6_projects": "Facade restored + front windows replaced (completed). HOA $500/mo.",
+          "s6_assess": "Not found.",
+          "s6_financing": "Not found. Relevant facts: sold strictly as-is, 'awaiting a complete renovation', and it is a 2-unit association - both can limit conventional/FHA options.",
+          "s6_key": "No entry in property_database.md - first visit. A 2-unit association is the headline: budget, reserves and financing all hinge on one other owner.",
+          "similar": [],
+          "commute": [],
+          "client_name": ""
+        },
+        {
+          "seq": "3",
+          "addr1": "226 1st St #401 (4A)",
+          "addr2": "Jersey City, NJ 07302",
+          "type": "Condominium (Brownstone), 4th floor",
+          "ptype": "condo",
+          "beds": "MLS room count: 2 BR / 1 full + 1 half bath. Advertising remarks describe it as a 1-bath home with a den — verify bed/bath count on site.",
+          "time": "5:30 PM",
+          "price": "$689,000",
+          "agent": "Michelle Mumoli",
+          "phone": "(973) 454-3543",
+          "zillow": "",
+          "nav_addr": "",
+          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/8/HUDSON_361995.pdf",
+          "flags": [],
+          "s1_time": "5:30 PM",
+          "s2_confirmed": "Yes - Confirmed (1st Showing)",
+          "s2_source": "ShowingTime confirmation (screenshot provided by Christian)",
+          "s3_occupancy": "No mention",
+          "s3_lb": "Combination lockbox + gate code · Code: Combo 1978 (gate/LB); unit top-lock keypad 2829 · Left side railing",
+          "s3_notes": "Combo code 1978 on left side railing. PLEASE REMOVE SHOES. Silver key in LB opens unit bottom lock; keypad code 2829 for unit top lock. On exit: turn off lights, lock doors, keys back in LB, scramble code. Alarm details: none provided.",
+          "snap": [
+            [
+              "$689K",
+              "Asking"
+            ],
+            [
+              "2d",
+              "Days on mkt"
+            ],
+            [
+              "$315/mo",
+              "HOA/mo"
+            ],
+            [
+              "$12,238/yr (2025) — listing says taxes to be independently verified with the City of Jersey City",
+              "Taxes"
+            ],
+            [
+              "940 sq ft",
+              "Sq ft"
+            ],
+            [
+              "$733/sq",
+              "Per sq ft"
+            ]
+          ],
+          "s5_history": "",
+          "s5_ownership": "",
+          "s5_hoainc": "Heat, hot water, gas, water/sewer and general building maintenance (self-managed condo)",
+          "s5_parking": "None — MLS Parking Available = None",
+          "s5_storage": "No mention",
+          "s5_hvac": "Window A/C units; baseboard gas heat — no central air",
+          "s5_laundry": "Washer/dryer listed in unit appliances; building also has a common wash/dry room",
+          "s5_flood": "",
+          "s5_misc": "Offers by email in NJAR contract form with pre-approval or proof of funds to michelle.mumoli@compass.com, cc Marielle at mumolicollective@gmail.com. Listing names Megan McDermott, Cross Country Mortgage, 973-534-340x as a preapproval contact (informational only).",
+          "s6_age": "Not confirmed. Zillow shows 1980 on a sister unit (likely a placeholder); StreetEasy and the brokerage record for #2A show no year built; tax record unreachable. NOTE: the loft-conversion assumption is NOT supported - the Coldwell Banker record for #2A calls it a brick 'Brownstone'. Verify age on the MLS sheet.",
+          "s6_units": "Not found officially. Unit designations in listing history (#1, #1B, #2A, #2B, #3A, #4A, #4B, #101, #BA) imply roughly 8-9 units over ~4 floors plus a basement unit - inferred, not verified.",
+          "s6_amenities": "Common laundry room in the basement (MLS 'Wash/Dry Room' for #2A; HOA permits in-unit W/D). Shared roof deck ('Public Roof Top'). Intercom. Gated entry. Parking: none. No elevator mentioned anywhere - assume a 4-story walk-up, which matters for a top-floor unit. Building HOA runs ~$225-$236/mo on other units; the fee for #401 was not found.",
+          "s6_projects": "Not found.",
+          "s6_assess": "Not found.",
+          "s6_financing": "Not found. Small (~8-9 unit) association - worth asking the listing agent about warrantability and rental caps.",
+          "s6_key": "No entry in property_database.md - first visit. Ask on site: true year built + any gut-reno; elevator or walk-up; unit count, the actual HOA for #401, and any assessment or financing restriction.",
+          "similar": [],
+          "commute": [],
+          "client_name": ""
+        }
+      ]
+    }
+  ],
+  "client": {
+    "name": "",
+    "fub_url": "",
+    "meta": "3 properties · Buyer · Christian Daugherty, Jill Biggs Group",
+    "stage": "Active buyer",
+    "fields": [],
+    "snapshotLines": [
+      "Showing today (3 properties)."
+    ]
+  },
+  "props": [
+    {
+      "seq": "1",
+      "addr1": "380 Luis M Marin Blvd #2R",
+      "addr2": "Jersey City, NJ 07302",
+      "type": "Condo",
+      "ptype": "condo",
+      "beds": "2 BR / 2 full + 1 half bath",
+      "time": "5:00 PM",
+      "price": "$849,000",
+      "agent": "Pavel Saikin, Corcoran Sawyer Smith —  (office)",
+      "phone": "201-653-8000",
+      "zillow": "https://www.zillow.com/homedetails/380-Luis-M-Marin-Blvd-2R-Jersey-City-NJ-07302/2081554800_zpid/",
+      "nav_addr": "",
+      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/3/HUDSON_358099.pdf",
+      "flags": [],
+      "s1_time": "5:00 PM",
+      "s2_confirmed": "Yes - Confirmed (1st Showing (Auto Confirm))",
+      "s2_source": "ShowingTime confirmation (screenshot provided by Christian)",
+      "s3_occupancy": "No mention",
+      "s3_lb": "Keypad · Code: Unit door: 2692 · No mention",
+      "s3_notes": "Alarm details: none provided. Access listed as Keypad; unit door code supplied by Christian.",
+      "snap": [
+        [
+          "$849K",
+          "Asking"
+        ],
+        [
+          "38d",
+          "Days on mkt"
+        ],
+        [
+          "$542/mo",
+          "HOA/mo"
+        ],
+        [
+          "No mention (Zillow: tax history unavailable)",
+          "Taxes"
+        ],
+        [
+          "1,150 sq ft",
+          "Sq ft"
+        ],
+        [
+          "$738/sq",
+          "Per sq ft"
+        ]
+      ],
+      "s5_history": "Listed 5/1: $869K → Price cut 6/8: $849K (-$20K). Actual DOM: 91 days (on market since 5/1/2026)",
+      "s5_ownership": "Bought 2/27/20 @ $695K. Owned ~6.4 yrs. No rental history on Zillow. (Prior sales: 5/18/15 @ $612K, 12/3/10 @ $405K.)",
+      "s5_hoainc": "No mention",
+      "s5_parking": "None (Zillow feature says '1 Car / See Remarks' but no actual spot is described in the listing description — realtor-CYA filter per §5.9)",
+      "s5_storage": "No mention",
+      "s5_hvac": "Central air conditioning (per listing description). Heat type: No mention — verify at showing.",
+      "s5_laundry": "In-unit washer/dryer",
+      "s5_flood": "Not found — Zillow no longer shows a FEMA zone (climate section now links out to First Street); FEMA NFHL API errored. VERIFY: downtown JC/Powerhouse Arts District block near the waterfront.",
+      "s5_misc": "Loft-style condo in the Powerhouse Arts District. 6-ft windows, exposed brick walls, two brick fireplaces, cherrywood floors, granite counters, stainless appliances, primary ensuite w/ custom glass shower. 1,150 sqft, $738/sqft. Zestimate $848,900. Short walk to Grove St PATH / Van Vorst Park.",
+      "s6_age": "1900 (Zillow + Trulia). Historic loft building in the Powerhouse Arts District — industrial-to-residential conversion; conversion year not found.",
+      "s6_units": "Not found — no published unit count. Past listings show only 2R / 3R / 4R (4R is the top-floor penthouse duplex), i.e. a small walk-up-scale loft building.",
+      "s6_amenities": "No shared amenities surfaced — no doorman, gym, roof deck or common laundry in any source. Intercom is the only building feature listed. Elevator: never mentioned — assume walk-up until confirmed. In-unit W/D + central A/C per past listings. HOA on this line has run $456-$542/mo (incl. water).",
+      "s6_projects": "Not found.",
+      "s6_assess": "Not found.",
+      "s6_financing": "Not found. Worth asking: a small (<10 unit) 1900 loft conversion is the profile where FHA approval / warrantability and rental caps bite.",
+      "s6_key": "No entry in property_database.md - first visit. Public data on this building is unusually thin (StreetEasy has no building profile). Parking is contradictory across sources (Zillow #2R '1 Car'; Compass #2R and Trulia 'None') - treat as NOT included until the listing agent confirms. Ask on site: unit count + elevator; is any parking deeded or rented and where; any assessment pending; FHA / rental-cap status.",
+      "similar": [],
+      "commute": [],
+      "client_name": ""
+    },
+    {
+      "seq": "2",
+      "addr1": "230 3rd St #1",
+      "addr2": "Jersey City, NJ 07302",
+      "type": "Condominium (Row House — garden/parlor duplex)",
+      "ptype": "condo",
+      "beds": "2 BR / 1 full bath",
+      "time": "5:30 PM",
+      "price": "$650,000",
+      "agent": "Brian Henry",
+      "phone": "(201) 401-1457",
+      "zillow": "",
+      "nav_addr": "",
+      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/5/HUDSON_362720.pdf",
+      "flags": [],
+      "s1_time": "5:30 PM",
+      "s2_confirmed": "Yes - Confirmed (1st Showing)",
+      "s2_source": "ShowingTime confirmation (screenshot provided by Christian)",
+      "s3_occupancy": "No mention",
+      "s3_lb": "Supra · Code: No mention · No mention",
+      "s3_notes": "ShowingTime: access details not provided — showing instructions say call Brian at 201-401-1457 for listing + showing info. Supra per Christian. NOTE: MLS status shows WITHDRAWN - CONDITIONAL.",
+      "snap": [
+        [
+          "$650K",
+          "Asking"
+        ],
+        [
+          "34d",
+          "Days on mkt"
+        ],
+        [
+          "$500/mo",
+          "HOA/mo"
+        ],
+        [
+          "$13,529/yr (2025)",
+          "Taxes"
+        ],
+        [
+          "1,100 sq ft",
+          "Sq ft"
+        ],
+        [
+          "$591/sq",
+          "Per sq ft"
+        ]
+      ],
+      "s5_history": "",
+      "s5_ownership": "",
+      "s5_hoainc": "Heat, water, hot water",
+      "s5_parking": "None — MLS Parking Available = None",
+      "s5_storage": "No mention",
+      "s5_hvac": "Baseboard gas heat; no central A/C listed",
+      "s5_laundry": "No mention — appliances listed are refrigerator and gas oven/range only",
+      "s5_flood": "",
+      "s5_misc": "Seller will consider ALL-CASH offers only; all offers require proof of funds through the listing broker. Sold 'as is' — renovation project. Exclusions: light fixtures (2 chandeliers on parlor floor, 4 sconces on garden level).",
+      "s6_age": "1885 (Hudson County tax record, Block 11105 Lot 22). 3-story brick-and-stucco rowhouse. Conversion/gut-reno year not found; facade recently restored and front windows newly replaced.",
+      "s6_units": "2 (tax record: duplex, 2 living units). Association on record: '230 Third Street Condominium'. Unit 1 is the lower duplex with the private garden.",
+      "s6_amenities": "No shared amenities (StreetEasy: 'No info on amenities'). Unit-level: private garden, eat-in kitchen, soaring ceilings, marble mantels, hardwood, original moldings. Parking: none on site. Heat: gas baseboard. Central A/C: not found. Laundry: not found.",
+      "s6_projects": "Facade restored + front windows replaced (completed). HOA $500/mo.",
+      "s6_assess": "Not found.",
+      "s6_financing": "Not found. Relevant facts: sold strictly as-is, 'awaiting a complete renovation', and it is a 2-unit association - both can limit conventional/FHA options.",
+      "s6_key": "No entry in property_database.md - first visit. A 2-unit association is the headline: budget, reserves and financing all hinge on one other owner.",
+      "similar": [],
+      "commute": [],
+      "client_name": ""
+    },
+    {
+      "seq": "3",
+      "addr1": "226 1st St #401 (4A)",
+      "addr2": "Jersey City, NJ 07302",
+      "type": "Condominium (Brownstone), 4th floor",
+      "ptype": "condo",
+      "beds": "MLS room count: 2 BR / 1 full + 1 half bath. Advertising remarks describe it as a 1-bath home with a den — verify bed/bath count on site.",
+      "time": "5:30 PM",
+      "price": "$689,000",
+      "agent": "Michelle Mumoli",
+      "phone": "(973) 454-3543",
+      "zillow": "",
+      "nav_addr": "",
+      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/8/HUDSON_361995.pdf",
+      "flags": [],
+      "s1_time": "5:30 PM",
+      "s2_confirmed": "Yes - Confirmed (1st Showing)",
+      "s2_source": "ShowingTime confirmation (screenshot provided by Christian)",
+      "s3_occupancy": "No mention",
+      "s3_lb": "Combination lockbox + gate code · Code: Combo 1978 (gate/LB); unit top-lock keypad 2829 · Left side railing",
+      "s3_notes": "Combo code 1978 on left side railing. PLEASE REMOVE SHOES. Silver key in LB opens unit bottom lock; keypad code 2829 for unit top lock. On exit: turn off lights, lock doors, keys back in LB, scramble code. Alarm details: none provided.",
+      "snap": [
+        [
+          "$689K",
+          "Asking"
+        ],
+        [
+          "2d",
+          "Days on mkt"
+        ],
+        [
+          "$315/mo",
+          "HOA/mo"
+        ],
+        [
+          "$12,238/yr (2025) — listing says taxes to be independently verified with the City of Jersey City",
+          "Taxes"
+        ],
+        [
+          "940 sq ft",
+          "Sq ft"
+        ],
+        [
+          "$733/sq",
+          "Per sq ft"
+        ]
+      ],
+      "s5_history": "",
+      "s5_ownership": "",
+      "s5_hoainc": "Heat, hot water, gas, water/sewer and general building maintenance (self-managed condo)",
+      "s5_parking": "None — MLS Parking Available = None",
+      "s5_storage": "No mention",
+      "s5_hvac": "Window A/C units; baseboard gas heat — no central air",
+      "s5_laundry": "Washer/dryer listed in unit appliances; building also has a common wash/dry room",
+      "s5_flood": "",
+      "s5_misc": "Offers by email in NJAR contract form with pre-approval or proof of funds to michelle.mumoli@compass.com, cc Marielle at mumolicollective@gmail.com. Listing names Megan McDermott, Cross Country Mortgage, 973-534-340x as a preapproval contact (informational only).",
+      "s6_age": "Not confirmed. Zillow shows 1980 on a sister unit (likely a placeholder); StreetEasy and the brokerage record for #2A show no year built; tax record unreachable. NOTE: the loft-conversion assumption is NOT supported - the Coldwell Banker record for #2A calls it a brick 'Brownstone'. Verify age on the MLS sheet.",
+      "s6_units": "Not found officially. Unit designations in listing history (#1, #1B, #2A, #2B, #3A, #4A, #4B, #101, #BA) imply roughly 8-9 units over ~4 floors plus a basement unit - inferred, not verified.",
+      "s6_amenities": "Common laundry room in the basement (MLS 'Wash/Dry Room' for #2A; HOA permits in-unit W/D). Shared roof deck ('Public Roof Top'). Intercom. Gated entry. Parking: none. No elevator mentioned anywhere - assume a 4-story walk-up, which matters for a top-floor unit. Building HOA runs ~$225-$236/mo on other units; the fee for #401 was not found.",
+      "s6_projects": "Not found.",
+      "s6_assess": "Not found.",
+      "s6_financing": "Not found. Small (~8-9 unit) association - worth asking the listing agent about warrantability and rental caps.",
+      "s6_key": "No entry in property_database.md - first visit. Ask on site: true year built + any gut-reno; elevator or walk-up; unit count, the actual HOA for #401, and any assessment or financing restriction.",
+      "similar": [],
+      "commute": [],
+      "client_name": ""
+    }
+  ],
+  "history": [
+    {
+      "deployedAt": "2026-07-28T04:57:05.959190+00:00",
+      "meta": {
+        "dateLabel": "Tue, July 28",
+        "agent": "Christian Daugherty"
+      },
       "client": {
         "name": "Jake Triarsi",
         "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/189400",
@@ -381,373 +816,7 @@ window.FC_DATA = {
           "client_name": "Jake Triarsi"
         }
       ]
-    }
-  ],
-  "client": {
-    "name": "Jake Triarsi",
-    "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/189400",
-    "meta": "5 properties · Buyer · Christian Daugherty, Jill Biggs Group",
-    "stage": "Showing homes",
-    "fields": [
-      [
-        "Budget",
-        "$799,000"
-      ],
-      [
-        "Location",
-        "Hoboken, NJ"
-      ],
-      [
-        "Home type",
-        "Condo"
-      ],
-      [
-        "Timeline",
-        "Lease ended June 30th"
-      ]
-    ],
-    "snapshotLines": [
-      "$799,000. Showing today (5 properties)."
-    ]
-  },
-  "props": [
-    {
-      "seq": "1",
-      "addr1": "734 Adams St",
-      "addr2": "#3A · Hoboken NJ 07030",
-      "type": "Condominium",
-      "ptype": "condo",
-      "beds": "2 BR / 1 BA",
-      "time": "",
-      "price": "$550,000",
-      "agent": "Soha Fontaine ·  (cell) · Compass NJ",
-      "phone": "917-892-8977",
-      "zillow": "https://www.zillow.com/homedetails/734-Adams-St-APT-3A-Hoboken-NJ-07030/88857375_zpid/",
-      "nav_addr": "",
-      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/4/HUDSON_358733.pdf",
-      "flags": [],
-      "s1_time": "",
-      "s2_confirmed": "Yes — Confirmed (Auto Confirm)",
-      "s2_source": "ShowingTime — Auto Confirm, appointment #885546622, confirmed 6:00 PM – 6:30 PM, Tue 7/28",
-      "s3_occupancy": "Vacant (go-and-show)",
-      "s3_lb": "Supra",
-      "s3_notes": "",
-      "snap": [
-        [
-          "$550K",
-          "Asking"
-        ],
-        [
-          "8d",
-          "Days on mkt"
-        ],
-        [
-          "$400/mo",
-          "HOA/mo"
-        ],
-        [
-          "$5,215",
-          "Taxes"
-        ],
-        [
-          "537 sq ft",
-          "Sq ft"
-        ],
-        [
-          "$1,024/sq",
-          "Per sq ft"
-        ]
-      ],
-      "s5_history": "Listed 7/20/26: $550K. No cuts.",
-      "s5_ownership": "Bought 2/3/20 @ $375K. Rented @ $3,200/mo (listed/removed 2024 & 2025). Listed for sale 7/20/26. Owned ~6.5 yrs.",
-      "s5_hoainc": "",
-      "s5_parking": "None",
-      "s5_storage": "Common storage in building",
-      "s5_hvac": "Wall A/C; baseboard gas heat",
-      "s5_laundry": "Common (wash/dry room in lower level)",
-      "s5_flood": "Zone AE (Yes)",
-      "s5_misc": "3rd floor walk-up (no elevator per ad remarks)",
-      "s6_age": "1910",
-      "s6_units": "22",
-      "s6_amenities": "Intercom; shared backyard",
-      "s6_projects": "",
-      "s6_assess": "",
-      "s6_financing": "",
-      "s6_key": "",
-      "similar": [],
-      "commute": [],
-      "client_name": "Jake Triarsi"
     },
-    {
-      "seq": "2",
-      "addr1": "73 Madison St",
-      "addr2": "#1S · Hoboken NJ 07030",
-      "type": "Condominium",
-      "ptype": "condo",
-      "beds": "2 BR / 1 BA",
-      "time": "",
-      "price": "$725,000",
-      "agent": "Thomas Kramer ·  (cell) · Weichert Realtors",
-      "phone": "201-458-3476",
-      "zillow": "https://www.zillow.com/homedetails/73-Madison-St-APT-1S-Hoboken-NJ-07030/38882435_zpid/",
-      "nav_addr": "",
-      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/5/HUDSON_359982.pdf",
-      "flags": [],
-      "s1_time": "",
-      "s2_confirmed": "Awaiting confirmation",
-      "s2_source": "ShowingTime — Auto Confirm listing (MLS 260013775, Active, 73 Madison St #1S); no appointment found for 7/28. Needs booking — will Auto Confirm instantly once scheduled.",
-      "s3_occupancy": "Vacant",
-      "s3_lb": "",
-      "s3_notes": "",
-      "snap": [
-        [
-          "$725K",
-          "Asking"
-        ],
-        [
-          "14d",
-          "Days on mkt"
-        ],
-        [
-          "$440/mo",
-          "HOA/mo"
-        ],
-        [
-          "$6,872",
-          "Taxes"
-        ],
-        [
-          "702 sq ft",
-          "Sq ft"
-        ],
-        [
-          "$1,033/sq",
-          "Per sq ft"
-        ]
-      ],
-      "s5_history": "Listed 7/14/26: $725K. No cuts.",
-      "s5_ownership": "Bought 5/15/23 @ $650K. No rental history on Zillow. Owned ~2.2 yrs.",
-      "s5_hoainc": "Water",
-      "s5_parking": "None (parking nearby for additional fee per broker remarks)",
-      "s5_storage": "Private storage in building",
-      "s5_hvac": "Wall A/C; baseboard heat",
-      "s5_laundry": "Common W/D room in building",
-      "s5_flood": "Zone AE (Yes)",
-      "s5_misc": "",
-      "s6_age": "1883",
-      "s6_units": "6",
-      "s6_amenities": "Intercom; private backyard",
-      "s6_projects": "",
-      "s6_assess": "",
-      "s6_financing": "",
-      "s6_key": "",
-      "similar": [],
-      "commute": [],
-      "client_name": "Jake Triarsi"
-    },
-    {
-      "seq": "3",
-      "addr1": "132 Jackson St",
-      "addr2": "#1N · Hoboken NJ 07030",
-      "type": "Condominium",
-      "ptype": "condo",
-      "beds": "2 BR / 1 BA",
-      "time": "",
-      "price": "$715,000",
-      "agent": "Anthony Packwood ·  (cell) · Engel & Volkers Hoboken",
-      "phone": "929-309-5530",
-      "zillow": "https://www.zillow.com/homedetails/132-Jackson-St-APT-1N-Hoboken-NJ-07030/38882700_zpid/",
-      "nav_addr": "",
-      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/9/HUDSON_358294.pdf",
-      "flags": [],
-      "s1_time": "",
-      "s2_confirmed": "UNVERIFIED: listing CND, not in ShowingTime — confirm with LA",
-      "s2_source": "ShowingTime returned 0 results for MLS 260012699 (CND per MLS ~7/22/26). Confirm with LA Anthony Packwood · 929-309-5530.",
-      "s3_occupancy": "Unknown — CND listing not in ShowingTime",
-      "s3_lb": "No mention · No mention",
-      "s3_notes": "Property under contract (CND). Confirm whether backup showing is proceeding and how to access with LA: Anthony Packwood · 929-309-5530.",
-      "snap": [
-        [
-          "$715K",
-          "Asking"
-        ],
-        [
-          "22d",
-          "Days on mkt"
-        ],
-        [
-          "$325/mo",
-          "HOA/mo"
-        ],
-        [
-          "$5,682",
-          "Taxes"
-        ],
-        [
-          "670 sq ft",
-          "Sq ft"
-        ],
-        [
-          "$1,067/sq",
-          "Per sq ft"
-        ]
-      ],
-      "s5_history": "Listed 6/30/26: $715K. Listing removed 7/22/26 (off market — note for coordinator).",
-      "s5_ownership": "Bought 4/5/21 @ $455K. No rental history on Redfin. Owned ~5.3 yrs.",
-      "s5_hoainc": "Water",
-      "s5_parking": "None",
-      "s5_storage": "Private basement storage",
-      "s5_hvac": "Central A/C; hot air (electric)",
-      "s5_laundry": "In-unit W/D",
-      "s5_flood": "Zone AE (Yes)",
-      "s5_misc": "STATUS: Conditional (under contract ~7/22/26). Unit has private terrace.",
-      "s6_age": "1986",
-      "s6_units": "6",
-      "s6_amenities": "Terrace (unit-specific); private backyard",
-      "s6_projects": "",
-      "s6_assess": "",
-      "s6_financing": "",
-      "s6_key": "",
-      "similar": [],
-      "commute": [],
-      "client_name": "Jake Triarsi"
-    },
-    {
-      "seq": "4",
-      "addr1": "84 Monroe St",
-      "addr2": "#3 · Hoboken NJ 07030",
-      "type": "Condominium",
-      "ptype": "condo",
-      "beds": "2 BR / 1 BA",
-      "time": "",
-      "price": "$674,000",
-      "agent": "Margaret M Crimmins ·  (cell) · Corcoran Sawyer Smith",
-      "phone": "201-240-6531",
-      "zillow": "https://www.zillow.com/homedetails/84-Monroe-St-APT-3-Hoboken-NJ-07030/38882355_zpid/",
-      "nav_addr": "",
-      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/0/HUDSON_355927.pdf",
-      "flags": [],
-      "s1_time": "",
-      "s2_confirmed": "UNVERIFIED: listing CND, not in ShowingTime — confirm with LA",
-      "s2_source": "ShowingTime returned 0 results for MLS 260011070 (CND per MLS ~7/27/26). Confirm with LA Margaret M Crimmins · 201-240-6531.",
-      "s3_occupancy": "Unknown — CND listing not in ShowingTime",
-      "s3_lb": "No mention · No mention",
-      "s3_notes": "Property under contract (CND) as of today. Confirm whether backup showing is proceeding and how to access with LA: Margaret M Crimmins · 201-240-6531.",
-      "snap": [
-        [
-          "$674K",
-          "Asking"
-        ],
-        [
-          "48d",
-          "Days on mkt"
-        ],
-        [
-          "$509/mo",
-          "HOA/mo"
-        ],
-        [
-          "$6,695 (2025)",
-          "Taxes"
-        ],
-        [
-          "830 sq ft",
-          "Sq ft"
-        ],
-        [
-          "$812/sq",
-          "Per sq ft"
-        ]
-      ],
-      "s5_history": "Listed 6/9/26: $700K → Price changed 7/13/26: $674K (−$26K). Removed 7/27/26 (off market — note for coordinator).",
-      "s5_ownership": "Bought 7/1/21 @ $535K. No rental history on Redfin. Owned ~5 yrs.",
-      "s5_hoainc": "Water",
-      "s5_parking": "None",
-      "s5_storage": "",
-      "s5_hvac": "Wall A/C; baseboard heat",
-      "s5_laundry": "In-unit W/D",
-      "s5_flood": "Zone AE (Yes)",
-      "s5_misc": "STATUS: Conditional (under contract ~7/27/26).",
-      "s6_age": "1901",
-      "s6_units": "5",
-      "s6_amenities": "Intercom",
-      "s6_projects": "Hallway in process of being painted (per broker remarks)",
-      "s6_assess": "$370,900 (2025)",
-      "s6_financing": "",
-      "s6_key": "",
-      "similar": [],
-      "commute": [],
-      "client_name": "Jake Triarsi"
-    },
-    {
-      "seq": "5",
-      "addr1": "717 Willow Ave",
-      "addr2": "#2 · Hoboken NJ 07030",
-      "type": "Condominium",
-      "ptype": "condo",
-      "beds": "2 BR / 1 BA",
-      "time": "",
-      "price": "$650,000",
-      "agent": "Colleen Kraus · KP&G NJ ·  (contact: Matt Kraus per broker remarks)",
-      "phone": "973-891-0616",
-      "zillow": "https://www.zillow.com/homedetails/717-Willow-Ave-APT-2-Hoboken-NJ-07030/88857654_zpid/",
-      "nav_addr": "",
-      "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/0/HUDSON_362177.pdf",
-      "flags": [],
-      "s1_time": "",
-      "s2_confirmed": "Awaiting confirmation",
-      "s2_source": "ShowingTime — Auto Confirm listing (MLS 260014550, Active, 717 Willow Ave #2); no appointment found for 7/28. Needs booking — will Auto Confirm instantly once scheduled.",
-      "s3_occupancy": "Vacant (virtually staged per broker remarks)",
-      "s3_lb": "",
-      "s3_notes": "",
-      "snap": [
-        [
-          "$650K",
-          "Asking"
-        ],
-        [
-          "7d",
-          "Days on mkt"
-        ],
-        [
-          "$451/mo",
-          "HOA/mo"
-        ],
-        [
-          "$6,733 (2025)",
-          "Taxes"
-        ],
-        [
-          "800 sq ft",
-          "Sq ft"
-        ],
-        [
-          "$813/sq",
-          "Per sq ft"
-        ]
-      ],
-      "s5_history": "Listed 7/23/26: $650K. No cuts.",
-      "s5_ownership": "Bought 12/14/20 @ $530K. No rental history on Zillow. Owned ~5.6 yrs.",
-      "s5_hoainc": "Heat, water, hot water",
-      "s5_parking": "None",
-      "s5_storage": "Deeded private basement storage",
-      "s5_hvac": "Window A/C; radiator heat (heat included in HOA)",
-      "s5_laundry": "In-unit W/D",
-      "s5_flood": "Zone AE (Yes)",
-      "s5_misc": "Split-bedroom layout. Shared backyard w/ patio furniture and grills.",
-      "s6_age": "1900",
-      "s6_units": "10",
-      "s6_amenities": "Intercom; shared backyard with patio and grills",
-      "s6_projects": "",
-      "s6_assess": "",
-      "s6_financing": "",
-      "s6_key": "",
-      "similar": [],
-      "commute": [],
-      "client_name": "Jake Triarsi"
-    }
-  ],
-  "history": [
     {
       "deployedAt": "2026-07-27T04:03:25.806424+00:00",
       "meta": {
@@ -1282,319 +1351,6 @@ window.FC_DATA = {
           "similar": [],
           "commute": [],
           "client_name": "noclient"
-        }
-      ]
-    },
-    {
-      "deployedAt": "2026-07-24T05:48:28.783616+00:00",
-      "meta": {
-        "dateLabel": "Fri, July 24",
-        "agent": "Christian Daugherty"
-      },
-      "client": {
-        "name": "Jessica Lynn",
-        "fub_url": "https://jillkbiggs.followupboss.com/2/people/view/217633",
-        "meta": "4 properties · Buyer · Christian Daugherty, Jill Biggs Group",
-        "stage": "Showing homes",
-        "fields": [
-          [
-            "Budget",
-            "$350k max"
-          ],
-          [
-            "Location",
-            "anywhere (drives to Hackensack, nurse)"
-          ],
-          [
-            "Home type",
-            "1 bed plus condo"
-          ],
-          [
-            "Requirements",
-            "nice building; move in ready"
-          ],
-          [
-            "Condition",
-            "move in ready"
-          ],
-          [
-            "Timeline",
-            "asap before end of summer"
-          ]
-        ],
-        "snapshotLines": [
-          "$350k max. Showing today (4 properties).",
-          "<b>Notes:</b> nice building; move in ready"
-        ]
-      },
-      "props": [
-        {
-          "seq": "1",
-          "addr1": "6600 Blvd E Unit 5J",
-          "addr2": "West New York, NJ 07093",
-          "type": "Cooperative",
-          "ptype": "condo",
-          "beds": "1 bed / 1 bath",
-          "time": "",
-          "price": "$189,000",
-          "agent": "Sonia DaSilva",
-          "phone": "(201) 288-4241",
-          "zillow": "https://www.zillow.com/homedetails/6600-Boulevard-East-UNIT-5J-West-New-York-NJ-07093/2070933497_zpid/",
-          "nav_addr": "",
-          "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/3/HUDSON_349193.pdf",
-          "flags": [],
-          "s1_time": "",
-          "s2_confirmed": "N/A: text-scheduled",
-          "s2_source": "FUB calendar says confirmed; no appointment found in ShowingTime — assumed text-scheduled",
-          "s3_occupancy": "",
-          "s3_lb": "",
-          "s3_notes": "",
-          "snap": [
-            [
-              "$189K",
-              "Asking"
-            ],
-            [
-              "95d",
-              "Days on mkt"
-            ],
-            [
-              "$739/mo",
-              "HOA/mo"
-            ],
-            [
-              "$378/yr",
-              "Taxes"
-            ],
-            [
-              "850 sqft",
-              "Sq ft"
-            ],
-            [
-              "$222/sqft",
-              "Per sq ft"
-            ]
-          ],
-          "s5_history": "Listed 4/21/2026: $189,000",
-          "s5_ownership": "Bought 4/15/2004 @ $119K (Redfin). Owned ~22 yrs. No rental history on Zillow.",
-          "s5_hoainc": "Taxes, Heat, Water, Gas, Electric, Hot Water, Air Conditioner",
-          "s5_parking": "None",
-          "s5_storage": "None",
-          "s5_hvac": "Hot Air heat; A/C wall units",
-          "s5_laundry": "Common",
-          "s5_flood": "Zone X (No)",
-          "s5_misc": "Board approval required. Income to debt ratio 3:1 with 20% min down; 10% down = 4:1 ratio. Pets allowed.",
-          "s6_age": "1959",
-          "s6_units": "250",
-          "s6_amenities": "Community Room, Doorman, Elevator, Exercise Room, Pool, Security, Terrace",
-          "s6_projects": "",
-          "s6_assess": "",
-          "s6_financing": "",
-          "s6_key": "",
-          "similar": [],
-          "commute": [],
-          "client_name": "Jessica Lynn"
-        },
-        {
-          "seq": "2",
-          "addr1": "5 Horizon Unit 1708",
-          "addr2": "Fort Lee, NJ 07024",
-          "type": "Cooperative",
-          "ptype": "condo",
-          "beds": "1 bed / 1 bath",
-          "time": "",
-          "price": "$175,000",
-          "agent": "Debra Jacobs",
-          "phone": "(201) 803-3191",
-          "zillow": "https://www.zillow.com/homedetails/5-Horizon-Rd-APT-1708-Fort-Lee-NJ-07024/2117087029_zpid/",
-          "nav_addr": "",
-          "disclosure": "https://njmls.mlsmatrix.com/mediaserver/GetMedia.ashx?Key=40698542&TableID=0&Type=3&Number=2&Size=0&NNF=1&RFN=Hantman+Seller+Disclosure.pdf&tstmp=0724003826&exk=e6baf23409f0554f4cbc9bd6e5853d88",
-          "flags": [],
-          "s1_time": "",
-          "s2_confirmed": "Yes — Confirmed",
-          "s2_source": "ShowingTime",
-          "s3_occupancy": "Occupied — clarify: seller or tenant? (Access details not provided in ShowingTime)",
-          "s3_lb": "",
-          "s3_notes": "Access details not provided in ShowingTime — contact Debra Jacobs (201) 803-3191",
-          "snap": [
-            [
-              "$175K",
-              "Asking"
-            ],
-            [
-              "10d",
-              "Days on mkt"
-            ],
-            [
-              "$1,955/mo base HOA (all util+taxes incl) + $475/mo capital assessment = $2,628/mo all-in",
-              "HOA/mo"
-            ],
-            [
-              "Included in HOA",
-              "Taxes"
-            ],
-            [
-              "1,317 sqft",
-              "Sq ft"
-            ],
-            [
-              "$133/sqft",
-              "Per sq ft"
-            ]
-          ],
-          "s5_history": "Listed 7/13/2026: $175,000",
-          "s5_ownership": "No Sold event found on Zillow/Redfin (co-op shares). Owner listed without selling in 2012 and 2013; held since before 2012 (14+ yrs). No rental history on Zillow.",
-          "s5_hoainc": "Taxes, All Utilities, Cable/Internet, Parking, Amenities, Underlying Mortgage",
-          "s5_parking": "Included (indoor garage +$105.60/mo for dedicated space)",
-          "s5_storage": "",
-          "s5_hvac": "Gas/hot air heat; central A/C multi-zone",
-          "s5_laundry": "Common — basement",
-          "s5_flood": "Zone X (No)",
-          "s5_misc": "Board approval required. 25% down, 4:1 ITD ratio. Min gross income (cash buyer/no debt): ~$126K/yr. Board app fees: $800/$400/$500. Pets: cats & dogs OK (conditional). Offers require: POF/pre-approval, full credit report w/score, top 2 pages last 3 yrs tax returns, 1 month pay stubs, asset statements.",
-          "s6_age": "1965",
-          "s6_units": "Not found after web search (Horizon House complex total: 900 units across 6 buildings per Homes.com; per-building count not found)",
-          "s6_amenities": "24hr Security/Doorman, Exercise Room, On-site Management (Associa 201-224-6300), Pickleball Courts, Play Area, Pool Outdoor, Shops on Premises, Tennis Ct",
-          "s6_projects": "",
-          "s6_assess": "$475/mo capital assessment",
-          "s6_financing": "",
-          "s6_key": "",
-          "similar": [],
-          "commute": [],
-          "client_name": "Jessica Lynn"
-        },
-        {
-          "seq": "3",
-          "addr1": "6 Horizon Rd Unit 1904",
-          "addr2": "Fort Lee, NJ 07024",
-          "type": "Cooperative",
-          "ptype": "condo",
-          "beds": "1 bed / 1 bath",
-          "time": "",
-          "price": "$198,500",
-          "agent": "Debra Jacobs",
-          "phone": "(201) 803-3191",
-          "zillow": "https://www.zillow.com/homedetails/6-Horizon-Rd-APT-1904-Fort-Lee-NJ-07024/2075797352_zpid/",
-          "nav_addr": "",
-          "disclosure": "https://njmls.mlsmatrix.com/mediaserver/GetMedia.ashx?Key=40653422&TableID=0&Type=3&Number=0&Size=0&NNF=1&RFN=JR_SD.pdf&tstmp=0724004941&exk=43544e0598d0a8373c78e4f5e8277548",
-          "flags": [],
-          "s1_time": "",
-          "s2_confirmed": "Yes — Confirmed",
-          "s2_source": "ShowingTime",
-          "s3_occupancy": "Seller-occupied",
-          "s3_lb": "N/A · N/A",
-          "s3_notes": "Owner home or key at doorman",
-          "snap": [
-            [
-              "$198K",
-              "Asking"
-            ],
-            [
-              "25d",
-              "Days on mkt"
-            ],
-            [
-              "$1,647/mo (all util+taxes incl) + $400/mo capital assessment = $2,244/mo all-in (incl. garage, cable)",
-              "HOA/mo"
-            ],
-            [
-              "Included in HOA",
-              "Taxes"
-            ],
-            [
-              "1,062 sqft",
-              "Sq ft"
-            ],
-            [
-              "$187/sqft",
-              "Per sq ft"
-            ]
-          ],
-          "s5_history": "Listed 6/27/2026: $209,000 → Price cut 7/13/2026: $198,500 (-$10.5K)",
-          "s5_ownership": "Bought 5/7/2025 @ $188K. Owned ~14 months. Prior sale: 2/25/2022 @ $90K. No rental history on Zillow.",
-          "s5_hoainc": "Taxes, All Utilities (elec, gas, water), Cable, Parking, Health Club, Pool, Tennis, Underlying Mortgage",
-          "s5_parking": "Indoor garage spot #182 included",
-          "s5_storage": "",
-          "s5_hvac": "Gas/hot air heat; Central A/C multi-zone + wall units",
-          "s5_laundry": "Common — basement (coin/card)",
-          "s5_flood": "Zone X (No)",
-          "s5_misc": "Board approval required. 4:1 ITD ratio. All-cash buyers: min gross income ~$107K. Board app fees: $800/$400/$500. Pets: cats OK (conditional). Fully furnished turnkey (Haverty's + Crate & Barrel). Showing via ShowingTime.",
-          "s6_age": "1965",
-          "s6_units": "Not found after web search (Horizon House complex total: 900 units across 6 buildings per Homes.com; per-building count not found)",
-          "s6_amenities": "24hr Security/Doorman, Exercise Room/Health Club, Fulltime Handyman, Hot Tub, On-site Management (Associa), Pickleball Courts, Play Area, Pool Outdoor, Shops on Premises, Super 24hrs, Tennis Ct, EV Charging in garage",
-          "s6_projects": "",
-          "s6_assess": "$400/mo capital assessment",
-          "s6_financing": "A portion of maintenance is tax-deductible",
-          "s6_key": "",
-          "similar": [],
-          "commute": [],
-          "client_name": "Jessica Lynn"
-        },
-        {
-          "seq": "4",
-          "addr1": "4 Horizon Rd Unit G18",
-          "addr2": "Fort Lee, NJ 07024",
-          "type": "Cooperative",
-          "ptype": "condo",
-          "beds": "2 bed / 2 bath",
-          "time": "",
-          "price": "$185,000",
-          "agent": "Halley Natkin ·  (LA1; Coldwell Banker Fort Lee); Co: Debra Jacobs (201) 803-3191",
-          "phone": "(917) 626-8240",
-          "zillow": "https://www.zillow.com/homedetails/4-Horizon-Rd-APT-G18-Fort-Lee-NJ-07024/2098949433_zpid/",
-          "nav_addr": "",
-          "disclosure": "https://njmls.mlsmatrix.com/mediaserver/GetMedia.ashx?Key=40661682&TableID=0&Type=3&Number=1&Size=0&NNF=1&RFN=M0lvOUJjZmpzU3RnTXVUbjBzdzREMlJvVmQwMUN0M2N2WUM0ejFtQTV2VStTSjVkanhVWXl6RkVzbEVJS2kzeFEwSFNwclZRRktOaGVLTTc2UXJaUkE9PQ==.pdf&tstmp=0724010155&exk=4059f9ce833189e45054ca01c6875be0",
-          "flags": [],
-          "s1_time": "",
-          "s2_confirmed": "Yes — Confirmed",
-          "s2_source": "ShowingTime",
-          "s3_occupancy": "Vacant (go-and-show; virtually staged — access details not provided in ShowingTime)",
-          "s3_lb": "",
-          "s3_notes": "Access details not provided in ShowingTime — contact Halley Natkin (917) 626-8240 or Debra Jacobs (201) 803-3191",
-          "snap": [
-            [
-              "$185K",
-              "Asking"
-            ],
-            [
-              "22d",
-              "Days on mkt"
-            ],
-            [
-              "$2,084/mo (listed base); $2,761.52/mo all-in",
-              "HOA/mo"
-            ],
-            [
-              "Included in HOA",
-              "Taxes"
-            ],
-            [
-              "1,317 sqft",
-              "Sq ft"
-            ],
-            [
-              "$141/sqft",
-              "Per sq ft"
-            ]
-          ],
-          "s5_history": "Listed 7/1/2026: $185,000",
-          "s5_ownership": "Bought 9/28/2018 @ $140K (Trulia). Owned ~8 yrs. No rental history on Zillow.",
-          "s5_hoainc": "Taxes, All Utilities (elec/gas/heat/HW), Cable/Int, Assessments, Underlying Mortgage, Parking, Amenities",
-          "s5_parking": "Included — deck parking spot #14 (premier)",
-          "s5_storage": "",
-          "s5_hvac": "All utilities included in HOA (electric/gas/heat/hot water)",
-          "s5_laundry": "Common — Coin/Card, Basement",
-          "s5_flood": "Zone X (No)",
-          "s5_misc": "Board: 25% down, 4:1 ITD. All-cash purchase (no other debt) requires min $132K gross income. Board fees: $800 APP, $400 M/I, $500 Dep. Pets conditional. 810 shares. Possession: 61-90 days. Subject to Board Approval.",
-          "s6_age": "1965",
-          "s6_units": "Not found after web search (Horizon House complex total: 900 units across 6 buildings per Homes.com; per-building count not found)",
-          "s6_amenities": "24hr Doorman, Elevator (building), Exercise Room, Fulltime Handyman, On-site Management, Pickleball Ct, Play Area, Pool Outdoor, Recycling, Shops on Premises, Super 24hr, Tennis Ct",
-          "s6_projects": "",
-          "s6_assess": "$506.25/mo capital assessment (included in all-in total)",
-          "s6_financing": "25% down; 4:1 ITD",
-          "s6_key": "",
-          "similar": [],
-          "commute": [],
-          "client_name": "Jessica Lynn"
         }
       ]
     }
