@@ -12,7 +12,7 @@ window.FC_DATA = {
   "meta": {
     "dateLabel": "Fri, July 31",
     "agent": "Christian Daugherty",
-    "deployedAt": "2026-07-31T20:51:01.122470+00:00"
+    "deployedAt": "2026-07-31T21:00:39.000977+00:00"
   },
   "appointments": [
     {
@@ -32,13 +32,13 @@ window.FC_DATA = {
           "seq": "1",
           "addr1": "380 Luis M Marin Blvd #2R",
           "addr2": "Jersey City, NJ 07302",
-          "type": "Condo",
-          "ptype": "condo",
+          "type": "Condominium (Row House, Multi-Level)",
+          "ptype": "multi",
           "beds": "2 BR / 2 full + 1 half bath",
           "time": "5:00 PM",
           "price": "$849,000",
-          "agent": "Pavel Saikin, Corcoran Sawyer Smith —  (office)",
-          "phone": "201-653-8000",
+          "agent": "Pavel Saikin",
+          "phone": "(908) 868-9552",
           "zillow": "https://www.zillow.com/homedetails/380-Luis-M-Marin-Blvd-2R-Jersey-City-NJ-07302/2081554800_zpid/",
           "nav_addr": "",
           "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/3/HUDSON_358099.pdf",
@@ -63,7 +63,7 @@ window.FC_DATA = {
               "HOA/mo"
             ],
             [
-              "No mention (Zillow: tax history unavailable)",
+              "$14,267/yr (2025)",
               "Taxes"
             ],
             [
@@ -75,15 +75,15 @@ window.FC_DATA = {
               "Per sq ft"
             ]
           ],
-          "s5_history": "Listed 5/1: $869K → Price cut 6/8: $849K (-$20K). Actual DOM: 91 days (on market since 5/1/2026)",
+          "s5_history": "Listed 5/1: $869K -> Price cut 6/8: $849K (-$20K). Actual DOM: 91 days (continuously on market since 5/1/2026; MLS DOM resets because the cycle spans 3 MLS#s: 260008145 -> 260009931 -> 260012233).",
           "s5_ownership": "Bought 2/27/20 @ $695K. Owned ~6.4 yrs. No rental history on Zillow. (Prior sales: 5/18/15 @ $612K, 12/3/10 @ $405K.)",
-          "s5_hoainc": "No mention",
-          "s5_parking": "None (Zillow feature says '1 Car / See Remarks' but no actual spot is described in the listing description — realtor-CYA filter per §5.9)",
+          "s5_hoainc": "Water",
+          "s5_parking": "1 Car, Other-See Remarks — no deeded/garage spot detailed in MLS; broker remarks note rental parking options 1 min away at 160 Morgan St",
           "s5_storage": "No mention",
-          "s5_hvac": "Central air conditioning (per listing description). Heat type: No mention — verify at showing.",
-          "s5_laundry": "In-unit washer/dryer",
-          "s5_flood": "Not found — Zillow no longer shows a FEMA zone (climate section now links out to First Street); FEMA NFHL API errored. VERIFY: downtown JC/Powerhouse Arts District block near the waterfront.",
-          "s5_misc": "Loft-style condo in the Powerhouse Arts District. 6-ft windows, exposed brick walls, two brick fireplaces, cherrywood floors, granite counters, stainless appliances, primary ensuite w/ custom glass shower. 1,150 sqft, $738/sqft. Zestimate $848,900. Short walk to Grove St PATH / Van Vorst Park.",
+          "s5_hvac": "Central A/C; hot air, gas heat",
+          "s5_laundry": "In-unit — washer/dryer listed in appliances",
+          "s5_flood": "Zone AE (Yes) - Special Flood Hazard Area. Source: NJDEP mirror of the FEMA NFHL (FEMA's own service is currently erroring). First Street Flood Factor 8/10.",
+          "s5_misc": "MLS status per ShowingTime: ACTIVE (Hudson County MLS #260012233).",
           "s6_age": "1900 (Zillow + Trulia). Historic loft building in the Powerhouse Arts District — industrial-to-residential conversion; conversion year not found.",
           "s6_units": "Not found — no published unit count. Past listings show only 2R / 3R / 4R (4R is the top-floor penthouse duplex), i.e. a small walk-up-scale loft building.",
           "s6_amenities": "No shared amenities surfaced — no doorman, gym, roof deck or common laundry in any source. Intercom is the only building feature listed. Elevator: never mentioned — assume walk-up until confirmed. In-unit W/D + central A/C per past listings. HOA on this line has run $456-$542/mo (incl. water).",
@@ -247,13 +247,13 @@ window.FC_DATA = {
       "seq": "1",
       "addr1": "380 Luis M Marin Blvd #2R",
       "addr2": "Jersey City, NJ 07302",
-      "type": "Condo",
-      "ptype": "condo",
+      "type": "Condominium (Row House, Multi-Level)",
+      "ptype": "multi",
       "beds": "2 BR / 2 full + 1 half bath",
       "time": "5:00 PM",
       "price": "$849,000",
-      "agent": "Pavel Saikin, Corcoran Sawyer Smith —  (office)",
-      "phone": "201-653-8000",
+      "agent": "Pavel Saikin",
+      "phone": "(908) 868-9552",
       "zillow": "https://www.zillow.com/homedetails/380-Luis-M-Marin-Blvd-2R-Jersey-City-NJ-07302/2081554800_zpid/",
       "nav_addr": "",
       "disclosure": "https://hudson.paragonrels.com/ParagonLS/Files/AssociatedDocs/HUDSON/3/HUDSON_358099.pdf",
@@ -278,7 +278,7 @@ window.FC_DATA = {
           "HOA/mo"
         ],
         [
-          "No mention (Zillow: tax history unavailable)",
+          "$14,267/yr (2025)",
           "Taxes"
         ],
         [
@@ -290,15 +290,15 @@ window.FC_DATA = {
           "Per sq ft"
         ]
       ],
-      "s5_history": "Listed 5/1: $869K → Price cut 6/8: $849K (-$20K). Actual DOM: 91 days (on market since 5/1/2026)",
+      "s5_history": "Listed 5/1: $869K -> Price cut 6/8: $849K (-$20K). Actual DOM: 91 days (continuously on market since 5/1/2026; MLS DOM resets because the cycle spans 3 MLS#s: 260008145 -> 260009931 -> 260012233).",
       "s5_ownership": "Bought 2/27/20 @ $695K. Owned ~6.4 yrs. No rental history on Zillow. (Prior sales: 5/18/15 @ $612K, 12/3/10 @ $405K.)",
-      "s5_hoainc": "No mention",
-      "s5_parking": "None (Zillow feature says '1 Car / See Remarks' but no actual spot is described in the listing description — realtor-CYA filter per §5.9)",
+      "s5_hoainc": "Water",
+      "s5_parking": "1 Car, Other-See Remarks — no deeded/garage spot detailed in MLS; broker remarks note rental parking options 1 min away at 160 Morgan St",
       "s5_storage": "No mention",
-      "s5_hvac": "Central air conditioning (per listing description). Heat type: No mention — verify at showing.",
-      "s5_laundry": "In-unit washer/dryer",
-      "s5_flood": "Not found — Zillow no longer shows a FEMA zone (climate section now links out to First Street); FEMA NFHL API errored. VERIFY: downtown JC/Powerhouse Arts District block near the waterfront.",
-      "s5_misc": "Loft-style condo in the Powerhouse Arts District. 6-ft windows, exposed brick walls, two brick fireplaces, cherrywood floors, granite counters, stainless appliances, primary ensuite w/ custom glass shower. 1,150 sqft, $738/sqft. Zestimate $848,900. Short walk to Grove St PATH / Van Vorst Park.",
+      "s5_hvac": "Central A/C; hot air, gas heat",
+      "s5_laundry": "In-unit — washer/dryer listed in appliances",
+      "s5_flood": "Zone AE (Yes) - Special Flood Hazard Area. Source: NJDEP mirror of the FEMA NFHL (FEMA's own service is currently erroring). First Street Flood Factor 8/10.",
+      "s5_misc": "MLS status per ShowingTime: ACTIVE (Hudson County MLS #260012233).",
       "s6_age": "1900 (Zillow + Trulia). Historic loft building in the Powerhouse Arts District — industrial-to-residential conversion; conversion year not found.",
       "s6_units": "Not found — no published unit count. Past listings show only 2R / 3R / 4R (4R is the top-floor penthouse duplex), i.e. a small walk-up-scale loft building.",
       "s6_amenities": "No shared amenities surfaced — no doorman, gym, roof deck or common laundry in any source. Intercom is the only building feature listed. Elevator: never mentioned — assume walk-up until confirmed. In-unit W/D + central A/C per past listings. HOA on this line has run $456-$542/mo (incl. water).",
