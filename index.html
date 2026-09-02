@@ -1282,6 +1282,21 @@ body.acd-locked{overflow:hidden}
 <!-- Showing data — the ONLY file the prep workflow overwrites. -->
 <script src="field_companion_data.js"></script>
 <script>
+
+/* ============ DATA ENDPOINT (build-injected, 2026-09-02) ============
+   Local when this page is served by Command Central over Tailscale (or from
+   the Mac directly); the Apps Script relay everywhere else, so the GitHub
+   Pages copy keeps working unchanged until the relay is retired. */
+const FC_SYNC_RELAY = 'https://script.google.com/macros/s/AKfycbzxbkrYSrI0AfdfTfiI9GPK_fBPUuZJZSCSQHRQ4HpDhmBMFCTqkgVoEoVIYwXkLmn3/exec';
+const FC_SYNC_ENDPOINT = (function(){
+  try{
+    var h = (location.hostname || '').toLowerCase();
+    if (h.indexOf('.ts.net') === h.length - 7 && h.length > 7) return '/api/fc/sync';
+    if (h === 'localhost' || h === '127.0.0.1' || h === '') return '/api/fc/sync';
+  }catch(e){}
+  return FC_SYNC_RELAY;
+})();
+try{ console.log('[FC] data endpoint =', FC_SYNC_ENDPOINT); }catch(e){}
 /* ================================================================
    APP SHELL — home springboard + unified top bar + app switching.
    The Showing Companion tile opens the full current v1 showings app
@@ -1446,7 +1461,7 @@ function _restoreNotes(sessionKey, gids){
    stays the offline-safe source of truth and we re-push the full current state on
    every save, when the app is backgrounded, on reconnect, and on a timer — by end of
    day the Sheet reliably mirrors everything written even over flaky field signal.   */
-const SYNC_URL   = 'https://script.google.com/macros/s/AKfycbzxbkrYSrI0AfdfTfiI9GPK_fBPUuZJZSCSQHRQ4HpDhmBMFCTqkgVoEoVIYwXkLmn3/exec';
+const SYNC_URL   = FC_SYNC_ENDPOINT;
 const SYNC_TOKEN = 'fc_fb_kq83Jx2pL9vT';
 function _todayISO(){
   const d = new Date(), z = n => String(n).padStart(2,'0');
@@ -2051,7 +2066,7 @@ function renderHome(){
    ================================================================ */
 // Reuses the same Apps Script deployment + token as the feedback pipe.
 // Named distinctly (REM_*) so it never collides with the showings-sync SYNC_URL/SYNC_TOKEN.
-const REM_SYNC_BASE  = 'https://script.google.com/macros/s/AKfycbzxbkrYSrI0AfdfTfiI9GPK_fBPUuZJZSCSQHRQ4HpDhmBMFCTqkgVoEoVIYwXkLmn3/exec';
+const REM_SYNC_BASE  = FC_SYNC_ENDPOINT;
 const REM_SYNC_TOKEN = 'fc_fb_kq83Jx2pL9vT';
 
 let MANUAL_REMINDERS = [];   // [{id,text,raw,due,allDay,done,createdAt,updatedAt,deleted}]
@@ -2820,7 +2835,7 @@ document.addEventListener('DOMContentLoaded', renderCompletedFolder);
    Persistence: localStorage cache `fc_deals_full` + cloud GET 60s.
    ================================================================ */
 
-const DEAL_SYNC_BASE  = (typeof REM_SYNC_BASE  !== 'undefined') ? REM_SYNC_BASE  : 'https://script.google.com/macros/s/AKfycbzxbkrYSrI0AfdfTfiI9GPK_fBPUuZJZSCSQHRQ4HpDhmBMFCTqkgVoEoVIYwXkLmn3/exec';
+const DEAL_SYNC_BASE  = (typeof REM_SYNC_BASE  !== 'undefined') ? REM_SYNC_BASE  : FC_SYNC_ENDPOINT;
 const DEAL_SYNC_TOKEN = (typeof REM_SYNC_TOKEN !== 'undefined') ? REM_SYNC_TOKEN : 'fc_fb_kq83Jx2pL9vT';
 
 let DEALS_FULL = [];   // array of full deal objects from the cloud
@@ -3254,7 +3269,7 @@ document.addEventListener('visibilitychange', function(){ if(!document.hidden) l
    Persistence: localStorage cache `fc_clients_roster` + 60s poll.
    ================================================================ */
 
-const CLI_SYNC_BASE  = (typeof REM_SYNC_BASE  !== 'undefined') ? REM_SYNC_BASE  : 'https://script.google.com/macros/s/AKfycbzxbkrYSrI0AfdfTfiI9GPK_fBPUuZJZSCSQHRQ4HpDhmBMFCTqkgVoEoVIYwXkLmn3/exec';
+const CLI_SYNC_BASE  = (typeof REM_SYNC_BASE  !== 'undefined') ? REM_SYNC_BASE  : FC_SYNC_ENDPOINT;
 const CLI_SYNC_TOKEN = (typeof REM_SYNC_TOKEN !== 'undefined') ? REM_SYNC_TOKEN : 'fc_fb_kq83Jx2pL9vT';
 
 let CLIENTS_ROSTER = { clients: [], count: 0, builtAt: '' };
@@ -4195,7 +4210,7 @@ function submitAddClosedDealMobile(){
    on first paint, then hydrate from cloud, then poll.
    ================================================================ */
 
-const CALL_SYNC_BASE  = (typeof REM_SYNC_BASE  !== 'undefined') ? REM_SYNC_BASE  : 'https://script.google.com/macros/s/AKfycbzxbkrYSrI0AfdfTfiI9GPK_fBPUuZJZSCSQHRQ4HpDhmBMFCTqkgVoEoVIYwXkLmn3/exec';
+const CALL_SYNC_BASE  = (typeof REM_SYNC_BASE  !== 'undefined') ? REM_SYNC_BASE  : FC_SYNC_ENDPOINT;
 const CALL_SYNC_TOKEN = (typeof REM_SYNC_TOKEN !== 'undefined') ? REM_SYNC_TOKEN : 'fc_fb_kq83Jx2pL9vT';
 
 let CALLS_SNAP = null;
