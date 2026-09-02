@@ -1284,15 +1284,23 @@ body.acd-locked{overflow:hidden}
 <script>
 
 /* ============ DATA ENDPOINT (build-injected, 2026-09-02) ============
-   Local when this page is served by Command Central over Tailscale (or from
-   the Mac directly); the Apps Script relay everywhere else, so the GitHub
-   Pages copy keeps working unchanged until the relay is retired. */
+   Local when this page is served by this agent's own Command Central — her
+   Cloudflare Access hostname, her Tailscale name, or the Mac directly. The
+   Apps Script relay everywhere else, so the GitHub Pages copy keeps working
+   unchanged until the relay is retired.
+
+   ALLOWLIST, not "anything that isn't github.io": an unknown host falls back
+   to the relay, which still works, instead of calling an /api that isn't
+   there. Hosts come from agent_profile.json, so this is per-install data. */
 const FC_SYNC_RELAY = 'https://script.google.com/macros/s/AKfycbzxbkrYSrI0AfdfTfiI9GPK_fBPUuZJZSCSQHRQ4HpDhmBMFCTqkgVoEoVIYwXkLmn3/exec';
+const FC_SYNC_HOSTS = ["christians-imac-1.taild55dfe.ts.net"];
 const FC_SYNC_ENDPOINT = (function(){
   try{
     var h = (location.hostname || '').toLowerCase();
-    if (h.indexOf('.ts.net') === h.length - 7 && h.length > 7) return '/api/fc/sync';
     if (h === 'localhost' || h === '127.0.0.1' || h === '') return '/api/fc/sync';
+    if (FC_SYNC_HOSTS.indexOf(h) !== -1) return '/api/fc/sync';
+    /* any tailnet name — covers a rename of the machine without a rebuild */
+    if (h.length > 7 && h.indexOf('.ts.net') === h.length - 7) return '/api/fc/sync';
   }catch(e){}
   return FC_SYNC_RELAY;
 })();
