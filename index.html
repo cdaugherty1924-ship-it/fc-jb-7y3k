@@ -4855,7 +4855,19 @@ function fleetProblemCount(){
   let n = 0;
   (FLEET_SNAP.services||[]).forEach(function(s){ if(s.ok === false) n++; });
   (FLEET_SNAP.logins||[]).forEach(function(l){ if(l.ok === false) n++; });
+  n += _fleetJobNotices().length;
   return n;
+}
+
+/* 2026-09-02 (afternoon): the MLS/prep job alerts stopped going to Telegram and land here
+   instead, so they must be VISIBLE and must COUNT — an alert nobody is told about and that
+   doesn't move the badge is worse than the Telegram it replaced. Only section==='jobs' is
+   drawn: 'health' notices are the same conditions the service/login lamps already show, so
+   rendering them too would double-count the same problem. */
+function _fleetJobNotices(){
+  return (FLEET_SNAP && FLEET_SNAP.notices || []).filter(function(n){
+    return n && n.section === 'jobs' && n.msg;
+  });
 }
 
 function updateFleetBadge(){
@@ -4926,6 +4938,15 @@ function renderFleet(){
     h += '<div class="flt-sec">Logins</div>';
     logs.forEach(function(l){
       h += _fleetRow(l.site, stale ? null : l.ok, l.detail, l.raw);
+    });
+  }
+
+  const jobs = stale ? [] : _fleetJobNotices();
+  if(jobs.length){
+    h += '<div class="flt-sec">Needs you</div>';
+    jobs.forEach(function(n){
+      const when = _fleetAgeText(_fleetAgeMin(n.at));
+      h += _fleetRow(n.title || n.key, false, String(n.msg).split('\n')[0], n.msg + '\n\n(' + when + ')');
     });
   }
 
