@@ -906,6 +906,40 @@ body.acd-locked{overflow:hidden}
 .ibx-formhost{margin-top:2px}
 .ibx-item.expanded .ibx-formhost{margin-top:9px}
 .ibx-remform{display:flex;flex-direction:column;gap:8px}
+/* ============ FLEET STATUS — back-office lamps ============ */
+/* ============ FLEET STATUS — green/red lamps for the back office ============
+   Christian, 2026-09-02: fleet health used to arrive as repeated Telegram
+   messages in the Sonny thread. It lives here instead — pull, not push. ==== */
+.flt-wrap{padding:0 14px 28px}
+.flt-hero{display:flex;align-items:center;gap:12px;padding:16px 14px;border-radius:16px;
+  background:var(--card);border:1px solid var(--line);margin:12px 0 6px}
+.flt-hero .flt-bigdot{width:16px;height:16px;border-radius:50%;flex:0 0 16px}
+.flt-hero .flt-htxt{flex:1;min-width:0}
+.flt-hero .flt-hmain{font-size:15.5px;font-weight:800;color:var(--ink);line-height:1.25}
+.flt-hero .flt-hsub{font-size:11.5px;color:var(--muted);margin-top:3px}
+.flt-stale{margin:8px 0 2px;padding:11px 13px;border-radius:13px;font-size:12.5px;line-height:1.45;
+  background:rgba(214,158,46,.13);border:1px solid rgba(214,158,46,.42);color:var(--ink)}
+.flt-sec{margin:18px 0 7px;font-size:11px;font-weight:800;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted)}
+.flt-row{display:flex;align-items:flex-start;gap:11px;padding:12px 13px;border-radius:13px;
+  background:var(--card);border:1px solid var(--line);margin-bottom:7px;
+  width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.flt-row:active{transform:scale(.995)}
+.flt-dot{width:11px;height:11px;border-radius:50%;flex:0 0 11px;margin-top:4px}
+.flt-ok{background:#2f9e5f;box-shadow:0 0 0 3px rgba(47,158,95,.16)}
+.flt-bad{background:#d64545;box-shadow:0 0 0 3px rgba(214,69,69,.16)}
+.flt-unk{background:#9aa2ad;box-shadow:0 0 0 3px rgba(154,162,173,.14)}
+.flt-txt{flex:1;min-width:0}
+.flt-name{font-size:14px;font-weight:700;color:var(--ink)}
+.flt-why{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.4}
+.flt-raw{display:none;margin-top:8px;padding:9px 10px;border-radius:9px;font-size:11px;
+  line-height:1.5;white-space:pre-wrap;word-break:break-word;
+  background:rgba(127,127,127,.09);color:var(--muted);font-family:ui-monospace,Menlo,monospace}
+.flt-row.open .flt-raw{display:block}
+.flt-foot{margin-top:18px;font-size:11.5px;color:var(--muted);line-height:1.5;text-align:center}
+.flt-empty{padding:22px 14px;text-align:center;color:var(--muted);font-size:13px}
+/* springboard tile face — matches the other t-* tiles */
+.tile.t-fleet{background:linear-gradient(135deg,rgba(127,127,127,.16),var(--card))}
 </style>
 </head>
 <body>
@@ -994,6 +1028,11 @@ body.acd-locked{overflow:hidden}
       <div id="pastList"></div>
     </section>
 
+  </section>
+
+  <!-- ===================== FLEET STATUS (live lamps) ===================== -->
+  <section class="appscreen" id="app-fleet">
+    <div class="flt-wrap"><div id="fleetBody"></div></div>
   </section>
 
 <!-- ===================== CLIENTS APP ===================== -->
@@ -1096,11 +1135,6 @@ body.acd-locked{overflow:hidden}
     </div>
   </section>
 
-  <!-- ===================== FLEET STATUS (live lamps, 2026-09-02) ===================== -->
-  <section class="appscreen" id="app-fleet">
-    <div class="flt-wrap"><div id="fleetBody"></div></div>
-  </section>
-
   <!-- ===================== COMMISSION APP (was Trackers) ===================== -->
   <section class="appscreen" id="app-trackers">
     <div class="apppad">
@@ -1181,43 +1215,7 @@ body.acd-locked{overflow:hidden}
     .pill-txn{background:rgba(128,128,128,.16);color:var(--muted-2)}
     .cldel{margin-left:auto;border:none;background:none;color:var(--red,#e0524a);font-size:.72rem;font-weight:700;cursor:pointer;padding:2px 4px}
     .closings-empty{font-size:.82rem;color:var(--muted-2);text-align:center;padding:18px 12px;line-height:1.5}
-  
-/* ============ FLEET STATUS — back-office lamps (2026-09-02) ============ */
-/* ============ FLEET STATUS — green/red lamps for the back office ============
-   Christian, 2026-09-02: fleet health used to arrive as repeated Telegram
-   messages in the Sonny thread. It lives here instead — pull, not push. ==== */
-.flt-wrap{padding:0 14px 28px}
-.flt-hero{display:flex;align-items:center;gap:12px;padding:16px 14px;border-radius:16px;
-  background:var(--card);border:1px solid var(--line);margin:12px 0 6px}
-.flt-hero .flt-bigdot{width:16px;height:16px;border-radius:50%;flex:0 0 16px}
-.flt-hero .flt-htxt{flex:1;min-width:0}
-.flt-hero .flt-hmain{font-size:15.5px;font-weight:800;color:var(--ink);line-height:1.25}
-.flt-hero .flt-hsub{font-size:11.5px;color:var(--muted);margin-top:3px}
-.flt-stale{margin:8px 0 2px;padding:11px 13px;border-radius:13px;font-size:12.5px;line-height:1.45;
-  background:rgba(214,158,46,.13);border:1px solid rgba(214,158,46,.42);color:var(--ink)}
-.flt-sec{margin:18px 0 7px;font-size:11px;font-weight:800;letter-spacing:.09em;
-  text-transform:uppercase;color:var(--muted)}
-.flt-row{display:flex;align-items:flex-start;gap:11px;padding:12px 13px;border-radius:13px;
-  background:var(--card);border:1px solid var(--line);margin-bottom:7px;
-  width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer}
-.flt-row:active{transform:scale(.995)}
-.flt-dot{width:11px;height:11px;border-radius:50%;flex:0 0 11px;margin-top:4px}
-.flt-ok{background:#2f9e5f;box-shadow:0 0 0 3px rgba(47,158,95,.16)}
-.flt-bad{background:#d64545;box-shadow:0 0 0 3px rgba(214,69,69,.16)}
-.flt-unk{background:#9aa2ad;box-shadow:0 0 0 3px rgba(154,162,173,.14)}
-.flt-txt{flex:1;min-width:0}
-.flt-name{font-size:14px;font-weight:700;color:var(--ink)}
-.flt-why{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.4}
-.flt-raw{display:none;margin-top:8px;padding:9px 10px;border-radius:9px;font-size:11px;
-  line-height:1.5;white-space:pre-wrap;word-break:break-word;
-  background:rgba(127,127,127,.09);color:var(--muted);font-family:ui-monospace,Menlo,monospace}
-.flt-row.open .flt-raw{display:block}
-.flt-foot{margin-top:18px;font-size:11.5px;color:var(--muted);line-height:1.5;text-align:center}
-.flt-empty{padding:22px 14px;text-align:center;color:var(--muted);font-size:13px}
-/* springboard tile face — matches the other t-* tiles */
-.tile.t-fleet{background:linear-gradient(135deg,rgba(127,127,127,.16),var(--card))}
-
-</style>
+  </style>
 
 </div>
 
@@ -4766,24 +4764,12 @@ loadInboxLive();
 setInterval(function(){ if(!document.hidden && _inboxLaneOpen) loadInboxLive(); }, 60000);
 document.addEventListener('visibilitychange', function(){ if(!document.hidden && _inboxLaneOpen) loadInboxLive(); });
 
-/* ============ THEME ============ */
-function toggleTheme(){
-  const cur=document.documentElement.getAttribute('data-theme');
-  const next = cur==='dark' ? 'light' : (cur==='light' ? 'dark' : 'dark');
-  document.documentElement.setAttribute('data-theme',next);
-}
-
-/* ============ BOOT (on the home springboard) ============ */
-renderHome();
-if(typeof swipe !== 'undefined' && swipe){
-  swipe.addEventListener('scroll',()=>{
-    const idx = Math.round(swipe.scrollLeft / swipe.clientWidth);
-    [...dotsEl.children].forEach((d,i)=>d.classList.toggle('on', i===idx));
-  });
-}
-_setTopbar();
-
-/* ==== FLEET STATUS MODULE (2026-09-02) ==== */
+/* ================================================================
+   FLEET STATUS MODULE (live) — green/red lamps fed by the cloud
+   'fleetstatus' row the Mac's watchdog pushes each pass. Exists so
+   fleet health is something Christian LOOKS AT, never something
+   that texts him. (2026-09-02)
+   ================================================================ */
 /* ================================================================
    FLEET STATUS MODULE (live) — green/red lamps for the back office.
 
@@ -4958,6 +4944,22 @@ function renderFleet(){
   host.innerHTML = h;
 }
 
+/* ============ THEME ============ */
+function toggleTheme(){
+  const cur=document.documentElement.getAttribute('data-theme');
+  const next = cur==='dark' ? 'light' : (cur==='light' ? 'dark' : 'dark');
+  document.documentElement.setAttribute('data-theme',next);
+}
+
+/* ============ BOOT (on the home springboard) ============ */
+renderHome();
+if(typeof swipe !== 'undefined' && swipe){
+  swipe.addEventListener('scroll',()=>{
+    const idx = Math.round(swipe.scrollLeft / swipe.clientWidth);
+    [...dotsEl.children].forEach((d,i)=>d.classList.toggle('on', i===idx));
+  });
+}
+_setTopbar();
 </script>
 </body>
 </html>
