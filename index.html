@@ -960,6 +960,10 @@ body.acd-locked{overflow:hidden}
           <div class="tile t-trak">💰</div>
           <div class="lbl">Commission</div>
         </button>
+        <button class="appicon" onclick="openApp('fleet')">
+          <div class="tile t-fleet">🚦<span class="abadge" id="fleetBadge" style="display:none">0</span></div>
+          <div class="lbl">Fleet<br>Status</div>
+        </button>
       </div>
 
       <div class="home-foot">Showings, Reminders, Deal Tracker, Clients &amp; Commission are live.<br>Prospect tile awaits the pond-pull wiring.</div>
@@ -1092,6 +1096,11 @@ body.acd-locked{overflow:hidden}
     </div>
   </section>
 
+  <!-- ===================== FLEET STATUS (live lamps, 2026-09-02) ===================== -->
+  <section class="appscreen" id="app-fleet">
+    <div class="flt-wrap"><div id="fleetBody"></div></div>
+  </section>
+
   <!-- ===================== COMMISSION APP (was Trackers) ===================== -->
   <section class="appscreen" id="app-trackers">
     <div class="apppad">
@@ -1172,7 +1181,43 @@ body.acd-locked{overflow:hidden}
     .pill-txn{background:rgba(128,128,128,.16);color:var(--muted-2)}
     .cldel{margin-left:auto;border:none;background:none;color:var(--red,#e0524a);font-size:.72rem;font-weight:700;cursor:pointer;padding:2px 4px}
     .closings-empty{font-size:.82rem;color:var(--muted-2);text-align:center;padding:18px 12px;line-height:1.5}
-  </style>
+  
+/* ============ FLEET STATUS — back-office lamps (2026-09-02) ============ */
+/* ============ FLEET STATUS — green/red lamps for the back office ============
+   Christian, 2026-09-02: fleet health used to arrive as repeated Telegram
+   messages in the Sonny thread. It lives here instead — pull, not push. ==== */
+.flt-wrap{padding:0 14px 28px}
+.flt-hero{display:flex;align-items:center;gap:12px;padding:16px 14px;border-radius:16px;
+  background:var(--card);border:1px solid var(--line);margin:12px 0 6px}
+.flt-hero .flt-bigdot{width:16px;height:16px;border-radius:50%;flex:0 0 16px}
+.flt-hero .flt-htxt{flex:1;min-width:0}
+.flt-hero .flt-hmain{font-size:15.5px;font-weight:800;color:var(--ink);line-height:1.25}
+.flt-hero .flt-hsub{font-size:11.5px;color:var(--muted);margin-top:3px}
+.flt-stale{margin:8px 0 2px;padding:11px 13px;border-radius:13px;font-size:12.5px;line-height:1.45;
+  background:rgba(214,158,46,.13);border:1px solid rgba(214,158,46,.42);color:var(--ink)}
+.flt-sec{margin:18px 0 7px;font-size:11px;font-weight:800;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted)}
+.flt-row{display:flex;align-items:flex-start;gap:11px;padding:12px 13px;border-radius:13px;
+  background:var(--card);border:1px solid var(--line);margin-bottom:7px;
+  width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.flt-row:active{transform:scale(.995)}
+.flt-dot{width:11px;height:11px;border-radius:50%;flex:0 0 11px;margin-top:4px}
+.flt-ok{background:#2f9e5f;box-shadow:0 0 0 3px rgba(47,158,95,.16)}
+.flt-bad{background:#d64545;box-shadow:0 0 0 3px rgba(214,69,69,.16)}
+.flt-unk{background:#9aa2ad;box-shadow:0 0 0 3px rgba(154,162,173,.14)}
+.flt-txt{flex:1;min-width:0}
+.flt-name{font-size:14px;font-weight:700;color:var(--ink)}
+.flt-why{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.4}
+.flt-raw{display:none;margin-top:8px;padding:9px 10px;border-radius:9px;font-size:11px;
+  line-height:1.5;white-space:pre-wrap;word-break:break-word;
+  background:rgba(127,127,127,.09);color:var(--muted);font-family:ui-monospace,Menlo,monospace}
+.flt-row.open .flt-raw{display:block}
+.flt-foot{margin-top:18px;font-size:11.5px;color:var(--muted);line-height:1.5;text-align:center}
+.flt-empty{padding:22px 14px;text-align:center;color:var(--muted);font-size:13px}
+/* springboard tile face — matches the other t-* tiles */
+.tile.t-fleet{background:linear-gradient(135deg,rgba(127,127,127,.16),var(--card))}
+
+</style>
 
 </div>
 
@@ -1253,7 +1298,8 @@ const APP_TITLES = {
   deals:    ['Deal Tracker','Pipeline \u00b7 synced with Command Central'],
   prospect: ['Prospect',    "Today's call sheet \u00b7 awaiting pond-pull"],
   todo:     ['To-Do List',  'Reminders \u00b7 synced with Command Central'],
-  trackers: ['Commission',  'Production \u00b7 synced with Command Central']
+  trackers: ['Commission',  'Production \u00b7 synced with Command Central'],
+  fleet:    ['Fleet Status', 'Back office \u00b7 green means it is running']
 };
 
 function _setTopbar(){
@@ -1296,6 +1342,7 @@ function openApp(name){
     if(name === 'deals'    && typeof loadDealsLive      === 'function') loadDealsLive();
     if(name === 'clients'  && typeof loadClientsLive    === 'function') loadClientsLive();
     if(name === 'trackers' && typeof loadCommissionLive === 'function') loadCommissionLive();
+    if(name === 'fleet'    && typeof loadFleetLive       === 'function') loadFleetLive();
     _setTopbar();
   }
   window.scrollTo(0,0);
@@ -4735,6 +4782,182 @@ if(typeof swipe !== 'undefined' && swipe){
   });
 }
 _setTopbar();
+
+/* ==== FLEET STATUS MODULE (2026-09-02) ==== */
+/* ================================================================
+   FLEET STATUS MODULE (live) — green/red lamps for the back office.
+
+   WHY THIS EXISTS (2026-09-02): fleet health used to be pushed at
+   Christian as repeated Telegram messages in the Sonny thread —
+   "Login expired for: showingtime" ~4x/day, forever, because the
+   ShowingTime OTP wall can never auto-heal. His ruling: "i don't
+   like the idea of a message telling me the status of this stuff
+   via telegram... it should be in a fleet status section on the
+   Field Companion app with light indicators green or red showing
+   which services are down."
+
+   So this panel is PULL, not push. The Mac's watchdog upserts one
+   cloud row (type='fleetstatus', id='fleet') every pass; this reads
+   it. Nothing here ever messages anyone.
+
+   Staleness matters as much as the lamps: a Mac that is asleep or
+   wedged stops pushing, and the last snapshot would otherwise sit
+   there looking green forever. Past FLEET_STALE_MIN every lamp goes
+   GREY and a banner says how long it has been dark.
+   ================================================================ */
+const FLEET_STALE_MIN = 45;      // watchdog runs every 5 min + heartbeats every 15
+let FLEET_SNAP = null;
+
+// Pretty names — the cloud row carries the internal service keys.
+const FLEET_LABELS = {
+  fubbrowser:     'FUB browser',
+  fubinboxsync:   'FUB inbox sync',
+  doorbell:       'Sonny doorbell',
+  sonny:          'Sonny',
+  commandcentral: 'Command Central',
+  showingreminders:'Showing reminders',
+  leadautomation: 'Lead automation',
+  sonnyweb:       'Sonny web app',
+  autoprintmls:   'MLS auto-print',
+  fcdeploy:       'Field Companion deploy',
+  watchdog:       'Fleet watchdog',
+  fub:            'Follow Up Boss',
+  paragon:        'HCMLS (Paragon)',
+  matrix:         'NJMLS (Matrix)',
+  njmls:          'NJMLS (Matrix)',
+  showingtime:    'ShowingTime'
+};
+function fleetLabel(k){ return FLEET_LABELS[k] || String(k||''); }
+
+function _fleetAgeMin(iso){
+  if(!iso) return null;
+  const t = Date.parse(iso);
+  if(isNaN(t)) return null;
+  return Math.max(0, Math.round((Date.now() - t) / 60000));
+}
+function _fleetAgeText(min){
+  if(min == null) return 'never';
+  if(min < 1)   return 'just now';
+  if(min < 60)  return min + ' min ago';
+  const h = Math.floor(min/60);
+  if(h < 24)    return h + (h===1?' hour ago':' hours ago');
+  const d = Math.floor(h/24);
+  return d + (d===1?' day ago':' days ago');
+}
+
+async function loadFleetLive(){
+  try{
+    const j = await cloudGet('fleetstatus');
+    const rows = (j && j.rows) || [];
+    FLEET_SNAP = rows.filter(function(r){ return r && r.id === 'fleet' && !r.deleted; })[0] || null;
+    try{ localStorage.setItem('fc_fleet', JSON.stringify(FLEET_SNAP)); }catch(_){}
+  }catch(e){
+    // Offline: fall back to the last snapshot we saw. It will read as stale,
+    // which is the honest answer — we genuinely don't know the current state.
+    try{ FLEET_SNAP = JSON.parse(localStorage.getItem('fc_fleet')||'null'); }catch(_){ FLEET_SNAP = null; }
+  }
+  renderFleet();
+  updateFleetBadge();
+}
+
+/* Count of things currently wrong. Returns null when we can't tell (stale or
+   never reported) — a grey unknown must never be counted as "all good". */
+function fleetProblemCount(){
+  if(!FLEET_SNAP) return null;
+  const age = _fleetAgeMin(FLEET_SNAP.checkedAt || FLEET_SNAP.updatedAt);
+  if(age == null || age > FLEET_STALE_MIN) return null;
+  let n = 0;
+  (FLEET_SNAP.services||[]).forEach(function(s){ if(s.ok === false) n++; });
+  (FLEET_SNAP.logins||[]).forEach(function(l){ if(l.ok === false) n++; });
+  return n;
+}
+
+function updateFleetBadge(){
+  const b = document.getElementById('fleetBadge');
+  if(!b) return;
+  const n = fleetProblemCount();
+  if(n === null){ b.textContent = '?'; b.style.display = ''; b.className = 'abadge amber'; }
+  else if(n > 0){ b.textContent = String(n); b.style.display = ''; b.className = 'abadge'; }
+  else { b.style.display = 'none'; }
+}
+
+function _fleetRow(key, ok, why, raw){
+  const cls = ok === true ? 'flt-ok' : (ok === false ? 'flt-bad' : 'flt-unk');
+  return '<button class="flt-row" onclick="this.classList.toggle(\'open\')">'
+       +   '<span class="flt-dot '+cls+'"></span>'
+       +   '<span class="flt-txt">'
+       +     '<span class="flt-name">'+escH(fleetLabel(key))+'</span>'
+       +     '<div class="flt-why">'+escH(why||'')+'</div>'
+       +     (raw ? '<div class="flt-raw">'+escH(raw)+'</div>' : '')
+       +   '</span>'
+       + '</button>';
+}
+
+function renderFleet(){
+  const host = document.getElementById('fleetBody');
+  if(!host) return;
+
+  if(!FLEET_SNAP){
+    host.innerHTML = '<div class="flt-empty">No fleet report yet.<br>'
+      + 'This fills in the next time the watchdog runs on your Mac.</div>';
+    return;
+  }
+
+  const age   = _fleetAgeMin(FLEET_SNAP.checkedAt || FLEET_SNAP.updatedAt);
+  const stale = (age == null || age > FLEET_STALE_MIN);
+  const svcs  = FLEET_SNAP.services || [];
+  const logs  = FLEET_SNAP.logins   || [];
+  const bad   = svcs.filter(function(s){ return s.ok === false; }).length
+              + logs.filter(function(l){ return l.ok === false; }).length;
+
+  let hero;
+  if(stale){
+    hero = { dot:'flt-unk', main:'Status unknown',
+             sub:'Last report ' + _fleetAgeText(age) };
+  } else if(bad === 0){
+    hero = { dot:'flt-ok', main:'All systems normal',
+             sub:'Checked ' + _fleetAgeText(age) };
+  } else {
+    hero = { dot:'flt-bad', main: bad + (bad===1?' thing needs you':' things need you'),
+             sub:'Checked ' + _fleetAgeText(age) };
+  }
+
+  let h = '<div class="flt-hero">'
+        +   '<span class="flt-bigdot '+hero.dot+'"></span>'
+        +   '<span class="flt-htxt">'
+        +     '<div class="flt-hmain">'+escH(hero.main)+'</div>'
+        +     '<div class="flt-hsub">'+escH(hero.sub)+'</div>'
+        +   '</span>'
+        + '</div>';
+
+  if(stale){
+    h += '<div class="flt-stale">Nothing has reported in '+escH(_fleetAgeText(age))
+       + '. Your Mac is probably asleep or offline — the lamps below are the last '
+       + 'known state, not the current one.</div>';
+  }
+
+  if(logs.length){
+    h += '<div class="flt-sec">Logins</div>';
+    logs.forEach(function(l){
+      h += _fleetRow(l.site, stale ? null : l.ok, l.detail, l.raw);
+    });
+  }
+
+  h += '<div class="flt-sec">Services</div>';
+  if(!svcs.length){
+    h += '<div class="flt-empty">No services in the last report.</div>';
+  } else {
+    svcs.forEach(function(s){
+      const why = s.ok === true ? 'Running normally'
+                : (s.ok === false ? 'Not healthy — the Mac is retrying it' : 'Not reported');
+      h += _fleetRow(s.key, stale ? null : s.ok, why, s.detail);
+    });
+  }
+
+  h += '<div class="flt-foot">Nothing here texts you. Check it when you want to know.</div>';
+  host.innerHTML = h;
+}
+
 </script>
 </body>
 </html>
