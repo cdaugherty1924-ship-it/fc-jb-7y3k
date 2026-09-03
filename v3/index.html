@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#131f2e">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Field Companion</title>
+<style>
+/* ============ FIELD COMPANION v3 — "Brand Modern" (Option C) ============ */
+:root{
+  --navy:#131f2e; --navy2:#1c2a3a; --navy3:#24344a; --navyDeep:#0c1420;
+  --orange:#e85a3f; --orange2:#ff7a5c; --orangeDark:#c8452c;
+  --gold:#b2894f; --goldLite:#d9b075; --cream:#f7e1cf;
+  --ink:#f5f7fa; --dim:#94a3b8; --faint:#5b6b80;
+  --card:rgba(255,255,255,.05); --card2:rgba(255,255,255,.08); --stroke:rgba(255,255,255,.09); --stroke2:rgba(255,255,255,.16);
+  --teal:#37c8a2; --red:#ff6b6b; --redsoft:rgba(255,107,107,.09);
+  --r:20px; --r2:15px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+html{font-size:16px}
+body{background:var(--navyDeep);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+  display:flex;justify-content:center;min-height:100vh;min-height:100dvh}
+#app{width:100%;max-width:430px;min-height:100vh;min-height:100dvh;position:relative;
+  background:linear-gradient(180deg,var(--navy2),var(--navy) 45%,#0e1826);
+  padding-bottom:calc(env(safe-area-inset-bottom,0px) + 80px)}
+a{color:inherit;text-decoration:none}
+.screen{display:none;animation:fade .28s ease}
+.screen.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.pad{padding:0 20px}
+
+/* ---- shared ---- */
+.card{background:var(--card);border:1px solid var(--stroke);border-radius:var(--r);padding:16px;position:relative}
+.label{font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:8px}
+.topbar{display:flex;align-items:center;gap:12px;padding:calc(env(safe-area-inset-top,0px) + 20px) 20px 14px}
+.back{width:37px;height:37px;border-radius:12px;background:var(--card2);border:1px solid var(--stroke);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.05rem;flex-shrink:0}
+.topbar .t{font-weight:800;font-size:1.05rem;letter-spacing:-.01em}
+.topbar .s{font-size:.71rem;color:var(--dim);margin-top:1px}
+
+/* ---- HOME ---- */
+.header{background:linear-gradient(120deg,var(--orange) 0%,#d64a30 55%,#b93c26 100%);
+  padding:calc(env(safe-area-inset-top,0px) + 26px) 20px 58px;position:relative;overflow:hidden}
+.header::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.18),transparent 70%)}
+.brand{display:flex;align-items:center;gap:9px;font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.brand .sq{width:22px;height:22px;border-radius:7px;background:#fff;color:var(--orange);display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:900}
+.header h1{font-size:1.72rem;font-weight:850;letter-spacing:-.03em;color:#fff;margin-top:13px;line-height:1.12}
+.header p{color:rgba(255,255,255,.88);font-size:.84rem;margin-top:4px;font-weight:500}
+.hero{margin:-34px 20px 0;position:relative;z-index:2;cursor:pointer;
+  background:linear-gradient(160deg,var(--navy3),var(--navy2));
+  border:1px solid var(--stroke);border-radius:var(--r);padding:17px;
+  box-shadow:0 20px 44px -16px rgba(0,0,0,.55);transition:transform .14s}
+.hero:active{transform:scale(.98)}
+.hero .tag{font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--orange2)}
+.hero h2{font-size:1.26rem;font-weight:800;letter-spacing:-.02em;margin-top:6px}
+.hero > p{color:var(--dim);font-size:.82rem;margin-top:3px}
+.hero .bar{display:flex;gap:8px;margin-top:13px}
+.chip{flex:1;background:rgba(232,90,63,.12);border:1px solid rgba(232,90,63,.3);border-radius:12px;padding:8px 5px;text-align:center}
+.chip .v{font-weight:800;font-size:.84rem;color:var(--orange2)}
+.chip .k{font-size:.57rem;text-transform:uppercase;letter-spacing:.07em;color:var(--dim);margin-top:2px}
+.agenda{margin-top:13px;border-top:1px solid var(--stroke);padding-top:4px}
+.agrow{display:flex;gap:11px;align-items:baseline;padding:7px 0}
+.agrow .at{font-size:.7rem;font-weight:800;color:var(--orange2);width:56px;flex-shrink:0}
+.agrow .aa{font-size:.8rem;font-weight:600;color:#dbe2ec}
+.agrow.agdone .aa,.agrow.agdone .at{text-decoration:line-through;opacity:.45}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.tile{background:var(--card);border:1px solid var(--stroke);border-radius:var(--r);padding:14px;min-height:92px;
+  display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;transition:transform .13s;position:relative}
+.tile:active{transform:scale(.96)}
+.tile .ic{width:33px;height:33px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.98rem}
+.tile .nm{font-weight:700;font-size:.87rem}
+.tile .sub{font-size:.67rem;color:var(--faint);margin-top:2px}
+.tile .ext{position:absolute;top:10px;right:12px;font-size:.6rem;color:var(--faint)}
+.ic.o{background:rgba(232,90,63,.16);color:var(--orange2)} .ic.g{background:rgba(178,137,79,.18);color:var(--goldLite)}
+.ic.t{background:rgba(55,200,162,.14);color:var(--teal)} .ic.b{background:rgba(122,162,255,.14);color:#8ab0ff}
+.ic.c{background:rgba(247,225,207,.12);color:var(--cream)} .ic.w{background:rgba(255,255,255,.09);color:var(--ink)}
+
+/* ---- ITINERARY ---- */
+.prog{display:flex;gap:6px;padding:0 20px 14px}
+.prog .seg{flex:1;height:4px;border-radius:99px;background:var(--navy3)}
+.prog .seg.on{background:linear-gradient(90deg,var(--orange),var(--orange2))}
+.daychips{display:flex;gap:8px;padding:0 20px 12px;overflow-x:auto}
+.daychip{font-size:.73rem;font-weight:700;padding:7px 13px;border-radius:99px;border:1px solid var(--stroke2);color:var(--dim);white-space:nowrap;cursor:pointer}
+.daychip.on{background:linear-gradient(120deg,var(--orange),var(--orangeDark));color:#fff;border-color:transparent}
+.clientcard{margin:0 20px 12px;border-left:3px solid var(--orange)}
+.clientcard .nm{font-weight:800;font-size:.98rem}
+.clientcard .meta{font-size:.73rem;color:var(--dim);margin-top:2px}
+.clientcard .snapl{font-size:.76rem;color:var(--dim);margin-top:6px;line-height:1.45}
+.clientcard a.fub{color:var(--orange2);font-size:.71rem;font-weight:800}
+.stopcard{background:var(--card);border:1px solid var(--stroke);border-radius:var(--r);padding:15px;margin:0 20px 12px;cursor:pointer;transition:transform .13s}
+.stopcard:active{transform:scale(.98)}
+.stopcard .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.timechip{font-size:.69rem;font-weight:800;color:#fff;background:linear-gradient(120deg,var(--orange),var(--orangeDark));padding:5px 10px;border-radius:99px;white-space:nowrap}
+.conf{font-size:.64rem;font-weight:700;color:var(--teal);flex:1}
+.donebtn{width:29px;height:29px;border-radius:50%;border:1.5px solid var(--stroke2);display:flex;align-items:center;justify-content:center;
+  color:var(--faint);font-size:.8rem;cursor:pointer;flex-shrink:0}
+.stopcard h3{font-size:1.03rem;font-weight:800;letter-spacing:-.01em;margin-top:10px}
+.stopcard .sub{font-size:.75rem;color:var(--dim);margin-top:2px}
+.rowline{display:flex;justify-content:space-between;align-items:center;margin-top:10px;gap:8px}
+.price{font-weight:850;font-size:.99rem;color:var(--cream)}
+.pills{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.pill{font-size:.63rem;font-weight:700;padding:4px 9px;border-radius:99px;background:var(--navy3);border:1px solid var(--stroke);color:var(--dim)}
+.pill.warn{background:rgba(232,90,63,.13);border-color:rgba(232,90,63,.35);color:var(--orange2)}
+.pill.red{background:var(--redsoft);border-color:rgba(255,107,107,.4);color:#ff9b9b}
+.stopdone{opacity:.5}
+.stopdone .donebtn{background:var(--teal);border-color:var(--teal);color:#07352a}
+.histrow{cursor:pointer;margin:0 20px 11px}
+.histrow .d{font-size:.66rem;color:var(--gold);font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.histrow h3{font-size:.97rem;font-weight:800;margin-top:3px}
+.histrow .sub{font-size:.73rem;color:var(--dim);margin-top:2px}
+.empty{text-align:center;color:var(--faint);font-size:.85rem;padding:40px 20px}
+
+/* ---- DETAIL ---- */
+.dhero{background:linear-gradient(140deg,var(--orange) 0%,var(--orangeDark) 70%);
+  padding:calc(env(safe-area-inset-top,0px) + 18px) 20px 22px;position:relative;overflow:hidden}
+.dhero::after{content:"";position:absolute;left:-40px;bottom:-70px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.13),transparent 70%)}
+.dhero .crumb{font-size:.66rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.85);cursor:pointer;position:relative;z-index:2}
+.dhero h2{font-size:1.42rem;font-weight:850;letter-spacing:-.02em;color:#fff;margin-top:9px;line-height:1.15}
+.dhero .sub{color:rgba(255,255,255,.86);font-size:.79rem;margin-top:3px;line-height:1.4}
+.dhero .p{font-size:1.9rem;font-weight:900;letter-spacing:-.03em;color:#fff;margin-top:11px}
+.dhero .per{font-size:.76rem;color:rgba(255,255,255,.82);font-weight:600}
+.flagbanner{display:flex;gap:10px;border-radius:var(--r2);padding:12px 14px;margin:12px 20px 0;
+  background:var(--redsoft);border:1px solid rgba(255,107,107,.3)}
+.flagbanner p{font-size:.8rem;color:#ffc4c4;line-height:1.45;font-weight:600}
+.flagbanner.soft{background:rgba(178,137,79,.1);border-color:rgba(178,137,79,.35)}
+.flagbanner.soft p{color:#e6cfa3}
+.snap{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:14px 20px 0}
+.snap .s{background:var(--card);border:1px solid var(--stroke);border-radius:14px;padding:10px 9px}
+.snap .v{font-weight:800;font-size:.88rem;letter-spacing:-.01em;line-height:1.2}
+.snap .k{font-size:.59rem;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;margin-top:3px}
+.sec{margin:17px 20px 0}
+.kv .row{display:flex;gap:12px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.06);align-items:baseline}
+.kv .row:last-child{border-bottom:none}
+.kv .k{width:86px;flex-shrink:0;font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);font-weight:800}
+.kv .v{font-size:.8rem;line-height:1.5;color:#cbd5e1}
+.kv .v.hot{color:#ffd9a1}
+.access{border-left:3px solid var(--orange)}
+.code{font-family:ui-monospace,Menlo,monospace;font-weight:800;color:var(--orange2)}
+.notes textarea{width:100%;min-height:96px;background:var(--card);border:1px solid var(--stroke2);border-radius:var(--r2);
+  color:var(--ink);font:inherit;font-size:.85rem;padding:12px;resize:vertical;outline:none}
+.notes textarea:focus{border-color:var(--orange)}
+.btnrow{display:flex;gap:9px;margin:18px 20px 0}
+.btn{flex:1;text-align:center;padding:13px 6px;border-radius:14px;font-weight:800;font-size:.82rem;cursor:pointer;letter-spacing:-.01em}
+.btn.primary{background:linear-gradient(120deg,var(--orange),var(--orangeDark));color:#fff;box-shadow:0 12px 28px -10px rgba(232,90,63,.6)}
+.btn.ghost{background:var(--card2);border:1px solid var(--stroke2);color:var(--ink)}
+.btn.danger{background:none;border:1px solid rgba(255,107,107,.35);color:#ff9b9b;flex:0 0 auto;padding:13px 14px}
+.pnav{display:flex;justify-content:space-between;margin:20px 20px 0}
+.pnav .pn{font-size:.77rem;font-weight:700;color:var(--dim);cursor:pointer;padding:9px 14px;border-radius:99px;background:var(--card);border:1px solid var(--stroke)}
+.pnav .pn.off{opacity:.3;pointer-events:none}
+.vtag{position:fixed;bottom:calc(env(safe-area-inset-bottom,0px) + 10px);left:50%;transform:translateX(-50%);
+  font-size:.59rem;letter-spacing:.18em;text-transform:uppercase;color:#3d4c61;pointer-events:none}
+</style>
+</head>
+<body>
+<div id="app">
+  <section class="screen on" id="scr-home"></section>
+  <section class="screen" id="scr-today"></section>
+  <section class="screen" id="scr-past"></section>
+  <section class="screen" id="scr-detail"></section>
+</div>
+<div class="vtag">Field Companion · v3</div>
+
+<script src="field_companion_data.js"></script>
+<script>
+/* =====================================================================
+   FIELD COMPANION v3 — Brand Modern shell. v1/v2-compatible data+storage.
+   Lives at repo root as index.html; loads field_companion_data.js (root),
+   which the nightly prep + com.christian.fc-deploy keep current.
+   Storage keys identical to v1/v2 → notes/done/cancelled carry across.
+   Legacy v2 app remains at classic.html for modules not yet rebuilt.
+   ===================================================================== */
+const D = window.FC_DATA || {meta:{},appointments:[]};
+const META  = D.meta || {};
+const APPTS = (D.appointments && D.appointments.length) ? D.appointments
+            : (D.client || D.props) ? [{date: META.dateLabel, client: D.client||{}, props: D.props||[]}] : [];
+const HIST  = D.history || [];
+
+let _g = 0;
+APPTS.forEach((a, ai) => { a._ai = ai; (a.props||[]).forEach((p, li) => {
+  p._gid = _g++; p._ai = ai; p._li = li;
+  p.client_name = p.client_name || (a.client && a.client.name) || '';
+  p._ckey = _ckey(a.date || META.dateLabel, p.client_name, p);
+  p._ckeyLegacy = _ckeyLegacy(a.date || META.dateLabel, p);
+});});
+HIST.forEach((h, hi) => { (h.props||[]).forEach((p, li) => { p._gid = 'h'+hi+'_'+li; }); });
+const ALL_PROPS = APPTS.flatMap(a => a.props || []);
+function propByGid(g){ return ALL_PROPS.find(p => String(p._gid) === String(g)); }
+function _ckey(date, client, p){ return [(date||'').trim().toLowerCase(),(client||'').trim().toLowerCase(),(p.addr1||'').trim().toLowerCase(),(p.addr2||'').trim().toLowerCase()].join('||'); }
+function _ckeyLegacy(date, p){ return [(date||'').trim().toLowerCase(),(p.addr1||'').trim().toLowerCase(),(p.addr2||'').trim().toLowerCase()].join('||'); }
+
+const _noteSessionKey = META.deployedAt || new Date().toDateString();
+const DONE_KEY   = 'fc_done_' + (META.deployedAt || new Date().toDateString());
+const CANCEL_KEY = 'fc_cancelled';
+const doneSet      = new Set(JSON.parse(localStorage.getItem(DONE_KEY)   || '[]'));
+const cancelledSet = new Set(JSON.parse(localStorage.getItem(CANCEL_KEY) || '[]'));
+const isCancelled = p => p && ((p._ckey && cancelledSet.has(p._ckey)) || (p._ckeyLegacy && cancelledSet.has(p._ckeyLegacy)));
+function toggleDone(gid, ev){ ev && ev.stopPropagation();
+  doneSet.has(gid) ? doneSet.delete(gid) : doneSet.add(gid);
+  localStorage.setItem(DONE_KEY, JSON.stringify([...doneSet])); renderToday(); renderHome(); }
+function cancelStop(gid){ const p = propByGid(gid); if(!p) return;
+  if(!confirm('Cancel this stop? It disappears from the itinerary (no undo).')) return;
+  cancelledSet.add(p._ckey); localStorage.setItem(CANCEL_KEY, JSON.stringify([...cancelledSet]));
+  renderToday(); renderHome(); show('today'); }
+
+const SYNC_URL   = 'https://script.google.com/macros/s/AKfycbzxbkrYSrI0AfdfTfiI9GPK_fBPUuZJZSCSQHRQ4HpDhmBMFCTqkgVoEoVIYwXkLmn3/exec';
+const SYNC_TOKEN = 'fc_fb_kq83Jx2pL9vT';
+let _syncTimer = null;
+function saveNote(gid){ const ta = document.getElementById('note-'+gid);
+  if(ta) localStorage.setItem('fc_note_'+_noteSessionKey+'_'+gid, ta.value);
+  clearTimeout(_syncTimer); _syncTimer = setTimeout(fullSync, 2000); }
+function _todayISO(){ const d=new Date(),z=n=>String(n).padStart(2,'0'); return d.getFullYear()+'-'+z(d.getMonth()+1)+'-'+z(d.getDate()); }
+function fullSync(){
+  const prefix='fc_note_'+_noteSessionKey+'_', notes=[];
+  for(let i=0;i<localStorage.length;i++){ const k=localStorage.key(i);
+    if(!k||k.indexOf(prefix)!==0) continue; const text=localStorage.getItem(k)||''; if(!text.trim()) continue;
+    const gid=k.slice(prefix.length), p=propByGid(gid)||{};
+    notes.push({gid, property:[p.addr1,p.addr2].filter(Boolean).join(' ').trim(), text, updatedAt:new Date().toISOString()}); }
+  if(!notes.length) return;
+  try{ fetch(SYNC_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},
+    body: JSON.stringify({token:SYNC_TOKEN,date:_todayISO(),notes})}); }catch(e){}
+}
+document.addEventListener('visibilitychange',()=>{ if(document.hidden) fullSync(); });
+window.addEventListener('pagehide', fullSync);
+window.addEventListener('online', fullSync);
+setInterval(fullSync, 60000);
+
+/* ---------------- render helpers ---------------- */
+const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+function short(s,n){ s=String(s||''); return s.length>n ? s.slice(0,n-1)+'…' : s; }
+function bedsShort(b){ b=String(b||'');
+  const m=b.match(/(\d+)\s*BR/i), f=b.match(/(\d+)\s*full/i), h=b.match(/(\d+)\s*half/i);
+  if(m&&f) return m[1]+' BR / '+f[1]+(h&&+h[1]>0?'.5':'')+' BA';
+  return short(b, 46); }
+function hotV(v){ v=String(v||''); return /zone a|flood factor [6-9]|cash|as.?is|withdrawn|assessment/i.test(v); }
+function priceRange(props){
+  const ns=props.map(p=>parseInt(String(p.price||'').replace(/[^0-9]/g,''),10)).filter(n=>n>0);
+  if(!ns.length) return '';
+  const f=n=>n>=1e6?('$'+(n/1e6).toFixed(n%1e6?1:0)+'M'):('$'+Math.round(n/1e3)+'K');
+  const lo=Math.min(...ns),hi=Math.max(...ns);
+  return lo===hi?f(lo):f(lo)+'–'+f(hi); }
+function autoPills(p){
+  const pills=[];
+  (p.flags||[]).forEach(f=>{ const t=(typeof f==='string')?f:(f.t||''); if(t) pills.push({t:short(t,26),cls:(f.red?'red':'warn')}); });
+  if(!pills.length){
+    const fl=String(p.s5_flood||''); if(/zone a/i.test(fl)) pills.push({t:'Flood '+((fl.match(/zone\s+([A-Z]{1,2})/i)||[])[1]||'zone'),cls:'warn'});
+    if(/cash/i.test(p.s5_misc||'')) pills.push({t:'Cash only',cls:'warn'});
+    if(/withdrawn/i.test((p.s3_notes||'')+(p.s5_misc||''))) pills.push({t:'Withdrawn status',cls:'red'});
+  }
+  return pills.slice(0,2);
+}
+
+/* ---------------- HOME ---------------- */
+function renderHome(){
+  const live = ALL_PROPS.filter(p=>!isCancelled(p));
+  const nProps = live.length;
+  const first  = live[0];
+  const nConf  = live.filter(p=>/yes/i.test(p.s2_confirmed||'')).length;
+  const hh = new Date().getHours(), greet = hh<12?'Morning':hh<17?'Afternoon':'Evening';
+  const agenda = live.map(p=>`<div class="agrow ${doneSet.has(p._gid)?'agdone':''}">
+      <span class="at">${esc(p.time||p.s1_time||'')}</span>
+      <span class="aa">${esc(p.addr1||'')}</span></div>`).join('');
+  const hero = nProps ? `
+    <div class="hero" onclick="show('today')">
+      <div class="tag">${APPTS.length>1?'Next up':'Today'} · ${esc(META.dateLabel||'')}</div>
+      <h2>${nProps} showing${nProps>1?'s':''} on the board</h2>
+      <p>First stop ${esc(first.time||first.s1_time||'')} · ${esc(first.addr1||'')}</p>
+      <div class="bar">
+        <div class="chip"><div class="v">${esc((first.time||first.s1_time||'—').replace(' PM','').replace(' AM',''))}</div><div class="k">First stop</div></div>
+        <div class="chip"><div class="v">${nConf}/${nProps}</div><div class="k">Confirmed</div></div>
+        <div class="chip"><div class="v">${esc(priceRange(live)||'—')}</div><div class="k">Range</div></div>
+      </div>
+      <div class="agenda">${agenda}</div>
+    </div>` : `
+    <div class="hero" onclick="show('past')">
+      <div class="tag">Quiet board</div>
+      <h2>No showings loaded</h2>
+      <p>Tonight's prep fills this in · past tours in the archive</p>
+    </div>`;
+  document.getElementById('scr-home').innerHTML = `
+    <div class="header">
+      <div class="brand"><span class="sq">JB</span> Jill Biggs Group</div>
+      <h1>${greet}, ${esc((META.agent||'Christian').split(' ')[0])}.</h1>
+      <p>${esc(META.dateLabel||'')}${nProps?' · '+nProps+' showing'+(nProps>1?'s':'')+' on the board':''}</p>
+    </div>
+    ${hero}
+    <div class="pad"><div class="grid">
+      <div class="tile" onclick="show('today')"><div class="ic o">⌂</div><div><div class="nm">Showing Companion</div><div class="sub">${nProps?nProps+' stop'+(nProps>1?'s':''):'archive ready'}</div></div></div>
+      <div class="tile" onclick="show('past')"><div class="ic g">◷</div><div><div class="nm">Past Tours</div><div class="sub">${HIST.length} archived</div></div></div>
+      <a class="tile" href="classic.html"><span class="ext">↗</span><div class="ic t">✓</div><div><div class="nm">To-Do</div><div class="sub">live reminders</div></div></a>
+      <a class="tile" href="classic.html"><span class="ext">↗</span><div class="ic b">👥</div><div><div class="nm">Clients</div><div class="sub">roster</div></div></a>
+      <a class="tile" href="classic.html"><span class="ext">↗</span><div class="ic c">⇄</div><div><div class="nm">Deals</div><div class="sub">tracker</div></div></a>
+      <a class="tile" href="classic.html"><span class="ext">↗</span><div class="ic w">▦</div><div><div class="nm">Trackers</div><div class="sub">GCI · calls</div></div></a>
+    </div></div>`;
+}
+
+/* ---------------- TODAY ---------------- */
+let _curAi = 0;
+function renderToday(){
+  const el = document.getElementById('scr-today');
+  if(!APPTS.length){ el.innerHTML = topbar('Itinerary','No showings loaded','home') + '<div class="empty">Nothing on the board. Tonight\'s prep will fill this in.</div>'; return; }
+  _curAi = Math.min(_curAi, APPTS.length-1);
+  const a = APPTS[_curAi], c = a.client||{};
+  const live = (a.props||[]).filter(p=>!isCancelled(p));
+  const nDone = live.filter(p=>doneSet.has(p._gid)).length;
+  const chips = APPTS.length>1 ? `<div class="daychips">`+APPTS.map((x,i)=>
+    `<div class="daychip ${i===_curAi?'on':''}" onclick="_curAi=${i};renderToday()">${esc(x.date||('Day '+(i+1)))}</div>`).join('')+`</div>` : '';
+  const prog = live.length ? `<div class="prog">${live.map((p,i)=>`<div class="seg ${i<nDone?'on':''}"></div>`).join('')}</div>` : '';
+  const client = (c.name||c.meta||(c.snapshotLines||[]).length) ? `
+    <div class="card clientcard">
+      ${c.name?`<div class="nm">${esc(c.name)}${c.fub_url?` <a class="fub" href="${esc(c.fub_url)}">FUB ↗</a>`:''}</div>`:''}
+      ${c.meta?`<div class="meta">${esc(c.meta)}${c.stage?' · '+esc(c.stage):''}</div>`:''}
+      ${(c.snapshotLines||[]).length?`<div class="snapl">${c.snapshotLines.map(esc).join('<br>')}</div>`:''}
+    </div>` : '';
+  const stops = live.map((p,i)=>{
+    const done = doneSet.has(p._gid);
+    const pills = autoPills(p).map(x=>`<span class="pill ${x.cls}">${esc(x.t)}</span>`).join('');
+    return `
+    <div class="stopcard ${done?'stopdone':''}" onclick="openDetail('${p._gid}')">
+      <div class="top"><span class="timechip">${esc(p.time||p.s1_time||'')}</span>
+        <span class="conf">${/yes/i.test(p.s2_confirmed||'')?'● CONFIRMED':''}</span>
+        <span class="donebtn" onclick="toggleDone('${p._gid}',event)">✓</span></div>
+      <h3>${esc(p.addr1||'')}</h3>
+      <div class="sub">${esc(short(p.type||'',36))}${p.beds?' · '+esc(bedsShort(p.beds)):''}</div>
+      <div class="rowline"><span class="price">${esc(p.price||'')}</span><span class="pills">${pills}</span></div>
+    </div>`;}).join('');
+  el.innerHTML = topbar("Tonight's Itinerary", esc(a.date||META.dateLabel||'')+' · '+live.length+' propert'+(live.length===1?'y':'ies'),'home')
+    + prog + chips + client + (stops || '<div class="empty">All stops cancelled.</div>');
+}
+
+/* ---------------- PAST ---------------- */
+function renderPast(){
+  const el = document.getElementById('scr-past');
+  const rows = HIST.map((h,hi)=>{
+    const c=h.client||{}, n=(h.props||[]).length, d=(h.meta&&h.meta.dateLabel)||h.date||'';
+    return `<div class="card histrow" onclick="openHist(${hi})">
+      <div class="d">${esc(d||'earlier')}</div>
+      <h3>${esc(c.name||'Showing')}</h3>
+      <div class="sub">${n} propert${n===1?'y':'ies'}${c.meta?' · '+esc(short(c.meta,40)):''}</div></div>`;}).join('');
+  el.innerHTML = topbar('Past Tours', HIST.length+' archived','home') + (rows||'<div class="empty">No archive yet.</div>');
+}
+
+/* ---------------- DETAIL ---------------- */
+let _detailList=[], _detailIdx=0, _detailFrom='today';
+function openDetail(gid){ const p=propByGid(gid); if(!p) return;
+  _detailList = (APPTS[p._ai].props||[]).filter(x=>!isCancelled(x));
+  _detailIdx  = _detailList.findIndex(x=>x._gid===p._gid);
+  _detailFrom='today'; renderDetail(); show('detail'); }
+function openHist(hi){ _detailList = HIST[hi].props||[]; _detailIdx=0; _detailFrom='past'; renderDetail(); show('detail'); }
+function stepDetail(d){ _detailIdx=Math.max(0,Math.min(_detailList.length-1,_detailIdx+d)); renderDetail(); window.scrollTo(0,0); }
+
+function kvRows(pairs,extra){
+  const rows = pairs.filter(([k,v])=>v&&String(v).trim()&&!/^no mention$|^not found\.?$/i.test(String(v).trim()))
+    .map(([k,v])=>`<div class="row"><div class="k">${esc(k)}</div><div class="v ${hotV(v)?'hot':''}">${esc(v)}</div></div>`).join('');
+  return rows?`<div class="card kv ${extra||''}">${rows}</div>`:'';
+}
+function sectionBlock(title,pairs){ const b=kvRows(pairs); return b?`<div class="sec"><div class="label">${esc(title)}</div>${b}</div>`:''; }
+function renderDetail(){
+  const p=_detailList[_detailIdx]||{}, el=document.getElementById('scr-detail');
+  const per=(p.snap||[]).find(s=>/per sq/i.test(s[1]));
+  const flags=(p.flags||[]).map(f=>{const t=(typeof f==='string')?f:(f.t||'');return t?`<div class="flagbanner ${f.red?'':'soft'}"><p>${esc(t)}</p></div>`:'';}).join('');
+  const snap=(p.snap||[]).map(s=>{let v=String(s[0]||'').replace(/\s*\(.*$/,'').replace(/\s*[—-]\s.*$/,'');return `<div class="s"><div class="v">${esc(short(v,13))}</div><div class="k">${esc(short(s[1],16))}</div></div>`;}).join('');
+  const noteVal = esc(localStorage.getItem('fc_note_'+_noteSessionKey+'_'+p._gid)||'');
+  const isToday = _detailFrom==='today';
+  const accessRows = [['Confirmed',p.s2_confirmed],['Lockbox',p.s3_lb],['Occupancy',p.s3_occupancy],['Notes',p.s3_notes],['Agent',(p.agent||'')+(p.phone?' · '+p.phone:'')]]
+    .filter(([k,v])=>v&&String(v).trim()&&!/^no mention$/i.test(String(v).trim()))
+    .map(([k,v])=>`<div class="row"><div class="k">${esc(k)}</div><div class="v">${esc(v).replace(/Code: ([^·<]+)/,'Code: <span class=code>$1</span>')}</div></div>`).join('');
+  el.innerHTML = `
+    <div class="dhero">
+      <div class="crumb" onclick="show('${_detailFrom}')">‹ ${_detailFrom==='today'?'Itinerary':'Past Tours'} · Stop ${_detailIdx+1} of ${_detailList.length}${p.time||p.s1_time?' · '+esc(p.time||p.s1_time):''}</div>
+      <h2>${esc(p.addr1||'')}</h2>
+      <div class="sub">${esc(p.addr2||'')}${p.type?' · '+esc(p.type):''}${p.beds?'<br>'+esc(p.beds):''}</div>
+      <div class="p">${esc(p.price||'')} ${per?`<span class="per">· ${esc(per[0])}</span>`:''}</div>
+    </div>
+    ${flags}
+    ${snap?`<div class="snap">${snap}</div>`:''}
+    ${accessRows?`<div class="sec"><div class="label">Access & Showing</div><div class="card kv access">${accessRows}</div></div>`:''}
+    ${sectionBlock('Story & Costs',[['History',p.s5_history],['Ownership',p.s5_ownership],['HOA incl.',p.s5_hoainc],['Parking',p.s5_parking],['Storage',p.s5_storage],['HVAC',p.s5_hvac],['Laundry',p.s5_laundry],['Flood',p.s5_flood],['Also',p.s5_misc]])}
+    ${sectionBlock('Building & Financing',[['Built',p.s6_age],['Units',p.s6_units],['Amenities',p.s6_amenities],['Projects',p.s6_projects],['Assessments',p.s6_assess],['Financing',p.s6_financing]])}
+    ${p.s6_key?`<div class="sec"><div class="label">Key Details — ask on site</div><div class="card"><p style="font-size:.82rem;line-height:1.55;color:#cbd5e1">${esc(p.s6_key)}</p></div></div>`:''}
+    ${isToday?`<div class="sec notes"><div class="label">My Notes — syncs automatically</div>
+      <textarea id="note-${p._gid}" oninput="saveNote('${p._gid}')" placeholder="Impressions, client reactions, follow-ups…">${noteVal}</textarea></div>`:''}
+    <div class="btnrow">
+      ${p.nav_addr||p.addr1?`<a class="btn primary" href="https://maps.apple.com/?daddr=${encodeURIComponent(p.nav_addr||((p.addr1||'')+' '+(p.addr2||'')))}">Navigate</a>`:''}
+      ${p.zillow?`<a class="btn ghost" href="${esc(p.zillow)}">Zillow</a>`:''}
+      ${p.disclosure?`<a class="btn ghost" href="${esc(p.disclosure)}">Disclosure</a>`:''}
+      ${isToday?`<div class="btn danger" onclick="cancelStop('${p._gid}')">✕</div>`:''}
+    </div>
+    <div class="pnav">
+      <div class="pn ${_detailIdx===0?'off':''}" onclick="stepDetail(-1)">‹ Prev</div>
+      <div class="pn ${_detailIdx>=_detailList.length-1?'off':''}" onclick="stepDetail(1)">Next ›</div>
+    </div>`;
+}
+function topbar(t,s,backTo){ return `<div class="topbar"><div class="back" onclick="show('${backTo}')">‹</div><div><div class="t">${t}</div><div class="s">${s}</div></div></div>`; }
+
+function show(name){
+  if(name==='today') renderToday();
+  if(name==='past') renderPast();
+  if(name==='home') renderHome();
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));
+  document.getElementById('scr-'+name).classList.add('on');
+  window.scrollTo(0,0);
+}
+renderHome(); renderToday(); renderPast();
+</script>
+</body>
+</html>
