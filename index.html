@@ -1665,7 +1665,13 @@ HIST.forEach((e, hi) => (e.props || []).forEach((p, pi) => {
   p._ckey       = _ckey(hd, (e.client && e.client.name) || '', p);
   p._ckeyLegacy = _ckeyLegacy(hd, p);
 }));
-function propByGid(gid){ return ALL_PROPS.find(p => p._gid === gid); }
+function propByGid(gid){
+  // Today's props first; then history packets, so a note typed into a PAST
+  // showing syncs with its address instead of an empty property (2026-09-03).
+  const t = ALL_PROPS.find(p => p._gid === gid); if(t) return t;
+  for(const e of (HIST || [])){ const h = (e.props || []).find(p => p._gid === gid); if(h) return h; }
+  return undefined;
+}
 
 /* ============ LOCAL NOTE STORAGE (keyed by global id) ============ */
 let _noteSessionKey = META.deployedAt || new Date().toDateString();
@@ -1897,7 +1903,7 @@ function pageHTML(p, total, readOnly){
 
     <details class="sec" open><summary><span class="sn">${notesSn}</span>Notes &amp; feedback<span class="arw">›</span></summary>
       <div class="inner">
-        <textarea class="notesbox" id="note-${gid}" oninput="_saveNote(${gidArg})" placeholder="Tap to jot — client reactions, condition, follow-ups, anything. Saves locally to this device."></textarea>
+        <textarea class="notesbox" id="note-${gid}" oninput='_saveNote(${gidArg})' placeholder="Tap to jot — client reactions, condition, follow-ups, anything. Saves locally to this device."></textarea>
         <div class="notehint">Saved on this device · accessible in Past showings for 7 days</div>
       </div></details>
 
